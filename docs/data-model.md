@@ -18,6 +18,11 @@
 A tenant may have multiple outlets. Facilities need no tenant. A place gets its floor
 through its navigation node, avoiding conflicting floor fields.
 
+`Mall.LogoAssetPath` is an optional public branding asset. `Promotion.PosterAssetPath`
+is the public reviewed artwork shown to shoppers. `PromotionSubmission.AssetStorageKey`
+retains upload provenance separately. Demo submissions use the same generated public
+poster as their source; actual unreviewed uploads must use private storage.
+
 ```mermaid
 erDiagram
     Mall ||--o{ Floor : contains

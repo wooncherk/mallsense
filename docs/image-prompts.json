@@ -1,0 +1,18 @@
+{
+  "mode": "Built-in image_gen",
+  "assets": [
+    {
+      "key": "logo",
+      "transparent_background": true,
+      "prompt": "Use case: logo-brand. Create a polished compact brand symbol only for MallSense, an intelligent mall discovery companion. A bold emerald green abstract M formed by two continuous rounded paths, one path suggesting a subtle compass or discovery pointer. Flat vector-like clean edges, confident simple geometry, readable at 32 pixels, centered square composition. Transparent background. No letters, no wordmark, no mockup, no shadow. Output one image."
+    },
+    {
+      "key": "poster-books",
+      "prompt": "Use case: ads-marketing. Create a sophisticated portrait retail promotion poster for fictional Malaysian bookstore PAPER & PLAY at fictional Meridian Mall. Warm ivory background, emerald typography, beautifully photographed colourful paper craft and open children activity book arranged in lower half, editorial layout, generous margins. Exact readable text: \"PAPER & PLAY\" / \"Little makers. Big ideas.\" / \"20% off activity books\" / \"Ages 6–12\" / \"1–31 OCTOBER 2026\" / \"Level 1 · L1-03\" / \"Selected activity books only. While stocks last.\" No other text. Entire poster flat artwork, no frame or surrounding scene."
+    },
+    {
+      "key": "poster-cafe",
+      "prompt": "Use case: ads-marketing. Create a sophisticated portrait retail promotion poster for fictional Malaysian café COMMON GROUND at fictional Meridian Mall. Rich warm terracotta background, cream elegant typography, editorial photograph of ceramic coffee cup and flaky croissant on calm stone table in lower half. Exact readable text: \"COMMON GROUND\" / \"A little afternoon pause.\" / \"Coffee + pastry · RM18\" / \"Weekdays, 2–5 PM\" / \"1–31 OCTOBER 2026\" / \"Ground Floor · G-02\" / \"Selected drinks and pastries. Dine-in only.\" No other text. Entire poster flat artwork, no frame or surrounding scene."
+    }
+  ]
+}

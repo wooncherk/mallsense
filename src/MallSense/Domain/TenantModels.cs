@@ -19,6 +19,8 @@ public sealed class Promotion
     [MaxLength(2000)] public required string Description { get; set; }
     [MaxLength(2000)] public required string Offer { get; set; }
     [MaxLength(4000)] public string? Terms { get; set; }
+    // Public, reviewed artwork; private upload provenance stays on PromotionSubmission.
+    [MaxLength(500)] public string? PosterAssetPath { get; set; }
     // Inclusive local calendar dates, interpreted in the mall's time zone.
     public DateOnly ValidFrom { get; set; }
     public DateOnly ValidUntil { get; set; }

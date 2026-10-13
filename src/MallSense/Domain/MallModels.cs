@@ -9,6 +9,7 @@ public sealed class Mall
     [MaxLength(80)] public string TimeZoneId { get; set; } = "Asia/Kuala_Lumpur";
     [MaxLength(3)] public string CurrencyCode { get; set; } = "MYR";
     [MaxLength(500)] public string? Address { get; set; }
+    [MaxLength(500)] public string? LogoAssetPath { get; set; }
 }
 
 public sealed class Floor
