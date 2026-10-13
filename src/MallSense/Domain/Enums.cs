@@ -1,4 +1,4 @@
-namespace MallDiscovery.Domain;
+namespace MallSense.Domain;
 
 public enum PlaceKind { Store, Dining, Service, Facility, EventSpace }
 public enum NodeKind { Entrance, Landmark, Junction, Lift, Escalator, Stairs }

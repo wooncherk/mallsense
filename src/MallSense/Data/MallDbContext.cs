@@ -1,7 +1,7 @@
-using MallDiscovery.Domain;
+using MallSense.Domain;
 using Microsoft.EntityFrameworkCore;
 
-namespace MallDiscovery.Data;
+namespace MallSense.Data;
 
 public sealed class MallDbContext(DbContextOptions<MallDbContext> options) : DbContext(options)
 {

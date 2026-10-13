@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace MallDiscovery.Domain;
+namespace MallSense.Domain;
 
 // No account or shopper PII is required for discovery.
 public sealed class DiscoverySession

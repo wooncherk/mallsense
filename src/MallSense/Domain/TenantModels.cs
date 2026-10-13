@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace MallDiscovery.Domain;
+namespace MallSense.Domain;
 
 public sealed class Tenant
 {

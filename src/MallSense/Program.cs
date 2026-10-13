@@ -1,4 +1,4 @@
-using MallDiscovery.Data;
+using MallSense.Data;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,7 +10,7 @@ builder.Services.AddDbContext<MallDbContext>(options =>
 
 var app = builder.Build();
 app.UseExceptionHandler();
-app.MapGet("/", () => new { application = "Mall Discovery", stage = "Data model foundation" });
+app.MapGet("/", () => new { application = "MallSense", stage = "Data model foundation" });
 app.MapHealthChecks("/health");
 
 // Database creation/migrations are intentional operations, never startup side effects.

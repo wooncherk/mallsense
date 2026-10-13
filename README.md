@@ -1,19 +1,19 @@
-# Mall Discovery
+# MallSense
 
 .NET 10 ASP.NET Core backend foundation for the AI Builder Cup mall discovery prototype.
 The current scope is the relational data model for mall management, tenants and shoppers.
 
 ## Structure
 
-- `MallDiscovery.slnx`: solution.
-- `src/MallDiscovery/Domain`: mall, tenant and shopper entities and enums.
-- `src/MallDiscovery/Data/MallDbContext.cs`: EF Core relationships, indexes and constraints.
+- `MallSense.slnx`: solution.
+- `src/MallSense/Domain`: mall, tenant and shopper entities and enums.
+- `src/MallSense/Data/MallDbContext.cs`: EF Core relationships, indexes and constraints.
 - `docs/data-model.md`: model explanation, diagram and write-service rules.
 
 SQLite is the local development provider. EF Core packages are pinned to 10.0.0;
 `global.json` selects a stable .NET 10 SDK with feature-band roll-forward.
 Configuration uses `ConnectionStrings: MallDatabase` in `appsettings.json`.
-The default database file is `mall-discovery.db` relative to the process working directory.
+The default database file is `mallsense.db` relative to the process working directory.
 
 ## Current state
 
