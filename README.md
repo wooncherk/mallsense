@@ -90,3 +90,52 @@ The development database is seeded on first startup with these demo accounts:
 | Tenant user (SKECHERS) | `test@skechers.com` | `Tenant123!` |
 
 The primary SQLite database is created as `src/MallSense.WebApi/kluangmall.db`. Delete that file and restart the backend if you need a fresh seeded database. The legacy `mallsense.db` file is not used by the application.
+
+## Container demo on Google Cloud Run
+
+The root `Dockerfile` builds React and publishes the .NET API into one Linux image. Run all commands below from the repository root. Building this image compiles both applications; these are instructions to run when a build is wanted.
+
+Application configuration remains exclusively in `src/MallSense.WebApi/appsettings.json`. The image copies those settings and adjusts three container-specific values in its own JSON file: SQLite uses `/tmp/kluangmall.db`, Kestrel listens on `0.0.0.0:8080`, and `Hosting:HttpsRedirectionEnabled` is `false` because Cloud Run handles external HTTPS. Local settings are unchanged. No environment configuration overrides, Secret Manager, or Cloud SQL are required for this demo.
+
+Local databases are excluded from the image. A fresh container creates and seeds a new database. All subsequent database changes are disposable and can disappear after idle scale-down, deployments, crashes, or platform restarts. Minimum and maximum instance settings of `1` reduce turnover and independent database copies but do not guarantee persistence or prevent replacement overlap during deployments.
+
+The existing BI background scheduler remains enabled. It attempts to create yesterday's missing summaries at startup and runs at Malaysia midnight while CPU is available. With Cloud Run's default request-based billing, generation may be delayed until traffic resumes. Opening the BI page does not directly trigger generation; a refresh may be needed once it finishes.
+
+Settings, including any API keys, are included in the image. Use demo credentials and keep the Artifact Registry repository private. The deployed shopper website is public, while admin APIs retain application authentication.
+
+### Build and try locally
+
+Install Docker with Linux container support, then run:
+
+```powershell
+docker build -t mallsense:demo .
+docker run --rm -p 8080:8080 mallsense:demo
+```
+
+Open [http://localhost:8080](http://localhost:8080). Stopping this disposable container loses its database.
+
+### Build and deploy on Google Cloud
+
+Install the Google Cloud CLI, sign in, and choose a project with billing enabled. Replace `YOUR_PROJECT_ID` below. These commands create a repository, submit a remote container build, and deploy a public service; they incur Google Cloud usage charges.
+
+```powershell
+$projectId = "YOUR_PROJECT_ID"
+$region = "asia-southeast1"
+$image = "${region}-docker.pkg.dev/${projectId}/mallsense/app:demo"
+
+gcloud auth login
+gcloud config set project $projectId
+gcloud services enable run.googleapis.com cloudbuild.googleapis.com artifactregistry.googleapis.com
+
+# One-time repository setup; skip if it already exists.
+gcloud artifacts repositories create mallsense --repository-format=docker --location=$region
+
+gcloud builds submit --tag $image .
+gcloud run deploy mallsense --image $image --region $region --port 8080 --min=1 --max=1 --memory=1Gi --timeout=900 --allow-unauthenticated
+```
+
+The caller and Cloud Build service account need the relevant build, Artifact Registry, deployment, and service-account permissions. The deploy command prints the service URL. The 900-second request timeout accommodates the configured 600-second Gemini timeout. Minimum one instance incurs idle-instance charges; use `--min=0` if cold starts and more frequent demo resets are acceptable.
+
+To update the demo, rerun the build and deploy commands. Expect the deployed database to reset. Smoke-check the directory, admin login, a saved edit, and BI page after deployment.
+
+References: [Cloud Run container contract](https://docs.cloud.google.com/run/docs/container-contract), [deploying images](https://docs.cloud.google.com/run/docs/deploying), and [background activity](https://docs.cloud.google.com/run/docs/tips/general).

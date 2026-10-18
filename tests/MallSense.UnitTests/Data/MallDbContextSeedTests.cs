@@ -3,6 +3,7 @@ using Microsoft.Data.Sqlite;
 using MallSense.Domain.Entities;
 using MallSense.Domain.Enums;
 using MallSense.Infrastructure.Data;
+using MallSense.WebApi.Data;
 
 namespace MallSense.UnitTests.Data;
 

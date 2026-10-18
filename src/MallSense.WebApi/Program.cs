@@ -63,7 +63,9 @@ if (app.Environment.IsDevelopment())
 
 app.UseCors();
 
-if (!app.Environment.IsDevelopment())
+// Cloud Run terminates HTTPS before forwarding HTTP to the container.
+if (!app.Environment.IsDevelopment() &&
+    app.Configuration.GetValue("Hosting:HttpsRedirectionEnabled", true))
 {
     app.UseHttpsRedirection();
 }

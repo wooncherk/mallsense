@@ -1,0 +1,13 @@
+.git
+.vs
+.local-dotnet
+**/bin
+**/obj
+**/node_modules
+**/dist
+**/*.db
+**/*.db-*
+**/*.sqlite*
+**/.env*
+tests
+demo-assets
