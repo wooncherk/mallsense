@@ -2,6 +2,12 @@ using System.Text.Json;
 
 namespace MallSense.Application.Interfaces;
 
+public sealed record GeminiFunctionTool(
+    string Name,
+    string Description,
+    string ParametersSchema,
+    Func<JsonElement, CancellationToken, Task<string>> Execute);
+
 public interface IGeminiClient
 {
     Task<string> GenerateContentAsync(string prompt, string? systemInstruction = null, CancellationToken cancellationToken = default);
@@ -15,6 +21,13 @@ public interface IGeminiClient
         string functionDescription,
         string functionParametersSchema,
         Func<JsonElement, CancellationToken, Task<string>> executeFunction,
+        CancellationToken cancellationToken = default) =>
+        GenerateJsonAsync(prompt, jsonSchema, systemInstruction, cancellationToken);
+    Task<string> GenerateJsonWithFunctionsAsync(
+        string prompt,
+        string? jsonSchema,
+        string? systemInstruction,
+        IReadOnlyList<GeminiFunctionTool> functions,
         CancellationToken cancellationToken = default) =>
         GenerateJsonAsync(prompt, jsonSchema, systemInstruction, cancellationToken);
     Task<string> AnalyzeImageAsync(byte[] imageBytes, string mimeType, string prompt, CancellationToken cancellationToken = default);

@@ -259,9 +259,20 @@ public class GeminiApiClient : IGeminiClient
         string functionParametersSchema,
         Func<JsonElement, CancellationToken, Task<string>> executeFunction,
         CancellationToken cancellationToken = default)
+        => await GenerateJsonWithFunctionsAsync(prompt, jsonSchema, systemInstruction,
+            [new GeminiFunctionTool(functionName, functionDescription, functionParametersSchema, executeFunction)], cancellationToken);
+
+    public async Task<string> GenerateJsonWithFunctionsAsync(
+        string prompt,
+        string? jsonSchema,
+        string? systemInstruction,
+        IReadOnlyList<GeminiFunctionTool> functions,
+        CancellationToken cancellationToken = default)
     {
         if (!IsLiveApiConfigured)
             return await GenerateJsonAsync(prompt, jsonSchema, systemInstruction, cancellationToken);
+
+        if (functions.Count == 0) return await GenerateJsonAsync(prompt, jsonSchema, systemInstruction, cancellationToken);
 
         var url = $"https://generativelanguage.googleapis.com/v1beta/models/{_modelName}:generateContent?key={_apiKey}";
         var contents = new JsonArray
@@ -279,15 +290,12 @@ public class GeminiApiClient : IGeminiClient
             {
                 new JsonObject
                 {
-                    ["functionDeclarations"] = new JsonArray
+                    ["functionDeclarations"] = new JsonArray(functions.Select(function => (JsonNode)new JsonObject
                     {
-                        new JsonObject
-                        {
-                            ["name"] = functionName,
-                            ["description"] = functionDescription,
-                            ["parameters"] = JsonNode.Parse(functionParametersSchema)
-                        }
-                    }
+                        ["name"] = function.Name,
+                        ["description"] = function.Description,
+                        ["parameters"] = JsonNode.Parse(function.ParametersSchema)
+                    }).ToArray())
                 }
             },
             ["toolConfig"] = new JsonObject
@@ -306,7 +314,9 @@ public class GeminiApiClient : IGeminiClient
 
         try
         {
-            for (var toolTurn = 0; toolTurn <= 3; toolTurn++)
+            const int maxToolCalls = 8;
+            var toolCalls = new List<string>();
+            for (var toolTurn = 0; toolTurn <= maxToolCalls; toolTurn++)
             {
                 var responseJson = await PostGeminiRawAsync(url, requestBody, cancellationToken);
                 using var document = JsonDocument.Parse(responseJson);
@@ -329,21 +339,23 @@ public class GeminiApiClient : IGeminiClient
                     return text;
                 }
 
-                if (toolTurn == 3)
-                    throw new InvalidOperationException("Gemini exceeded the maximum number of tenant lookup tool turns.");
-
                 var calledName = functionCall.TryGetProperty("name", out var nameElement) ? nameElement.GetString() : null;
-                if (!string.Equals(calledName, functionName, StringComparison.Ordinal))
+                if (toolTurn == maxToolCalls)
+                    throw new InvalidOperationException($"Gemini exceeded the maximum of {maxToolCalls} tool calls. Calls: {string.Join(", ", toolCalls)}.");
+                var selectedFunction = functions.FirstOrDefault(function =>
+                    string.Equals(calledName, function.Name, StringComparison.Ordinal));
+                if (selectedFunction is null)
                     throw new InvalidOperationException($"Gemini requested an unsupported function: {calledName ?? "(unnamed)"}.");
+                toolCalls.Add(selectedFunction.Name);
                 using var emptyArgumentsDocument = JsonDocument.Parse("{}");
                 var arguments = functionCall.TryGetProperty("args", out var argsElement)
                     ? argsElement
                     : emptyArgumentsDocument.RootElement;
-                var functionResult = await executeFunction(arguments, cancellationToken);
+                var functionResult = await selectedFunction.Execute(arguments, cancellationToken);
                 var resultNode = JsonNode.Parse(functionResult) ?? new JsonObject();
                 var functionResponse = new JsonObject
                 {
-                    ["name"] = functionName,
+                    ["name"] = selectedFunction.Name,
                     ["response"] = resultNode
                 };
                 if (functionCall.TryGetProperty("id", out var callIdElement) && callIdElement.ValueKind == JsonValueKind.String)
