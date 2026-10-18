@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\MallSense.Domain\MallSense.Domain.csproj" />
+    <ProjectReference Include="..\MallSense.Application\MallSense.Application.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Google.GenAI" Version="1.26.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="10.0.13" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="10.0.13" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="10.0.13" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="10.0.13" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="10.0.13" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="..\..\artifacts\sunway-kluang-mall-data\stores\stores.json"
+                      LogicalName="MallSense.Infrastructure.SeedData.SunwayKluangMall.stores.json" />
+    <EmbeddedResource Include="..\..\artifacts\sunway-kluang-mall-data\deals\deals.json"
+                      LogicalName="MallSense.Infrastructure.SeedData.SunwayKluangMall.deals.json" />
+    <EmbeddedResource Include="..\..\artifacts\sunway-kluang-mall-data\events\events.json"
+                      LogicalName="MallSense.Infrastructure.SeedData.SunwayKluangMall.events.json" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+</Project>

@@ -1,66 +1,92 @@
-# MallSense
+# Sunway Kluang Mall · MallSense
 
-.NET 10 ASP.NET Core backend foundation for the AI Builder Cup mall discovery prototype.
-The current scope includes the relational data model, a seeded fictional demo mall and
-a Razor Pages shopper home page with keyword discovery and category filtering.
+This MallSense deployment is configured for Sunway Kluang Mall. It provides a shopper-facing directory, current deals and events, visitor assistance, and an authenticated administration area backed by a local SQLite database.
 
-## Structure
+## What it currently does
 
-- `MallSense.slnx`: solution.
-- `src/MallSense/Domain`: mall, tenant and shopper entities and enums.
-- `src/MallSense/Data/MallDbContext.cs`: EF Core relationships, indexes and constraints.
-- `docs/data-model.md`: model explanation, diagram and write-service rules.
-- `src/MallSense/Data/DemoSeeder.cs`: transactional, repeat-safe demo seeding.
-- `src/MallSense/Pages/Index.cshtml`: responsive home page.
-- `src/MallSense/wwwroot/images`: generated logo and promotion posters.
+### Shopper experience
 
-SQLite is the local development provider. EF Core packages are pinned to 10.0.0;
-`global.json` selects a stable .NET 10 SDK with feature-band roll-forward.
-Configuration uses `ConnectionStrings: MallDatabase` in `appsettings.json`.
-The default database file is `mallsense.db` relative to the process working directory.
+- Browse and filter the store directory by category and floor.
+- View published deals and events.
+- Ask an AI concierge for grounded store, deal, and event recommendations.
+- Calculate deterministic indoor routes, including accessible routes, and display them on a multi-floor map.
+- Recover a shopper's location from nearby landmarks or an uploaded image.
+- Keep and manage shopper conversation history.
 
-## Current state
+### Mall and tenant operations
 
-The host registers the database context, ProblemDetails and a liveness endpoint at `/health`.
-The root serves the shopper home page. Liveness does not check database readiness.
-The page reads seeded directory and promotion data; search uses keyword matching, not an LLM.
-No tenant write endpoints, authentication, LLM integrations or migrations exist yet.
-Search and browsing do not yet record real shopper sessions or analytics events.
+- Sign in as a mall administrator or tenant user with role-based access.
+- Create and manage stores, tenants, users, navigation nodes, and navigation edges.
+- Import text or files into permission-scoped knowledge collections.
+- Draft, review, accept, reject, and publish AI-assisted knowledge changes.
+- Convert floor-plan images or PDFs into editable graph drafts before publishing them to navigation.
+- Upload promotion posters, extract promotion details, clarify missing information, and confirm promotions.
+- View shopper-behavior metrics, daily summaries, AI-generated BI narratives, and BI chat history.
 
-The scaffold has not been restored, compiled or run, following the workspace instruction
-not to compile the .NET application. Database mapping is source-reviewed, not runtime-verified.
-No database is created automatically on normal startup. The seed routine has not been executed.
+### Implementation
 
-## Seed and launch when compilation is authorized
+- `.NET 10` Web API using Clean Architecture projects for Domain, Application, Infrastructure, and Web API layers.
+- React 19, TypeScript, Vite, Tailwind CSS, and daisyUI frontend.
+- SQLite storage created automatically on first backend startup.
+- Deterministic graph routing for physical directions; Gemini is used for language, retrieval, and image understanding.
+- OpenAPI and Scalar API documentation in Development mode.
 
-From the repository root in PowerShell:
+## Run locally
+
+### Requirements
+
+- [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0)
+- [Node.js](https://nodejs.org/) 22 or later with npm
+
+The backend reads its application configuration only from `src/MallSense.WebApi/appsettings.json`. Set `Gemini:ApiKey` there to use live AI features, or leave it empty to use the built-in simulation. Set `Gemini:AllowSimulationFallback` to `true` if live API failures should also fall back to simulated responses.
+
+### Development mode
+
+From the repository root, start the API:
 
 ```powershell
-$env:ASPNETCORE_ENVIRONMENT = 'Development'
-dotnet run --project src/MallSense -- --seed-demo
-dotnet run --project src/MallSense --launch-profile http
+dotnet run --project src/MallSense.WebApi
 ```
 
-Open `http://localhost:5007`. Both commands can restore and compile the app.
-The first command explicitly creates a fresh prototype SQLite schema with `EnsureCreated`,
-seeds it in one transaction, then exits. Running it again preserves existing demo data.
-Seeding is rejected outside Development. A missing demo database shows a friendly setup
-state on the home page.
+In a second terminal, install the frontend dependencies and start Vite:
 
-Seed contents: fictional Meridian Mall, 2 floors, 12 tenants/outlets, 2 facilities,
-2 published promotions and matching poster submissions, 1 event, a directed step-free
-navigation graph and 6 simulated shopper sessions with intent and engagement events.
-The page intentionally evaluates offers at the fixed demo date **13 October 2026**;
-the date is visible in the UI. It is not a live promotion feed.
+```powershell
+cd client
+npm ci
+npm run dev
+```
 
-Before retaining real data or evolving this schema, replace the prototype initialization
-with reviewed EF migrations. `EnsureCreated` does not update an existing schema, and
-must not be mixed with migration-managed databases. Preserve needed data before replacing
-any prototype database. No existing database is deleted or reset by the seed routine.
+Open the Vite URL shown in the terminal, normally [http://localhost:5173](http://localhost:5173). Vite proxies API requests to the backend at `http://localhost:5142`.
 
-## Next implementation slice
+API documentation is available at [http://localhost:5142/scalar/v1](http://localhost:5142/scalar/v1).
 
-Add validated application services and request/response DTOs for tenant promotion review,
-then shopper session/intent writes. Keep persistence entities out of
-public API responses. Follow the ownership and cross-record checks in `docs/data-model.md`.
-Add LLM extraction only after the draft-review-publish path is working.
+### Run the built frontend from the API
+
+Build the React app first:
+
+```powershell
+cd client
+npm ci
+npm run build
+cd ..
+dotnet run --project src/MallSense.WebApi
+```
+
+Then open [http://localhost:5142](http://localhost:5142). The API automatically serves `client/dist` when it exists.
+
+### Run tests
+
+```powershell
+dotnet test MallSense.sln
+```
+
+### Seeded development accounts
+
+The development database is seeded on first startup with these demo accounts:
+
+| Role | Email | Password |
+|---|---|---|
+| Mall administrator | `admin@test.com` | `Admin123!` |
+| Tenant user (SKECHERS) | `test@skechers.com` | `Tenant123!` |
+
+The primary SQLite database is created as `src/MallSense.WebApi/kluangmall.db`. Delete that file and restart the backend if you need a fresh seeded database. The legacy `mallsense.db` file is not used by the application.

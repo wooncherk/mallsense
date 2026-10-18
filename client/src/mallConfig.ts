@@ -1,0 +1,16 @@
+export const mallConfig = {
+  name: 'Sunway Kluang Mall',
+  shortName: 'Sunway Kluang',
+  platformName: 'MallSense',
+  copyrightHolder: 'Team Panorazzi',
+  address: 'Jalan Rambutan, 86000 Kluang, Johor',
+  locationLabel: 'Kluang, Johor',
+  openingHours: '10:00 AM–10:00 PM',
+  phone: '(+607) 772 6655',
+  email: 'skmconcierge@sunway.com.my',
+  website: 'https://www.sunwaykluangmall.com/',
+  adminLogin: 'admin@test.com',
+  adminPassword: 'Admin123!',
+  tenantLogin: 'test@skechers.com',
+  tenantPassword: 'Tenant123!',
+} as const;

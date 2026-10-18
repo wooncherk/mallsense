@@ -44,7 +44,6 @@ packages/
 .dotnet/
 
 ## Local SQLite databases
-*.db
 *.db-shm
 *.db-wal
 /src/MallSense.WebApi/appsettings.json
