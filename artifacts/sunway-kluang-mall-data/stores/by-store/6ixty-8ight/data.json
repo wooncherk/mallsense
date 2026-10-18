@@ -1,0 +1,77 @@
+{
+  "_id": "313f6e77806b6e5c715ddbe99e55902b",
+  "tags": [],
+  "categoryTree": [
+    {
+      "title": "Fashion Specialty",
+      "refcode": "FASHION_SPECIALTY",
+      "subs": []
+    }
+  ],
+  "deals": [],
+  "alternativeLocations": [],
+  "groups": [],
+  "title": "6IXTY 8IGHT",
+  "text": "6IXTY8IGHT embodies a young, playful, and carefree spirit, infusing trendy elements and diverse styles into its product designs to offer endless choices that cater to the daily needs of 6IXTY8IGHT girls. The brand strives to empower all women to feel confident in their bodies and to enjoy self-expression through their unique charm.\n\n \n\nFounded in Hong Kong in 2002, 6IXTY8IGHT is renowned for its signature pink hue, exuding chic and youthful energy. The brand successfully impressed the crowd with its exquisite and diverse lace lingerie. Over time, 6IXTY8IGHT has expanded its offerings to include a wide range of products, including bras, panties, nightwear, loungewear, casualwear, and accessories. With over 200 stores across China, Hong Kong, Taiwan, and Southeast Asia, including Singapore and Malaysia, 6IXTY8IGHT has become a girl's favorite one-stop shopping destination.\n\nUnleash Your Infinite Style - numbers 6 and 8 symbolize the infinite possibilities and endless styles we offer, ensuring her confidence and joy in every outfit.",
+  "venue": "1-11-13A",
+  "level": "1",
+  "sourceId": null,
+  "category": {
+    "title": "Fashion Specialty",
+    "refcode": "fashion_specialty",
+    "code": "fashion_specialty"
+  },
+  "website": "https://my.6ixty8ight.com/",
+  "slug": "6ixty-8ight",
+  "facebook": "",
+  "instagram": "",
+  "tiktok": "",
+  "xiaohongshu": "",
+  "keywords": "",
+  "contact": {
+    "email": "",
+    "phone": ""
+  },
+  "alternativeImages": [],
+  "logo": {
+    "local": "b514efb09ad006264195c66e15a11b91.jpg",
+    "orig": "km_tenant_logo_1_11[1].jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/b514efb09ad006264195c66e15a11b91/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "mainImage": {
+    "local": "ea2dc80aa8b3139ba9579a3573f0b744.jpg",
+    "orig": "1_11_6ixty_8ight_shopfront_photo.jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/ea2dc80aa8b3139ba9579a3573f0b744/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "id": "313f6e77806b6e5c715ddbe99e55902b"
+}

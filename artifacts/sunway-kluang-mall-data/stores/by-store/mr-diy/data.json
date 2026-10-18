@@ -1,0 +1,77 @@
+{
+  "_id": "e2347928a6a6c9e8e139b1d8f087a48d",
+  "tags": [],
+  "categoryTree": [
+    {
+      "title": "Homewares & Furnishings",
+      "refcode": "HOMEWARES_FURNISHINGS",
+      "subs": []
+    }
+  ],
+  "deals": [],
+  "alternativeLocations": [],
+  "groups": [],
+  "title": "MR D.I.Y PLUS",
+  "text": "MR D.I.Y PLUS is the latest iteration from home improvement retailer MR D.I.Y. Group Berhad - showcases products of various categories namely hardware, household and furnishing, electrical, stationery, and sports equipment products; and others (comprising toys, car accessories, jewellery, cosmetics, food and beverage items, as well as health & personal care items). ",
+  "venue": "2-02",
+  "level": "2",
+  "sourceId": null,
+  "category": {
+    "title": "Homewares & Furnishings",
+    "refcode": "homewares_furnishings",
+    "code": "homewares_furnishings"
+  },
+  "website": "https://www.mrdiy.com/",
+  "mainImage": {
+    "local": "cfde2cceab8155a6ffd1a6bde7bc41cf.jpg",
+    "orig": "2_02_mr_diy_plus_shopfront_photo.jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/cfde2cceab8155a6ffd1a6bde7bc41cf/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "slug": "mr-diy",
+  "facebook": "",
+  "instagram": "",
+  "tiktok": "",
+  "xiaohongshu": "",
+  "keywords": "",
+  "contact": {
+    "email": "",
+    "phone": ""
+  },
+  "alternativeImages": [],
+  "logo": {
+    "local": "8a5454e440b1e606149ccf2ecf6442e7.jpg",
+    "orig": "mr diy hammer logo white.jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/8a5454e440b1e606149ccf2ecf6442e7/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "id": "e2347928a6a6c9e8e139b1d8f087a48d"
+}

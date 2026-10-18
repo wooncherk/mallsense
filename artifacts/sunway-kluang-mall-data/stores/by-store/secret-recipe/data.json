@@ -1,0 +1,77 @@
+{
+  "_id": "0348fe5fc7e6132808fd3eb5dcb28d1a",
+  "tags": [],
+  "categoryTree": [
+    {
+      "title": "Food & Beverages",
+      "refcode": "FOOD_BEVERAGES",
+      "subs": []
+    }
+  ],
+  "deals": [],
+  "alternativeLocations": [],
+  "groups": [],
+  "title": "SECRET RECIPE",
+  "text": "",
+  "venue": "G-09",
+  "level": "G",
+  "sourceId": null,
+  "category": {
+    "title": "Food & Beverages",
+    "refcode": "food_beverages",
+    "code": "food_beverages"
+  },
+  "website": "",
+  "slug": "secret-recipe",
+  "facebook": "",
+  "instagram": "",
+  "tiktok": "",
+  "xiaohongshu": "",
+  "keywords": "",
+  "contact": {
+    "email": "",
+    "phone": ""
+  },
+  "alternativeImages": [],
+  "logo": {
+    "local": "051123b96f87bbc5cb1588ff8808b1ce.jpg",
+    "orig": "km_tenant_logo_g_09[1].jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/051123b96f87bbc5cb1588ff8808b1ce/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "mainImage": {
+    "local": "9dc5bb0fca316c2f41993607e9c4d2c8.png",
+    "orig": "G-09 Secret Recipe.png",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/9dc5bb0fca316c2f41993607e9c4d2c8/",
+      "thumbs": [
+        "w1920crop.png",
+        "w1440crop.png",
+        "w960crop.png",
+        "w768crop.png",
+        "w512crop.png",
+        "w380crop.png",
+        "w320crop.png",
+        "w180crop.png"
+      ],
+      "ext": ".png"
+    }
+  },
+  "id": "0348fe5fc7e6132808fd3eb5dcb28d1a"
+}

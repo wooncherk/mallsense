@@ -1,0 +1,77 @@
+{
+  "_id": "882c9b6fbdd3c25d05a34461ec1e3872",
+  "tags": [],
+  "categoryTree": [
+    {
+      "title": "Sport/Fitness",
+      "refcode": "SPORT_FITNESS",
+      "subs": []
+    }
+  ],
+  "deals": [],
+  "alternativeLocations": [],
+  "groups": [],
+  "title": "ORIGINAL CLASSIC (OC)",
+  "text": "",
+  "venue": "1-32",
+  "level": "1",
+  "sourceId": null,
+  "category": {
+    "title": "Sport/Fitness",
+    "refcode": "sport_fitness",
+    "code": "sport_fitness"
+  },
+  "website": "",
+  "mainImage": {
+    "local": "12cd33589b59a3d353d78913a88dc350.jpg",
+    "orig": "1_32_oc_shopfront_photo.jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/12cd33589b59a3d353d78913a88dc350/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "slug": "original-classic-oc",
+  "facebook": "",
+  "instagram": "",
+  "tiktok": "",
+  "xiaohongshu": "",
+  "keywords": "",
+  "contact": {
+    "email": "",
+    "phone": ""
+  },
+  "alternativeImages": [],
+  "logo": {
+    "local": "e103d955b1a3521240e887e1f9787acd.jpg",
+    "orig": "Original Classic (new).jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/e103d955b1a3521240e887e1f9787acd/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "id": "882c9b6fbdd3c25d05a34461ec1e3872"
+}

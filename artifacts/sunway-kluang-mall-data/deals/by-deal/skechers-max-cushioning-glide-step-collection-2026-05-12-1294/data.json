@@ -1,0 +1,76 @@
+{
+  "_id": "647b5c6dc5f2fd773ddffc6f49b56e64",
+  "tags": [],
+  "alternativeImages": [
+    {
+      "local": "bc2d83b5bcad6e837662318d8bd3c17c.jpg",
+      "orig": "2_AD_SUNWAY KLUANG 1080X1080 (1).jpg",
+      "refresh": null,
+      "_meta": {
+        "url": "https://www.sunwaykluangmall.com/static/promotions/",
+        "thumbsUrl": "https://www.sunwaykluangmall.com/static/promotions/bc2d83b5bcad6e837662318d8bd3c17c/",
+        "thumbs": [
+          "w1920crop.jpg",
+          "w1440crop.jpg",
+          "w960crop.jpg",
+          "w768crop.jpg",
+          "w512crop.jpg",
+          "w380crop.jpg",
+          "w320crop.jpg",
+          "w180crop.jpg"
+        ],
+        "ext": ".jpg"
+      }
+    }
+  ],
+  "title": "Skechers Max Cushioning Glide-Step Collection",
+  "venue": "",
+  "dateStart": "2026-05-06T16:00:00.000Z",
+  "dateEnd": "2026-12-30T16:00:00.000Z",
+  "slug": "skechers-max-cushioning-glide-step-collection-2026-05-12-1294",
+  "keywords": "",
+  "displayStart": "2026-05-11T16:00:00.000Z",
+  "description": "Skechers Reintroduces the Max Cushioning® Glide-Step® in Slip-In and Lace-Up Styles\n\nWith refreshed silhouettes and advanced cushioning , this collection features Skechers’ proprietary Air-Cooled Goga Mat™ insoles for breathable comfort and Goodyear® Performance Outsoles for durable traction across all styles.\n\nGrab yours today at Skechers store!\n\n📍 Skechers at Lot 1-42A, 1-43 & 1-43A, First Floor\n\n#SkechersMY #SkechersSlipins #SkechersGlideStep #SunwayKluangMall",
+  "term": "",
+  "shopMeta": {
+    "_id": "6cd468eb408501d9f2c7357f62940b6b",
+    "categoryTree": [
+      {
+        "title": "Sport/Fitness",
+        "refcode": "SPORT_FITNESS",
+        "subs": []
+      }
+    ],
+    "title": "SKECHERS",
+    "venue": "1-42-43A",
+    "level": "1",
+    "sourceId": null,
+    "category": {
+      "title": "Sport/Fitness",
+      "refcode": "sport_fitness",
+      "code": "sport_fitness"
+    },
+    "slug": "skechers"
+  },
+  "mainImage": {
+    "local": "cdac9e780aadf3d6f43b72bde26f4a77.jpg",
+    "orig": "2_AD_SUNWAY KLUANG 1080X1080 (1).jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/promotions/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/promotions/cdac9e780aadf3d6f43b72bde26f4a77/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "id": "647b5c6dc5f2fd773ddffc6f49b56e64"
+}

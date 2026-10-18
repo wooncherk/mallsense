@@ -1,0 +1,77 @@
+{
+  "_id": "d6175cc9f44016e07845fa1047e2f30e",
+  "tags": [],
+  "alternativeImages": [
+    {
+      "local": "902018b1e514a08884ec669860145786.jpg",
+      "orig": "square-image (20).jpg",
+      "refresh": null,
+      "_meta": {
+        "url": "https://www.sunwaykluangmall.com/static/promotions/",
+        "thumbsUrl": "https://www.sunwaykluangmall.com/static/promotions/902018b1e514a08884ec669860145786/",
+        "thumbs": [
+          "w1920crop.jpg",
+          "w1440crop.jpg",
+          "w960crop.jpg",
+          "w768crop.jpg",
+          "w512crop.jpg",
+          "w380crop.jpg",
+          "w320crop.jpg",
+          "w180crop.jpg"
+        ],
+        "ext": ".jpg"
+      }
+    }
+  ],
+  "title": "[NEW] vivo Y31s 5G",
+  "venue": "",
+  "text": "",
+  "dateStart": "2026-06-16T16:00:00.000Z",
+  "dateEnd": "2026-12-30T16:00:00.000Z",
+  "slug": "new-vivo-y31s-5g-2026-06-18-484",
+  "keywords": "",
+  "displayStart": "2026-06-17T16:00:00.000Z",
+  "description": "💜 NEW ARRIVAL AT OUR MALL\n\nMeet the new vivo Y31s 5G — designed for everyday durability with SGS-certified Anti-Drop protection and reliable 5G performance.\n\n📍Vivo Concept Store at Lot 1-16, First Floor\n\nDrop by and check out the latest offers in-store today!\n\n#vivoY31s5G #vivoMalaysia #newarrival #MMGdistribution #SunwayKluangMall",
+  "term": "",
+  "shopMeta": {
+    "_id": "70ec700eb52744dc3ea98b273bfe8998",
+    "categoryTree": [
+      {
+        "title": "Gadget/Electronic",
+        "refcode": "GADGET_ELECTRONIC",
+        "subs": []
+      }
+    ],
+    "title": "VIVO",
+    "venue": "1-16",
+    "level": "1",
+    "sourceId": null,
+    "category": {
+      "title": "Gadget/Electronic",
+      "refcode": "gadget_electronic",
+      "code": "gadget_electronic"
+    },
+    "slug": "vivo"
+  },
+  "mainImage": {
+    "local": "b515e610c472e2f65056fcf5b0f09f7b.jpg",
+    "orig": "square-image (20).jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/promotions/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/promotions/b515e610c472e2f65056fcf5b0f09f7b/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "id": "d6175cc9f44016e07845fa1047e2f30e"
+}

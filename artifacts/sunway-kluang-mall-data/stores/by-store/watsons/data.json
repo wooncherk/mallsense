@@ -1,0 +1,82 @@
+{
+  "_id": "5d9b1a83f8d19a2365c5544f87988aeb",
+  "tags": [],
+  "categoryTree": [
+    {
+      "title": "Health/Beauty",
+      "refcode": "HEALTH_BEAUTY",
+      "subs": []
+    },
+    {
+      "title": "Pharmacy",
+      "refcode": "PHARMACY",
+      "subs": []
+    }
+  ],
+  "deals": [],
+  "alternativeLocations": [],
+  "groups": [],
+  "title": "WATSONS",
+  "text": "Watsons Malaysia is the leading health and beauty retailer with more than 550 Watsons stores and growing in the country serving the needs of all Malaysians. \n\nWatsons continues to inspire our customers to enjoy life to the fullest and set the standards in the health, wellness and beauty market, providing personalised advice in health, beauty and personal care on top of its market-leading product ranges, making customers LOOK GOOD, FEEL GREAT every day.",
+  "venue": "G-06",
+  "level": "G",
+  "sourceId": null,
+  "category": {
+    "title": "Health/Beauty",
+    "refcode": "health_beauty",
+    "code": "health_beauty"
+  },
+  "website": "https://www.watsons.com.my/",
+  "mainImage": {
+    "local": "589ee3ddbd9a39e80d3bfb22811e63a6.jpg",
+    "orig": "g_06_watson_shopfront_photo.jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/589ee3ddbd9a39e80d3bfb22811e63a6/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "slug": "watsons",
+  "facebook": "",
+  "instagram": "",
+  "tiktok": "",
+  "xiaohongshu": "",
+  "keywords": "",
+  "contact": {
+    "email": "",
+    "phone": ""
+  },
+  "alternativeImages": [],
+  "logo": {
+    "local": "7cd611e31859d522ddcb55a142a2f8a3.jpg",
+    "orig": "km_tenant_logo_g_06[1].jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/7cd611e31859d522ddcb55a142a2f8a3/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "id": "5d9b1a83f8d19a2365c5544f87988aeb"
+}

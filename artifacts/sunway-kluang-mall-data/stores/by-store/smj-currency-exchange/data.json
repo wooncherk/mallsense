@@ -1,0 +1,77 @@
+{
+  "_id": "450ae68d9e410edd8f0f6c0b5de2acb2",
+  "tags": [],
+  "categoryTree": [
+    {
+      "title": "Services",
+      "refcode": "SERVICES",
+      "subs": []
+    }
+  ],
+  "deals": [],
+  "alternativeLocations": [],
+  "groups": [],
+  "title": "SMJ CURRENCY EXCHANGE",
+  "text": "",
+  "venue": "G-53",
+  "level": "G",
+  "sourceId": null,
+  "category": {
+    "title": "Services",
+    "refcode": "services",
+    "code": "services"
+  },
+  "website": "",
+  "slug": "smj-currency-exchange",
+  "facebook": "",
+  "instagram": "",
+  "tiktok": "",
+  "xiaohongshu": "",
+  "keywords": "",
+  "contact": {
+    "email": "",
+    "phone": ""
+  },
+  "alternativeImages": [],
+  "logo": {
+    "local": "ae7c45c2231bedabed67172c20ffe2d9.jpg",
+    "orig": "km_tenant_logo_g_53[1].jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/ae7c45c2231bedabed67172c20ffe2d9/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "mainImage": {
+    "local": "a36b3e91d3d34e9d7e8572b3654f4909.jpg",
+    "orig": "g_53_smj_shopfront_photo.jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/a36b3e91d3d34e9d7e8572b3654f4909/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "id": "450ae68d9e410edd8f0f6c0b5de2acb2"
+}

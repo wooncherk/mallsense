@@ -1,0 +1,77 @@
+{
+  "_id": "edab96a2ccfc00aa3b57da11754dc218",
+  "tags": [],
+  "categoryTree": [
+    {
+      "title": "Anchor Tenants",
+      "refcode": "ANCHOR_TENANTS",
+      "subs": []
+    }
+  ],
+  "deals": [],
+  "alternativeLocations": [],
+  "groups": [],
+  "title": "PACIFIC DEPARTMENTAL STORE",
+  "text": "Pacific Grocer & Department Store is running a 2 in 1 shopping concept, offering up to 100,000 selections of merchandise to shoppers. \n\n“Jimat Setiap Hari”, this motto serves as a focal point in Pacific’s concept, where quality goods are offered at reasonable prices and is one of the main attraction factors for shopping at Pacific Grocer. Departmental store is a highly-targeted retail business with merchandise and goods that appeal more to fashion-conscious shoppers.",
+  "venue": "1-88",
+  "level": "1",
+  "sourceId": null,
+  "category": {
+    "title": "Anchor Tenants",
+    "refcode": "anchor_tenants",
+    "code": "anchor_tenants"
+  },
+  "website": "https://pacificgrocer-dept.com.my/",
+  "slug": "pacific-departmental-store",
+  "facebook": "",
+  "instagram": "",
+  "tiktok": "",
+  "xiaohongshu": "",
+  "keywords": "",
+  "contact": {
+    "email": "",
+    "phone": ""
+  },
+  "alternativeImages": [],
+  "logo": {
+    "local": "d74d3c40fb8be5e3a752281eb9b25af6.jpg",
+    "orig": "km_tenant_logo_1_88[1].jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/d74d3c40fb8be5e3a752281eb9b25af6/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "mainImage": {
+    "local": "4d15d06cb053d0fe6a6e58adb0b5526a.jpg",
+    "orig": "1_88_pacific_hypermarket_shopfront_photo.jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/4d15d06cb053d0fe6a6e58adb0b5526a/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "id": "edab96a2ccfc00aa3b57da11754dc218"
+}

@@ -1,0 +1,89 @@
+{
+  "_id": "dbef9ce54bd8efc8583ae382dcf5d895",
+  "tags": [],
+  "categoryTree": [
+    {
+      "title": "Gifts/Toys/Books/Stationery",
+      "refcode": "GIFTS_TOYS_BOOKS_STATIONERY",
+      "subs": []
+    }
+  ],
+  "deals": [],
+  "alternativeLocations": [],
+  "groups": [],
+  "title": "QQ MOON",
+  "text": "QQ MOON is a fun-filled toy store offering a variety of toys and collectibles for kids and the young at heart. \n\nDiscover exciting finds that bring joy, creativity and plenty of playtime fun.",
+  "venue": "1-63",
+  "level_label": "1",
+  "sourceId": null,
+  "category": {
+    "title": "Gifts/Toys/Books/Stationery",
+    "refcode": "gifts_toys_books_stationery",
+    "code": "gifts_toys_books_stationery"
+  },
+  "website": "",
+  "slug": "qq-moon",
+  "facebook": "",
+  "instagram": "",
+  "tiktok": "",
+  "xiaohongshu": "",
+  "keywords": "",
+  "contact": {
+    "email": "",
+    "phone": ""
+  },
+  "level": {
+    "code": "1",
+    "label": "1",
+    "title": "1"
+  },
+  "alternativeImages": [
+    {
+      "_id": "6ab9f099c2067aea12b131ed",
+      "local": "97f8716d3b363b73a2df98532e82376b.jpg",
+      "orig": "1_63_QQmoon_shopfront_photo.jpg",
+      "refresh": null
+    }
+  ],
+  "logo": {
+    "local": "24bcac2ed9df43a0186e5737c5d78aa2.jpeg",
+    "orig": "skm_tenant_logo_1_63.jpg.jpeg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/24bcac2ed9df43a0186e5737c5d78aa2/",
+      "thumbs": [
+        "w1920crop.jpeg",
+        "w1440crop.jpeg",
+        "w960crop.jpeg",
+        "w768crop.jpeg",
+        "w512crop.jpeg",
+        "w380crop.jpeg",
+        "w320crop.jpeg",
+        "w180crop.jpeg"
+      ],
+      "ext": ".jpeg"
+    }
+  },
+  "mainImage": {
+    "local": "be52fce86445f33b468d656ca4a3df76.jpg",
+    "orig": "1_63_QQmoon_shopfront_photo.jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/be52fce86445f33b468d656ca4a3df76/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "id": "dbef9ce54bd8efc8583ae382dcf5d895"
+}

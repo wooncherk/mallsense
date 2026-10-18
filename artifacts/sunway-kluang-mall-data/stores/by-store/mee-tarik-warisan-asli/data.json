@@ -1,0 +1,77 @@
+{
+  "_id": "2ed0487eefab11514c47e02c04c80766",
+  "tags": [],
+  "categoryTree": [
+    {
+      "title": "Food & Beverages",
+      "refcode": "FOOD_BEVERAGES",
+      "subs": []
+    }
+  ],
+  "deals": [],
+  "alternativeLocations": [],
+  "groups": [],
+  "title": "MEE TARIK WARISAN ASLI",
+  "text": "",
+  "venue": "G-50",
+  "level": "G",
+  "sourceId": null,
+  "category": {
+    "title": "Food & Beverages",
+    "refcode": "food_beverages",
+    "code": "food_beverages"
+  },
+  "website": "",
+  "slug": "mee-tarik-warisan-asli",
+  "facebook": "",
+  "instagram": "",
+  "tiktok": "",
+  "xiaohongshu": "",
+  "keywords": "",
+  "contact": {
+    "email": "",
+    "phone": ""
+  },
+  "alternativeImages": [],
+  "logo": {
+    "local": "c42ecbd22cf54b0ce2adce7c99d2e2c5.jpg",
+    "orig": "skm_tenant_logo_g_50.jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/c42ecbd22cf54b0ce2adce7c99d2e2c5/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "mainImage": {
+    "local": "cd8ec075f9329d328e6ca238474ed1b8.jpg",
+    "orig": "g_50_meetarik_shopfront_photo.jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/cd8ec075f9329d328e6ca238474ed1b8/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "id": "2ed0487eefab11514c47e02c04c80766"
+}

@@ -1,0 +1,77 @@
+{
+  "_id": "afdb77b81f467d9d9d95f3a38db44252",
+  "tags": [],
+  "categoryTree": [
+    {
+      "title": "Food & Beverages",
+      "refcode": "FOOD_BEVERAGES",
+      "subs": []
+    }
+  ],
+  "deals": [],
+  "alternativeLocations": [],
+  "groups": [],
+  "title": "CHAGEE",
+  "text": "Step into CHAGEE and experience the art of modern tea culture. Inspired by traditional brewing methods and premium handcrafted ingredients, CHAGEE offers a refined selection of milk teas, fruit teas, and signature brews that celebrate authenticity in every sip.\n\nWhether you’re craving a refreshing pick-me-up or a comforting cup of tea, CHAGEE brings a harmonious blend of taste, quality, and craftsmanship—perfect for tea lovers of all kinds.",
+  "venue": "G-10",
+  "level": "G",
+  "sourceId": null,
+  "category": {
+    "title": "Food & Beverages",
+    "refcode": "food_beverages",
+    "code": "food_beverages"
+  },
+  "website": "https://chagee.com.my/",
+  "slug": "chagee",
+  "facebook": "",
+  "instagram": "",
+  "tiktok": "",
+  "xiaohongshu": "",
+  "keywords": "",
+  "contact": {
+    "email": "",
+    "phone": ""
+  },
+  "alternativeImages": [],
+  "logo": {
+    "local": "fc3dea6da32b0ad023b0fa353d9faa04.jpg",
+    "orig": "skm_tenant_logo_g_10.jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/fc3dea6da32b0ad023b0fa353d9faa04/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "mainImage": {
+    "local": "97bd99d3829f6f2cfecb7339edf7af59.jpg",
+    "orig": "g_10_chagee_shopfront_photo.jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/97bd99d3829f6f2cfecb7339edf7af59/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "id": "afdb77b81f467d9d9d95f3a38db44252"
+}

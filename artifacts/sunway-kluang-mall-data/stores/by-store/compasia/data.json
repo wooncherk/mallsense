@@ -1,0 +1,77 @@
+{
+  "_id": "f5b8db820ff793c9a1a852136bd03542",
+  "tags": [],
+  "categoryTree": [
+    {
+      "title": "Gadget/Electronic",
+      "refcode": "GADGET_ELECTRONIC",
+      "subs": []
+    }
+  ],
+  "deals": [],
+  "alternativeLocations": [],
+  "groups": [],
+  "title": "COMPASIA",
+  "text": "CompAsia is a leading Malaysian platform specialising in certified refurbished smartphones and gadgets. \n\nOffering a smarter and more sustainable way to own quality devices, CompAsia carefully tests, grades, and certifies each product to ensure reliable performance and value. \n\nWith trusted brands, warranty coverage, and affordable pricing, CompAsia makes upgrading your tech easier while supporting a greener, circular economy.",
+  "venue": "1-63A",
+  "level": "1",
+  "sourceId": null,
+  "category": {
+    "title": "Gadget/Electronic",
+    "refcode": "gadget_electronic",
+    "code": "gadget_electronic"
+  },
+  "website": "https://compasia.my/",
+  "slug": "compasia",
+  "facebook": "",
+  "instagram": "",
+  "tiktok": "",
+  "xiaohongshu": "",
+  "keywords": "",
+  "contact": {
+    "email": "",
+    "phone": ""
+  },
+  "alternativeImages": [],
+  "logo": {
+    "local": "15ccf93da893d1063a31a2c32ff52057.jpg",
+    "orig": "skm_tenant_logo_1_63a.jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/15ccf93da893d1063a31a2c32ff52057/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "mainImage": {
+    "local": "1ba51eda70299a5cd735f7835fe5eac7.jpg",
+    "orig": "1_63a_compasia_shopfront_photo.jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/1ba51eda70299a5cd735f7835fe5eac7/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "id": "f5b8db820ff793c9a1a852136bd03542"
+}

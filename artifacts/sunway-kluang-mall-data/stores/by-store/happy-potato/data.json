@@ -1,0 +1,77 @@
+{
+  "_id": "8516e814a0beb251bc715060e16a64f0",
+  "tags": [],
+  "categoryTree": [
+    {
+      "title": "Food & Beverages",
+      "refcode": "FOOD_BEVERAGES",
+      "subs": []
+    }
+  ],
+  "deals": [],
+  "alternativeLocations": [],
+  "groups": [],
+  "title": "HAPPY POTATO",
+  "text": "",
+  "venue": "G-52",
+  "level": "G",
+  "sourceId": null,
+  "category": {
+    "title": "Food & Beverages",
+    "refcode": "food_beverages",
+    "code": "food_beverages"
+  },
+  "website": "",
+  "slug": "happy-potato",
+  "facebook": "",
+  "instagram": "",
+  "tiktok": "",
+  "xiaohongshu": "",
+  "keywords": "",
+  "contact": {
+    "email": "",
+    "phone": ""
+  },
+  "alternativeImages": [],
+  "logo": {
+    "local": "1697ffc92ee4e7a7c8edea7261d7b414.jpg",
+    "orig": "skm_tenant_logo_g_52.jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/1697ffc92ee4e7a7c8edea7261d7b414/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "mainImage": {
+    "local": "c682a104f663d4aedb0d6e602f2a513e.jpg",
+    "orig": "g_52_happypotato_shopfront_photo.jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/c682a104f663d4aedb0d6e602f2a513e/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "id": "8516e814a0beb251bc715060e16a64f0"
+}

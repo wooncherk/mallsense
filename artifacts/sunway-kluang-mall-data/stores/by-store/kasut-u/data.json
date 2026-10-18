@@ -1,0 +1,77 @@
+{
+  "_id": "c52d159f9cb9d95c0fe23801e1b53f6d",
+  "tags": [],
+  "categoryTree": [
+    {
+      "title": "Shoes/Bags/Accessories",
+      "refcode": "SHOES_BAGS_ACCESSORIES",
+      "subs": []
+    }
+  ],
+  "deals": [],
+  "alternativeLocations": [],
+  "groups": [],
+  "title": "KASUT U",
+  "text": "",
+  "venue": "1-46",
+  "level": "1",
+  "sourceId": null,
+  "category": {
+    "title": "Shoes/Bags/Accessories",
+    "refcode": "shoes_bags_accessories",
+    "code": "shoes_bags_accessories"
+  },
+  "website": "",
+  "mainImage": {
+    "local": "4895a548f57238f5aeb829c1f0a06f41.jpg",
+    "orig": "1_46_kasut_u_shopfront_photo.jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/4895a548f57238f5aeb829c1f0a06f41/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "slug": "kasut-u",
+  "facebook": "",
+  "instagram": "",
+  "tiktok": "",
+  "xiaohongshu": "",
+  "keywords": "",
+  "contact": {
+    "email": "",
+    "phone": ""
+  },
+  "alternativeImages": [],
+  "logo": {
+    "local": "36cc6104f1c974702461ff915a0bb04a.jpg",
+    "orig": "shop_1_46[1].jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/36cc6104f1c974702461ff915a0bb04a/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "id": "c52d159f9cb9d95c0fe23801e1b53f6d"
+}

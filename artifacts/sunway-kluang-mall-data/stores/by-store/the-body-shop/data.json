@@ -1,0 +1,82 @@
+{
+  "_id": "838f175fff6fe486f933ee2de7ae9b60",
+  "tags": [],
+  "categoryTree": [
+    {
+      "title": "Health/Beauty",
+      "refcode": "HEALTH_BEAUTY",
+      "subs": []
+    }
+  ],
+  "deals": [],
+  "alternativeLocations": [],
+  "groups": [],
+  "title": "THE BODY SHOP",
+  "text": "",
+  "venue": "G-31",
+  "level": {
+    "code": "",
+    "label": "",
+    "title": ""
+  },
+  "sourceId": null,
+  "category": {
+    "title": "Health/Beauty",
+    "refcode": "health_beauty",
+    "code": "health_beauty"
+  },
+  "website": "",
+  "mainImage": {
+    "local": "21379b012b31a5f0a15a339ee7b1afc0.jpg",
+    "orig": "g_31_thebodyshop_shopfront_photo.jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/21379b012b31a5f0a15a339ee7b1afc0/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "slug": "the-body-shop",
+  "facebook": "",
+  "instagram": "",
+  "tiktok": "",
+  "xiaohongshu": "",
+  "keywords": "",
+  "contact": {
+    "email": "",
+    "phone": ""
+  },
+  "alternativeImages": [],
+  "logo": {
+    "local": "0ee673909669d9e5a0030a524084d155.jpg",
+    "orig": "km_tenant_logo_g_31[1].jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/0ee673909669d9e5a0030a524084d155/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "level_label": "",
+  "id": "838f175fff6fe486f933ee2de7ae9b60"
+}

@@ -1,0 +1,77 @@
+{
+  "_id": "1d4a786a6517a9bea2f14d4cf14e7d06",
+  "tags": [],
+  "categoryTree": [
+    {
+      "title": "Fashion Specialty",
+      "refcode": "FASHION_SPECIALTY",
+      "subs": []
+    }
+  ],
+  "deals": [],
+  "alternativeLocations": [],
+  "groups": [],
+  "title": "YFS CONCEPT STORE",
+  "text": "YFS Concept Store is a fashion retailer in Malaysia specializing in clothing for the entire family. They offer a wide range of apparel, from basic garments to trendy, stylish pieces for all ages. The store aims to provide a comfortable shopping experience with a focus on high-quality, competitively priced fashion. ",
+  "venue": "2-08",
+  "level": "2",
+  "sourceId": null,
+  "category": {
+    "title": "Fashion Specialty",
+    "refcode": "fashion_specialty",
+    "code": "fashion_specialty"
+  },
+  "website": "https://www.facebook.com/yfsconceptstoremy/",
+  "mainImage": {
+    "local": "3dcebaeec7e3960dff143362cb69f86e.jpg",
+    "orig": "2_08_yfs_concept_store_shopfront_photo.jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/3dcebaeec7e3960dff143362cb69f86e/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "slug": "yfs-concept-store",
+  "facebook": "",
+  "instagram": "",
+  "tiktok": "",
+  "xiaohongshu": "",
+  "keywords": "",
+  "contact": {
+    "email": "",
+    "phone": ""
+  },
+  "alternativeImages": [],
+  "logo": {
+    "local": "b0d0ae0d3463787014c29ecb808608b2.jpg",
+    "orig": "km_tenant_logo_2_08[1].jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/b0d0ae0d3463787014c29ecb808608b2/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "id": "1d4a786a6517a9bea2f14d4cf14e7d06"
+}

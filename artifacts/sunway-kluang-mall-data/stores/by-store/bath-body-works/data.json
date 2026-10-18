@@ -1,0 +1,77 @@
+{
+  "_id": "2f9606d925e8f1e81a02094505f61bb1",
+  "tags": [],
+  "categoryTree": [
+    {
+      "title": "Health/Beauty",
+      "refcode": "HEALTH_BEAUTY",
+      "subs": []
+    }
+  ],
+  "deals": [],
+  "alternativeLocations": [],
+  "groups": [],
+  "title": "BATH & BODY WORKS",
+  "text": "Bath & Body Works is a globally loved personal care brand known for its wide range of fragrant body care, home fragrances, and bath essentials. \n\nFrom signature fine fragrance mists, lotions, and shower gels to best-selling candles and home scents, each product is thoughtfully crafted with high-quality ingredients to deliver delightful, long-lasting scents. \n\nWith seasonal collections and irresistible favourites, Bath & Body Works brings everyday moments to life through fragrance and self-care.",
+  "venue": "G-29-30",
+  "level": "G",
+  "sourceId": null,
+  "category": {
+    "title": "Health/Beauty",
+    "refcode": "health_beauty",
+    "code": "health_beauty"
+  },
+  "website": "https://www.bathandbodyworks.com.my/",
+  "slug": "bath-body-works",
+  "facebook": "",
+  "instagram": "",
+  "tiktok": "",
+  "xiaohongshu": "",
+  "keywords": "",
+  "contact": {
+    "email": "",
+    "phone": ""
+  },
+  "alternativeImages": [],
+  "logo": {
+    "local": "9acc7fb4b6d821fcad2def764f79d6df.jpg",
+    "orig": "skm_tenant_logo_g_29.jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/9acc7fb4b6d821fcad2def764f79d6df/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "mainImage": {
+    "local": "6b1775178a6b3f654f67834733dec09b.jpg",
+    "orig": "g_29_bath&bodyworks_shopfront_photo.jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/6b1775178a6b3f654f67834733dec09b/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "id": "2f9606d925e8f1e81a02094505f61bb1"
+}

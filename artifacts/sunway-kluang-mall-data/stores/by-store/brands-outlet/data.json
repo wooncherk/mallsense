@@ -1,0 +1,82 @@
+{
+  "_id": "78fc7851f2b36df3601bc51e852ccbf6",
+  "tags": [],
+  "categoryTree": [
+    {
+      "title": "Anchor Tenants",
+      "refcode": "ANCHOR_TENANTS",
+      "subs": []
+    },
+    {
+      "title": "Fashion Specialty",
+      "refcode": "FASHION_SPECIALTY",
+      "subs": []
+    }
+  ],
+  "deals": [],
+  "alternativeLocations": [],
+  "groups": [],
+  "title": "BRANDS OUTLET",
+  "text": "Brands Outlet, this “all in-one” fashion store debuted in 2006, bringing together a variety of brands to provide a whole range of wardrobe essentials for men, women and children. Shoppers will be able to find everything they need for their wardrobe right here – from casual to career wear, inner wear to accessories.\n\nOne thing is for sure – dressing up is simply more fun at Brands Outlet!",
+  "venue": "G-01-03A",
+  "level": "G",
+  "sourceId": null,
+  "category": {
+    "title": "Anchor Tenants",
+    "refcode": "anchor_tenants",
+    "code": "anchor_tenants"
+  },
+  "website": "https://www.padini.com/",
+  "slug": "brands-outlet",
+  "facebook": "",
+  "instagram": "",
+  "tiktok": "",
+  "xiaohongshu": "",
+  "keywords": "",
+  "contact": {
+    "email": "",
+    "phone": ""
+  },
+  "alternativeImages": [],
+  "logo": {
+    "local": "b5764979a664624e279dd837985996a2.jpg",
+    "orig": "km_tenant_logo_g_01[1].jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/b5764979a664624e279dd837985996a2/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "mainImage": {
+    "local": "eac7f22ad96e47dfac958a534c8c2915.jpg",
+    "orig": "g_01_brandsoutlet_shopfront_photo.jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/eac7f22ad96e47dfac958a534c8c2915/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "id": "78fc7851f2b36df3601bc51e852ccbf6"
+}

@@ -1,0 +1,77 @@
+{
+  "_id": "e549c8982517afdeaedc32f6f9bfb55b",
+  "tags": [],
+  "categoryTree": [
+    {
+      "title": "Gadget/Electronic",
+      "refcode": "GADGET_ELECTRONIC",
+      "subs": []
+    }
+  ],
+  "deals": [],
+  "alternativeLocations": [],
+  "groups": [],
+  "title": "HONOR",
+  "text": "",
+  "venue": "1-18",
+  "level": "1",
+  "sourceId": null,
+  "category": {
+    "title": "Gadget/Electronic",
+    "refcode": "gadget_electronic",
+    "code": "gadget_electronic"
+  },
+  "website": "",
+  "slug": "honor",
+  "facebook": "",
+  "instagram": "",
+  "tiktok": "",
+  "xiaohongshu": "",
+  "keywords": "",
+  "contact": {
+    "email": "",
+    "phone": ""
+  },
+  "alternativeImages": [],
+  "logo": {
+    "local": "a44a8c11fca51ff2033fdb832f025a3b.jpg",
+    "orig": "skm_tenant_logo_1_18.jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/a44a8c11fca51ff2033fdb832f025a3b/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "mainImage": {
+    "local": "7e0fb2f32a4732cf9b12771563100091.jpg",
+    "orig": "1_18_honor_concept_store_shopfront_photo.jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/7e0fb2f32a4732cf9b12771563100091/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "id": "e549c8982517afdeaedc32f6f9bfb55b"
+}

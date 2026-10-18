@@ -1,0 +1,84 @@
+{
+  "_id": "f80c0c762c765345366d5e0c52c01ea9",
+  "tags": [],
+  "categoryTree": [
+    {
+      "title": "Food & Beverages",
+      "refcode": "FOOD_BEVERAGES",
+      "subs": []
+    }
+  ],
+  "deals": [],
+  "alternativeLocations": [],
+  "groups": [],
+  "title": "LLAO LLAO",
+  "text": "llaollao (pronounced \"yao yao\") is a leading Spanish frozen yogurt franchise in Malaysia, known for its natural, creamy, and healthy yogurt-based desserts. \n\nWith over 100 outlets nationwide as of 2024, it is highly popular for its customizable, fresh-fruit-topped desserts.",
+  "venue": "GK-07 & GK-07A",
+  "level": "G",
+  "sourceId": null,
+  "category": {
+    "title": "Food & Beverages",
+    "refcode": "food_beverages",
+    "code": "food_beverages"
+  },
+  "website": "",
+  "slug": "llao-llao",
+  "facebook": "https://www.facebook.com/llaollaoMalaysia/",
+  "instagram": "",
+  "tiktok": "",
+  "xiaohongshu": "",
+  "keywords": "",
+  "contact": {
+    "email": "",
+    "phone": ""
+  },
+  "alternativeImages": [
+    {
+      "_id": "6997c214f147580ea65ff72e",
+      "local": "7abc2235482ffdc5854111667ca442ec.jpg",
+      "orig": "gk_07_llaollao_shopfront_photo.jpg",
+      "refresh": null
+    }
+  ],
+  "logo": {
+    "local": "626bf7dc4eacd8643a620eaa12111814.jpg",
+    "orig": "km_tenant_logo_gk_07.jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/626bf7dc4eacd8643a620eaa12111814/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "mainImage": {
+    "local": "f3c7407c205b71f35263d7695da3a224.jpg",
+    "orig": "gk_07_llaollao_shopfront_photo.jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/f3c7407c205b71f35263d7695da3a224/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "id": "f80c0c762c765345366d5e0c52c01ea9"
+}

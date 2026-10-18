@@ -1,0 +1,77 @@
+{
+  "_id": "2eaa1e08f42aa58c957287d33fc2d266",
+  "tags": [],
+  "alternativeImages": [
+    {
+      "local": "558059b5657a50628c194fed266c19fd.jpg",
+      "orig": "Coco Blast 2026_Kluang Mall - 1000 x 1000 pxl.jpg",
+      "refresh": null,
+      "_meta": {
+        "url": "https://www.sunwaykluangmall.com/static/promotions/",
+        "thumbsUrl": "https://www.sunwaykluangmall.com/static/promotions/558059b5657a50628c194fed266c19fd/",
+        "thumbs": [
+          "w1920crop.jpg",
+          "w1440crop.jpg",
+          "w960crop.jpg",
+          "w768crop.jpg",
+          "w512crop.jpg",
+          "w380crop.jpg",
+          "w320crop.jpg",
+          "w180crop.jpg"
+        ],
+        "ext": ".jpg"
+      }
+    }
+  ],
+  "title": "[NEW] MB MILO® Coco Blast",
+  "venue": "",
+  "text": "",
+  "dateStart": "2026-08-23T16:00:00.000Z",
+  "dateEnd": "2026-11-11T16:00:00.000Z",
+  "slug": "new-mb-milo-coco-blast-2026-09-24-2079",
+  "keywords": "",
+  "displayStart": "2026-09-23T16:00:00.000Z",
+  "description": "Get ready to make your meal extra chocolatey with Coco Blast! 🍫🥤\n\nUpgrade your combo with a MILO® Coco Blast drink! Choose your favourite from Iced Dinosaur Pearl, MILO® Float or Extra Large Iced MILO® Dinosaur (22oz) and enjoy a deliciously chocolatey treat with your meal. 🤎✨\n\nAvailable for a limited time only. Come get your Coco Blast fix at Marrybrown! ❤️\n\n📍 Marrybrown at Lot G-07, Ground Floor\n\n#MarrybrownMY #SomethingDifferent #MBMadeInMalaysia #MemangBuatanMalaysia #CocoBlast",
+  "term": "",
+  "shopMeta": {
+    "_id": "410c7c6542714f83bab4904d74682204",
+    "categoryTree": [
+      {
+        "title": "Food & Beverages",
+        "refcode": "FOOD_BEVERAGES",
+        "subs": []
+      }
+    ],
+    "title": "MARRYBROWN",
+    "venue": "G-07",
+    "level": "G",
+    "sourceId": null,
+    "category": {
+      "title": "Food & Beverages",
+      "refcode": "food_beverages",
+      "code": "food_beverages"
+    },
+    "slug": "marrybrown"
+  },
+  "mainImage": {
+    "local": "09a5f01d73557b5347cb88603a172fdd.jpg",
+    "orig": "Coco Blast 2026_Kluang Mall - 1000 x 1000 pxl.jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/promotions/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/promotions/09a5f01d73557b5347cb88603a172fdd/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "id": "2eaa1e08f42aa58c957287d33fc2d266"
+}

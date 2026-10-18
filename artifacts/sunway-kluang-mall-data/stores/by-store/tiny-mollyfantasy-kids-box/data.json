@@ -1,0 +1,77 @@
+{
+  "_id": "28b47a4e1adf9fc04108a8b77773f59b",
+  "tags": [],
+  "categoryTree": [
+    {
+      "title": "Leisure/Entertainment",
+      "refcode": "LEISURE_ENTERTAINMENT",
+      "subs": []
+    }
+  ],
+  "deals": [],
+  "alternativeLocations": [],
+  "groups": [],
+  "title": "TINY MOLLYFANTASY & KIDS BOX",
+  "text": "Mollyfantasy is a world full of laughter, fun and excitement for families that provide a safe indoor entertainment centre originating from Japan.\n\nKid’s Box is an all-new store by Aeon Fantasy, which is derived from the kidzooona concept pioneered in Japan. Kid’s Box provides great playtime for children with exciting toys, game machines, and play equipment. It provides quality and memorable moments within the confines of a well-crafted space.",
+  "venue": "2-03A & 2-05",
+  "level": "2",
+  "sourceId": null,
+  "category": {
+    "title": "Leisure/Entertainment",
+    "refcode": "leisure_entertainment",
+    "code": "leisure_entertainment"
+  },
+  "website": "https://www.aeonfantasy.com.my/",
+  "slug": "tiny-mollyfantasy-kids-box",
+  "facebook": "",
+  "instagram": "",
+  "tiktok": "",
+  "xiaohongshu": "",
+  "keywords": "",
+  "contact": {
+    "email": "",
+    "phone": ""
+  },
+  "alternativeImages": [],
+  "logo": {
+    "local": "8e0d1df52776929ff4573a7bb5e81d0b.jpg",
+    "orig": "Tiny Molly logo.jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/8e0d1df52776929ff4573a7bb5e81d0b/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "mainImage": {
+    "local": "59173a4b8f92775aab991702f6c0cef9.jpg",
+    "orig": "2_03a_tiny_molly_fantasy_shopfront_photo.jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/59173a4b8f92775aab991702f6c0cef9/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "id": "28b47a4e1adf9fc04108a8b77773f59b"
+}

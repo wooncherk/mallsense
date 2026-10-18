@@ -1,0 +1,77 @@
+{
+  "_id": "a30518076d97784a44005c06399c77ea",
+  "tags": [],
+  "categoryTree": [
+    {
+      "title": "Shoes/Bags/Accessories",
+      "refcode": "SHOES_BAGS_ACCESSORIES",
+      "subs": []
+    }
+  ],
+  "deals": [],
+  "alternativeLocations": [],
+  "groups": [],
+  "title": "SLIPPER2U",
+  "text": "Retailing various footwear products with reasonable prices.",
+  "venue": "LG-18",
+  "level": "LG",
+  "sourceId": null,
+  "category": {
+    "title": "Shoes/Bags/Accessories",
+    "refcode": "shoes_bags_accessories",
+    "code": "shoes_bags_accessories"
+  },
+  "website": "",
+  "slug": "slipper2u",
+  "facebook": "",
+  "instagram": "",
+  "tiktok": "",
+  "xiaohongshu": "",
+  "keywords": "",
+  "contact": {
+    "email": "",
+    "phone": ""
+  },
+  "alternativeImages": [],
+  "logo": {
+    "local": "956d6f9258b13ad3427ae7aa13d3af9e.jpg",
+    "orig": "km_tenant_logo_lg_18[1].jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/956d6f9258b13ad3427ae7aa13d3af9e/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "mainImage": {
+    "local": "e3609e2a5cc9678c2201b2cdef939d44.jpg",
+    "orig": "lg18_slipper2u_shopfront_photo.jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/e3609e2a5cc9678c2201b2cdef939d44/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "id": "a30518076d97784a44005c06399c77ea"
+}

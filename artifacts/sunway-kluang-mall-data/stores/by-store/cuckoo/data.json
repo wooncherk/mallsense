@@ -1,0 +1,77 @@
+{
+  "_id": "2e568a5edf80dde62f4c5aa0fdcde67a",
+  "tags": [],
+  "categoryTree": [
+    {
+      "title": "Homewares & Furnishings",
+      "refcode": "HOMEWARES_FURNISHINGS",
+      "subs": []
+    }
+  ],
+  "deals": [],
+  "alternativeLocations": [],
+  "groups": [],
+  "title": "CUCKOO",
+  "text": "Cuckoo Malaysia describe themselves as a “Healthy Home Creator”, focusing on appliances and lifestyle products aimed at healthier living. \n\nTheir product range is fairly wide: water purifiers, air purifiers, air‐conditioners, mattresses, massage chairs, washer/dryer appliances, kitchen appliances and more.",
+  "venue": "GK-02",
+  "level": "GK",
+  "sourceId": null,
+  "category": {
+    "title": "Homewares & Furnishings",
+    "refcode": "homewares_furnishings",
+    "code": "homewares_furnishings"
+  },
+  "website": "https://www.cuckoo.com.my/",
+  "slug": "cuckoo",
+  "facebook": "",
+  "instagram": "",
+  "tiktok": "",
+  "xiaohongshu": "",
+  "keywords": "",
+  "contact": {
+    "email": "",
+    "phone": ""
+  },
+  "alternativeImages": [],
+  "logo": {
+    "local": "35fc8447f83a627e25342e6a0b459a81.jpg",
+    "orig": "km_tenant_logo_gk_02-1[1].jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/35fc8447f83a627e25342e6a0b459a81/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "mainImage": {
+    "local": "acee4dd676cad4b47cbbe7a7b475e064.jpg",
+    "orig": "gk_02_cuckoo_shopfront_photo.jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/acee4dd676cad4b47cbbe7a7b475e064/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "id": "2e568a5edf80dde62f4c5aa0fdcde67a"
+}

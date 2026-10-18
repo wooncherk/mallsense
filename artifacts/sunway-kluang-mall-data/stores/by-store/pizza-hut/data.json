@@ -1,0 +1,77 @@
+{
+  "_id": "eeff1d1d04424f153ac3546a19699b71",
+  "tags": [],
+  "categoryTree": [
+    {
+      "title": "Food & Beverages",
+      "refcode": "FOOD_BEVERAGES",
+      "subs": []
+    }
+  ],
+  "deals": [],
+  "alternativeLocations": [],
+  "groups": [],
+  "title": "PIZZA HUT",
+  "text": "Pizza Hut featuring a delicious mix of nutritious Italian-American cuisine that includes the world’s favourite pan pizza and other signature dishes. There are two different concepts: Pizza Hut Restaurant & Pizza Hut Delivery. \n\nPizza Hut Restaurant offers a cosy & friendly ambience coupled with great hospitality makes it the perfect place for one to relax, unwind & have a great time with family or friends. \n\nTo add, Pizza Hut Delivery provides guaranteed hot & fresh pizza within promised delivery time in a convenient setting for added comfort.",
+  "venue": "G-12",
+  "level": "G",
+  "sourceId": null,
+  "category": {
+    "title": "Food & Beverages",
+    "refcode": "food_beverages",
+    "code": "food_beverages"
+  },
+  "website": "https://www.pizzahut.com.my/",
+  "slug": "pizza-hut",
+  "facebook": "",
+  "instagram": "",
+  "tiktok": "",
+  "xiaohongshu": "",
+  "keywords": "",
+  "contact": {
+    "email": "",
+    "phone": ""
+  },
+  "alternativeImages": [],
+  "logo": {
+    "local": "0510be0fb17e50c62a5127e81bc49405.jpg",
+    "orig": "km_tenant_logo_g_12[1].jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/0510be0fb17e50c62a5127e81bc49405/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "mainImage": {
+    "local": "9d720ff3c23b97e11c86d8b93393f03f.jpg",
+    "orig": "g_12_pizzahut_shopfront_photo.jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/9d720ff3c23b97e11c86d8b93393f03f/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "id": "eeff1d1d04424f153ac3546a19699b71"
+}

@@ -1,0 +1,89 @@
+{
+  "_id": "1071112e1211a35442b3c04a8fd97514",
+  "category": {
+    "title": "Fashion Specialty",
+    "refcode": "fashion_specialty",
+    "code": "fashion_specialty"
+  },
+  "tags": [],
+  "categoryTree": [
+    {
+      "title": "Fashion Specialty",
+      "refcode": "FASHION_SPECIALTY",
+      "subs": []
+    }
+  ],
+  "deals": [],
+  "alternativeLocations": [],
+  "groups": [],
+  "title": "MERRIGE",
+  "text": "Discover comfort and confidence at MERRIGE.\n\nFrom everyday essentials to stylish innerwear and sleepwear, MERRIGE offers a range of pieces designed to provide the perfect fit and lasting comfort.",
+  "venue": "1-48",
+  "level_label": "1",
+  "sourceId": null,
+  "website": "",
+  "slug": "merrige",
+  "facebook": "https://www.facebook.com/merrigemalaysia",
+  "instagram": "",
+  "tiktok": "",
+  "xiaohongshu": "",
+  "keywords": "",
+  "contact": {
+    "email": "",
+    "phone": ""
+  },
+  "level": {
+    "code": "1",
+    "label": "1",
+    "title": "1"
+  },
+  "alternativeImages": [
+    {
+      "_id": "6a4623f31b19f4ab28a8c8bb",
+      "local": "ab3487446b96b20afafca3925b5aa06e.jpg",
+      "orig": "1_48_merrige_shopfront_photo.jpg",
+      "refresh": null
+    }
+  ],
+  "logo": {
+    "local": "d0b9f118809cc9cbd31b75e73a58e9c5.jpg",
+    "orig": "skm_tenant_logo_1_48.jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/d0b9f118809cc9cbd31b75e73a58e9c5/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "mainImage": {
+    "local": "69290d45a118b65e69dea727c447ab72.jpg",
+    "orig": "1_48_merrige_shopfront_photo.jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/69290d45a118b65e69dea727c447ab72/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "id": "1071112e1211a35442b3c04a8fd97514"
+}

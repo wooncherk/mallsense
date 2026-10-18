@@ -1,0 +1,76 @@
+{
+  "_id": "24e9dc9c2d7e3d4da2cbc24345104c22",
+  "tags": [],
+  "alternativeImages": [
+    {
+      "local": "e76ec5230d5d74d3c2110395f5ffcc45.jpg",
+      "orig": "AD_SUNWAY KLUANG 1080X1080.jpg",
+      "refresh": null,
+      "_meta": {
+        "url": "https://www.sunwaykluangmall.com/static/promotions/",
+        "thumbsUrl": "https://www.sunwaykluangmall.com/static/promotions/e76ec5230d5d74d3c2110395f5ffcc45/",
+        "thumbs": [
+          "w1920crop.jpg",
+          "w1440crop.jpg",
+          "w960crop.jpg",
+          "w768crop.jpg",
+          "w512crop.jpg",
+          "w380crop.jpg",
+          "w320crop.jpg",
+          "w180crop.jpg"
+        ],
+        "ext": ".jpg"
+      }
+    }
+  ],
+  "title": "[NEW] Skechers x Sanrio Collection Characters Foamies®",
+  "venue": "",
+  "dateStart": "2026-04-13T16:00:00.000Z",
+  "dateEnd": "2026-12-30T16:00:00.000Z",
+  "slug": "new-skechers-x-sanrio-collection-characters-foamies-2026-04-24-1820",
+  "keywords": "",
+  "displayStart": "2026-04-23T16:00:00.000Z",
+  "description": "Step into a World of Sweetness and Fun with Skechers × Sanrio Characters Foamies®\n\nMeet the Skechers x Sanrio Characters Collection, featuring four beloved icons: Hello Kitty, My Melody, Kuromi and Cinnamoroll, each bringing their signature charm to a playful lineup of Skechers lifestyle pieces.\n\nSkechers Foamies® Tai and Skechers Foamies® Cutie Pops – Splash are now available at selected Skechers stores.\n\nGrab your cute pair today while stocks last!\n\n📍 Skechers at Lot 1-42A, 1-43 & 1-43A, First Floor\n\n#SkechersMY #SkechersxSanrio #NewCollection #SunwayKluangMall",
+  "term": "",
+  "shopMeta": {
+    "_id": "6cd468eb408501d9f2c7357f62940b6b",
+    "categoryTree": [
+      {
+        "title": "Sport/Fitness",
+        "refcode": "SPORT_FITNESS",
+        "subs": []
+      }
+    ],
+    "title": "SKECHERS",
+    "venue": "1-42-43A",
+    "level": "1",
+    "sourceId": null,
+    "category": {
+      "title": "Sport/Fitness",
+      "refcode": "sport_fitness",
+      "code": "sport_fitness"
+    },
+    "slug": "skechers"
+  },
+  "mainImage": {
+    "local": "92ca5775e009d5c729dd8a4846ecfc9b.jpg",
+    "orig": "AD_SUNWAY KLUANG 1080X1080.jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/promotions/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/promotions/92ca5775e009d5c729dd8a4846ecfc9b/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "id": "24e9dc9c2d7e3d4da2cbc24345104c22"
+}

@@ -1,0 +1,77 @@
+{
+  "_id": "9ae2cc8489309d8396e45f21d1a0f805",
+  "tags": [],
+  "categoryTree": [
+    {
+      "title": "Fashion Specialty",
+      "refcode": "FASHION_SPECIALTY",
+      "subs": []
+    }
+  ],
+  "deals": [],
+  "alternativeLocations": [],
+  "groups": [],
+  "title": "GIORDANO",
+  "text": "Giordano is one of the best known and established apparel retailers in the Asia Pacific region. Giordano embodies today’s contemporary lifestyle choices — simplicity in design and quality in substance. \n\nThe essence of Giordano is to provide relevant, essential and timeless fashion for all; and to develop apparel for everyone regardless of ethnicity, nationality or culture, truly illustrating our brand value “World Without Strangers”.",
+  "venue": "G-26",
+  "level": "G",
+  "sourceId": null,
+  "category": {
+    "title": "Fashion Specialty",
+    "refcode": "fashion_specialty",
+    "code": "fashion_specialty"
+  },
+  "website": "https://www.giordano.com/my/",
+  "slug": "giordano",
+  "facebook": "",
+  "instagram": "",
+  "tiktok": "",
+  "xiaohongshu": "",
+  "keywords": "",
+  "contact": {
+    "email": "",
+    "phone": ""
+  },
+  "alternativeImages": [],
+  "logo": {
+    "local": "7496a93ea1132269f346ac39706292c5.jpg",
+    "orig": "km_tenant_logo_g_26[1].jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/7496a93ea1132269f346ac39706292c5/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "mainImage": {
+    "local": "e62b087baa19bf3e4b795e0581e2c177.jpg",
+    "orig": "g_26_giordano_shopfront_photo.jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/e62b087baa19bf3e4b795e0581e2c177/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "id": "9ae2cc8489309d8396e45f21d1a0f805"
+}

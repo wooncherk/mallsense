@@ -1,0 +1,89 @@
+{
+  "_id": "8390584e4c7e63b63485faa23404c683",
+  "tags": [],
+  "categoryTree": [
+    {
+      "title": "Food & Beverages",
+      "refcode": "FOOD_BEVERAGES",
+      "subs": []
+    }
+  ],
+  "deals": [],
+  "alternativeLocations": [],
+  "groups": [],
+  "title": "SUBWAY",
+  "text": "SUBWAY® first opened in Malaysia in 1999 at Ampang Point, Kuala Lumpur, and has since grown its presence across the country. Known for its freshly made sandwiches, wraps and salads, SUBWAY lets you customise your meal with a variety of fresh ingredients and flavours.",
+  "venue": "G-16",
+  "level_label": "",
+  "sourceId": null,
+  "category": {
+    "title": "Food & Beverages",
+    "refcode": "food_beverages",
+    "code": "food_beverages"
+  },
+  "website": "https://www.subway.com.my/",
+  "slug": "subway",
+  "facebook": "",
+  "instagram": "",
+  "tiktok": "",
+  "xiaohongshu": "",
+  "keywords": "",
+  "contact": {
+    "email": "",
+    "phone": ""
+  },
+  "level": {
+    "code": "",
+    "label": "",
+    "title": ""
+  },
+  "alternativeImages": [
+    {
+      "_id": "6ab9e6027d1f3d3b66893efb",
+      "local": "0674ab155053ed346bc991f1f0bcaf98.jpeg",
+      "orig": "g_16_subway_shopfront_photo.jpg.jpeg",
+      "refresh": null
+    }
+  ],
+  "logo": {
+    "local": "f21b37a90f93068906d8a20bdedb57a8.jpg",
+    "orig": "km_tenant_logo_g_13a.jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/f21b37a90f93068906d8a20bdedb57a8/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "mainImage": {
+    "local": "980caa4278f3a9b4a6292453a841900e.jpeg",
+    "orig": "g_16_subway_shopfront_photo.jpg.jpeg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/980caa4278f3a9b4a6292453a841900e/",
+      "thumbs": [
+        "w1920crop.jpeg",
+        "w1440crop.jpeg",
+        "w960crop.jpeg",
+        "w768crop.jpeg",
+        "w512crop.jpeg",
+        "w380crop.jpeg",
+        "w320crop.jpeg",
+        "w180crop.jpeg"
+      ],
+      "ext": ".jpeg"
+    }
+  },
+  "id": "8390584e4c7e63b63485faa23404c683"
+}

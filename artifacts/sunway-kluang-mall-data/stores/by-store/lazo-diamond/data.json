@@ -1,0 +1,77 @@
+{
+  "_id": "a0f9d83ca326c713edc36db465aee0a3",
+  "tags": [],
+  "categoryTree": [
+    {
+      "title": "Jewellery/Timepieces/Optical",
+      "refcode": "JEWELLERY_TIMEPIECES_OPTICAL",
+      "subs": []
+    }
+  ],
+  "deals": [],
+  "alternativeLocations": [],
+  "groups": [],
+  "title": "LAZO DIAMOND",
+  "text": "",
+  "venue": "G-53A",
+  "level": "G",
+  "sourceId": null,
+  "category": {
+    "title": "Jewellery/Timepieces/Optical",
+    "refcode": "jewellery_timepieces_optical",
+    "code": "jewellery_timepieces_optical"
+  },
+  "website": "",
+  "mainImage": {
+    "local": "a7e007c1a9e27740496f6d00cc3bf0d2.jpg",
+    "orig": "g_53a_lazo_diamond_shopfront_photo.jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/a7e007c1a9e27740496f6d00cc3bf0d2/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "slug": "lazo-diamond",
+  "facebook": "",
+  "instagram": "",
+  "tiktok": "",
+  "xiaohongshu": "",
+  "keywords": "",
+  "contact": {
+    "email": "",
+    "phone": ""
+  },
+  "alternativeImages": [],
+  "logo": {
+    "local": "c898b7318ec6f1c4a1c7f92921346be2.jpg",
+    "orig": "km_tenant_logo_g_53a[1].jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/c898b7318ec6f1c4a1c7f92921346be2/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "id": "a0f9d83ca326c713edc36db465aee0a3"
+}

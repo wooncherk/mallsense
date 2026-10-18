@@ -1,0 +1,77 @@
+{
+  "_id": "154686e3e6c92a464b373ce2dbf1f39a",
+  "tags": [],
+  "categoryTree": [
+    {
+      "title": "Fashion Specialty",
+      "refcode": "FASHION_SPECIALTY",
+      "subs": []
+    }
+  ],
+  "deals": [],
+  "alternativeLocations": [],
+  "groups": [],
+  "title": "SITI KHADIJAH",
+  "text": "",
+  "venue": "1-45",
+  "level": "1",
+  "sourceId": null,
+  "category": {
+    "title": "Fashion Specialty",
+    "refcode": "fashion_specialty",
+    "code": "fashion_specialty"
+  },
+  "website": "",
+  "mainImage": {
+    "local": "805ab82df3e7e45049f089fbfede6f5c.jpg",
+    "orig": "1_45_hla_shopfront_photo.jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/805ab82df3e7e45049f089fbfede6f5c/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "slug": "siti-khadijah",
+  "facebook": "",
+  "instagram": "",
+  "tiktok": "",
+  "xiaohongshu": "",
+  "keywords": "",
+  "contact": {
+    "email": "",
+    "phone": ""
+  },
+  "alternativeImages": [],
+  "logo": {
+    "local": "a5d63459ddad2357b363651df3f39b3e.jpg",
+    "orig": "km_tenant_logo_1_45[1].jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/a5d63459ddad2357b363651df3f39b3e/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "id": "154686e3e6c92a464b373ce2dbf1f39a"
+}

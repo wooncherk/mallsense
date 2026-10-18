@@ -1,0 +1,89 @@
+{
+  "_id": "11211e190d813a9cdd71420d51231374",
+  "tags": [],
+  "categoryTree": [
+    {
+      "title": "Services",
+      "refcode": "SERVICES",
+      "subs": []
+    }
+  ],
+  "deals": [],
+  "alternativeLocations": [],
+  "groups": [],
+  "title": "U MOBILE EXPERIENCE CENTRE",
+  "text": "U Mobile Experience Store offers a range of mobile services, devices and connectivity solutions to keep you connected. \n\nVisit the store for U Mobile plans, smartphones, accessories and more.",
+  "venue": "1-61 & 62",
+  "level_label": "1",
+  "sourceId": null,
+  "category": {
+    "title": "Services",
+    "refcode": "services",
+    "code": "services"
+  },
+  "website": "",
+  "slug": "u-mobile-experience-centre",
+  "facebook": "",
+  "instagram": "",
+  "tiktok": "",
+  "xiaohongshu": "",
+  "keywords": "",
+  "contact": {
+    "email": "",
+    "phone": ""
+  },
+  "level": {
+    "code": "1",
+    "label": "1",
+    "title": "1"
+  },
+  "alternativeImages": [
+    {
+      "_id": "6ab9edb0c2067ab44eb131ea",
+      "local": "89767bc18457bec06e9af5bffdffb6e3.jpg",
+      "orig": "1_61_umobile_shopfront_photo.jpg",
+      "refresh": null
+    }
+  ],
+  "logo": {
+    "local": "c5f426d14ffe349d14a2cb25d718896f.jpeg",
+    "orig": "skm_tenant_logo_1_61.jpg.jpeg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/c5f426d14ffe349d14a2cb25d718896f/",
+      "thumbs": [
+        "w1920crop.jpeg",
+        "w1440crop.jpeg",
+        "w960crop.jpeg",
+        "w768crop.jpeg",
+        "w512crop.jpeg",
+        "w380crop.jpeg",
+        "w320crop.jpeg",
+        "w180crop.jpeg"
+      ],
+      "ext": ".jpeg"
+    }
+  },
+  "mainImage": {
+    "local": "2f82c17359e5189ea40427961ad86efd.jpg",
+    "orig": "1_61_umobile_shopfront_photo.jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/2f82c17359e5189ea40427961ad86efd/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "id": "11211e190d813a9cdd71420d51231374"
+}

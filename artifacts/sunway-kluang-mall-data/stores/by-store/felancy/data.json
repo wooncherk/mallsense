@@ -1,0 +1,77 @@
+{
+  "_id": "ad48c0c300ff4e19e46de51e51b3fc9d",
+  "tags": [],
+  "categoryTree": [
+    {
+      "title": "Fashion Specialty",
+      "refcode": "FASHION_SPECIALTY",
+      "subs": []
+    }
+  ],
+  "deals": [],
+  "alternativeLocations": [],
+  "groups": [],
+  "title": "FELANCY",
+  "text": "Felancy is a brand that produces lingerie for women, Felancy itself has been established since 1987 and their commitment is to make products in comfortable clothing worn by women in Malaysia. \n\nA sense of comfort thanks to the use of the right lingerie will be able to maintain the confidence of women who occupied the move whenever and wherever they are.",
+  "venue": "1K-12",
+  "level": "1K",
+  "sourceId": null,
+  "category": {
+    "title": "Fashion Specialty",
+    "refcode": "fashion_specialty",
+    "code": "fashion_specialty"
+  },
+  "website": "https://www.felancy.com.my/",
+  "mainImage": {
+    "local": "93e1b99a5aec6f3a9809bdf67c6d89bc.jpg",
+    "orig": "1k_12_felancy_shopfront_photo.jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/93e1b99a5aec6f3a9809bdf67c6d89bc/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "slug": "felancy",
+  "facebook": "",
+  "instagram": "",
+  "tiktok": "",
+  "xiaohongshu": "",
+  "keywords": "",
+  "contact": {
+    "email": "",
+    "phone": ""
+  },
+  "alternativeImages": [],
+  "logo": {
+    "local": "8e7e2bf7880d28609188c357344a398b.jpg",
+    "orig": "WhatsApp-Image-2023-10-09-at-10.51.57_c4367d99[1].jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/8e7e2bf7880d28609188c357344a398b/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "id": "ad48c0c300ff4e19e46de51e51b3fc9d"
+}

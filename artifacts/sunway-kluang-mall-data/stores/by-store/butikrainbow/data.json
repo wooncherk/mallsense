@@ -1,0 +1,77 @@
+{
+  "_id": "6cbf565b7d0882afa797e30542aff447",
+  "tags": [],
+  "categoryTree": [
+    {
+      "title": "Fashion Specialty",
+      "refcode": "FASHION_SPECIALTY",
+      "subs": []
+    }
+  ],
+  "deals": [],
+  "alternativeLocations": [],
+  "groups": [],
+  "title": "BUTIK RAINBOW",
+  "text": "",
+  "venue": "LG-21",
+  "level": "LG",
+  "sourceId": null,
+  "category": {
+    "title": "Fashion Specialty",
+    "refcode": "fashion_specialty",
+    "code": "fashion_specialty"
+  },
+  "website": "",
+  "mainImage": {
+    "local": "542c9fd9bf20db46dd95012aa2642f20.jpg",
+    "orig": "lg21_butik_rainbow_morning_shopfront_photo.jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/542c9fd9bf20db46dd95012aa2642f20/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "slug": "butikrainbow",
+  "facebook": "",
+  "instagram": "",
+  "tiktok": "",
+  "xiaohongshu": "",
+  "keywords": "",
+  "contact": {
+    "email": "",
+    "phone": ""
+  },
+  "alternativeImages": [],
+  "logo": {
+    "local": "f5a012a8bcff2828b652c6f388b92407.png",
+    "orig": "white sq logo.png",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/f5a012a8bcff2828b652c6f388b92407/",
+      "thumbs": [
+        "w1920crop.png",
+        "w1440crop.png",
+        "w960crop.png",
+        "w768crop.png",
+        "w512crop.png",
+        "w380crop.png",
+        "w320crop.png",
+        "w180crop.png"
+      ],
+      "ext": ".png"
+    }
+  },
+  "id": "6cbf565b7d0882afa797e30542aff447"
+}

@@ -1,0 +1,77 @@
+{
+  "_id": "b1809dd541ff761c62c69af2abdae8d8",
+  "tags": [],
+  "categoryTree": [
+    {
+      "title": "Food & Beverages",
+      "refcode": "FOOD_BEVERAGES",
+      "subs": []
+    }
+  ],
+  "deals": [],
+  "alternativeLocations": [],
+  "groups": [],
+  "title": "DAILY FRESH",
+  "text": "Daily Fresh Foods Group, with more than 800 franchise outlets and 1,000 licensing selling points around the world, is one of the leading global snack food retailers. Based in Simpang Renggam, Johor (Malaysia), Daily Fresh Foods Group has expanded business into 15 countries with four branch offices located at Dubai (United Arab Emirates), Shanghai (China), Jakarta (Indonesia) and Riyath (Saudi Arabia), selling a vast variety of ready-to-snacks and desserts such as Cup Corn, Wafito, Ice Kimo, Gelato Tempo and Pop Corn through the world. \n\nDaily Fresh Foods Sdn Bhd was established in 1997 a Malaysia’s market leader in sweet corn farming, processing and franchising. More than 70% of Daily Fresh Foods kiosks worldwide are owned and operated by local independent small and medium entrepreneurs.",
+  "venue": "1K-06",
+  "level": "1K",
+  "sourceId": null,
+  "category": {
+    "title": "Food & Beverages",
+    "refcode": "food_beverages",
+    "code": "food_beverages"
+  },
+  "website": "https://www.dailyfreshfoods.com/",
+  "mainImage": {
+    "local": "3fa7c1c50910595b3f4222fab0c5dcd6.jpg",
+    "orig": "1k_06_daily_fresh_shopfront_photo.jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/3fa7c1c50910595b3f4222fab0c5dcd6/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "slug": "daily-fresh",
+  "facebook": "",
+  "instagram": "",
+  "tiktok": "",
+  "xiaohongshu": "",
+  "keywords": "",
+  "contact": {
+    "email": "",
+    "phone": ""
+  },
+  "alternativeImages": [],
+  "logo": {
+    "local": "7fa1d65477f7216f4c78c717b9c2f0b9.jpg",
+    "orig": "km_tenant_logo_1k_06-1[1].jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/7fa1d65477f7216f4c78c717b9c2f0b9/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "id": "b1809dd541ff761c62c69af2abdae8d8"
+}

@@ -1,0 +1,77 @@
+{
+  "_id": "8f81115899064a1bd296b80ab8ff6ae6",
+  "tags": [],
+  "categoryTree": [
+    {
+      "title": "Jewellery/Timepieces/Optical",
+      "refcode": "JEWELLERY_TIMEPIECES_OPTICAL",
+      "subs": []
+    }
+  ],
+  "deals": [],
+  "alternativeLocations": [],
+  "groups": [],
+  "title": "DR. SPECS",
+  "text": "DR.SPECS provides stylish, comfortable, and affordable eyewear for all ages. \n\nFrom prescription glasses to trendy sunglasses, we focus on clarity, quality, and everyday wearability.",
+  "venue": "G-42",
+  "level": "G",
+  "sourceId": null,
+  "category": {
+    "title": "Jewellery/Timepieces/Optical",
+    "refcode": "jewellery_timepieces_optical",
+    "code": "jewellery_timepieces_optical"
+  },
+  "website": "https://drspecs.com.my/",
+  "mainImage": {
+    "local": "976f6d7b1e1a8700d08ecdedc72b289f.jpg",
+    "orig": "g_42_dr_specs_shopfront_photo.jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/976f6d7b1e1a8700d08ecdedc72b289f/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "slug": "drspecs",
+  "facebook": "",
+  "instagram": "",
+  "tiktok": "",
+  "xiaohongshu": "",
+  "keywords": "",
+  "contact": {
+    "email": "",
+    "phone": ""
+  },
+  "alternativeImages": [],
+  "logo": {
+    "local": "c0060412da7d23d8d1fec3fd252c856d.jpg",
+    "orig": "km_tenant_logo_g_42[1].jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/c0060412da7d23d8d1fec3fd252c856d/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "id": "8f81115899064a1bd296b80ab8ff6ae6"
+}

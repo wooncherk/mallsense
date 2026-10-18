@@ -1,0 +1,1697 @@
+{
+  "source": "https://www.sunwaykluangmall.com/",
+  "captured_at_utc": "2026-10-18T09:36:57+00:00",
+  "scope": "Public store directory, event listings, and deal/promotion listings",
+  "counts": {
+    "stores_api_total": 124,
+    "stores_captured": 124,
+    "events_captured": 4,
+    "deals_api_total": 9,
+    "deals_captured": 9,
+    "files_downloaded": 280,
+    "download_failures": 0
+  },
+  "downloads": [
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/a99619205e71187131806d5287b61ad1/w768.jpg",
+      "path": "stores/by-store/60-minutes/images/main.jpg",
+      "bytes": 159651,
+      "sha256": "04cfc50dac897c287d0ee32d938fea0634d14d448c651bc9de566a0138956f85"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/cbb23d944d8097c38f1c0c47a31f4b16/w768-crop.jpg",
+      "path": "stores/by-store/60-minutes/images/logo.jpg",
+      "bytes": 28827,
+      "sha256": "7b82cacdec7794ae184fb76d4905156d93fdcb64c69d5635ed54c2cfc8f4ffa2"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/ea2dc80aa8b3139ba9579a3573f0b744/w768.jpg",
+      "path": "stores/by-store/6ixty-8ight/images/main.jpg",
+      "bytes": 123385,
+      "sha256": "afaafc91c87d826da3a868ba861a5bbb41ab62c65afdcff9e009abf3d2da1b85"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/b514efb09ad006264195c66e15a11b91/w768-crop.jpg",
+      "path": "stores/by-store/6ixty-8ight/images/logo.jpg",
+      "bytes": 31589,
+      "sha256": "4f6906401496326d3bd2200e20403483dcfe3097ab8257bcd9bdff01746726bc"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/92b2c1f7b48593112ccb50bf16b24326/w768.jpg",
+      "path": "stores/by-store/7-eleven/images/main.jpg",
+      "bytes": 174805,
+      "sha256": "061ca1634f612db0ad24d633d11ed8b82a1cefc5a9c08e4b6074bbf676e6f618"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/a1d7e67d9333240f405c629410b1fab7/w768-crop.jpg",
+      "path": "stores/by-store/7-eleven/images/logo.jpg",
+      "bytes": 32748,
+      "sha256": "d7d5067195a71858ee7906a29a64483d60293c2f0e59f807a1ea2e0d921201fc"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/92b0a16556d37e936b7a22a2a1d7ded6/w768.jpg",
+      "path": "stores/by-store/ampang-superbowl/images/main.jpg",
+      "bytes": 129147,
+      "sha256": "7807572df2a6cd2edbb4f54de8d9bbbd409eff0e61fb5f5702a5b8e0fb9aced4"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/dc64ee107cbe322049ecc803e041d314/w768-crop.jpg",
+      "path": "stores/by-store/ampang-superbowl/images/logo.jpg",
+      "bytes": 48032,
+      "sha256": "ba198562ad4bc82393943311ee32cb560e7e0475647b26b073326ebbef33c248"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/cebe0a702eddf4956c8d17a3bcfbc28a/w768.jpg",
+      "path": "stores/by-store/anta/images/main.jpg",
+      "bytes": 95212,
+      "sha256": "c15693df32ccf6043e5f8c6bb89eb50de740034f27d7e217bb0a7633ac607cf7"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/d34d408675203dcf4731d878ed2dbb26/w768-crop.png",
+      "path": "stores/by-store/anta/images/logo.png",
+      "bytes": 77664,
+      "sha256": "d11940707b813b0ef64995951d029350b45678ead99433b36e74a16e5b42621e"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/f7484f8393b5320ac3b85e29ac5efaf5/w768.jpg",
+      "path": "stores/by-store/auntie-annes-pretzel/images/main.jpg",
+      "bytes": 169348,
+      "sha256": "80a4c28fdaee4c11d8b4625d36c0116f9ece67a00306dac9018c90d583d3ca8e"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/b84d61d9fb6d2b1b8bea6b55340d28b8/w768-crop.jpg",
+      "path": "stores/by-store/auntie-annes-pretzel/images/logo.jpg",
+      "bytes": 48191,
+      "sha256": "5a1c295f1e252ff5464adb7c2b5efb60699f636973544d84b4f406d73f7743e7"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/e86c7fd18020bfa28ece67d87a560de5/w768.jpg",
+      "path": "stores/by-store/baskin-robbins/images/main.jpg",
+      "bytes": 99253,
+      "sha256": "d72f7543c8f57a5f3031dd3cdec1398f9584db1fdeb8ff5dabfb38adea1fa972"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/6b1b877cfb68665da1ed349b08b4a746/w768-crop.jpg",
+      "path": "stores/by-store/baskin-robbins/images/logo.jpg",
+      "bytes": 38153,
+      "sha256": "baa8c217e4f140bb2b8bdd6c9580beb940ccdbcac436a78aa94fc0dd5f009da8"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/3dd844b03e9acc35cb257c1b2cc5203b/w768.jpg",
+      "path": "stores/by-store/bata/images/main.jpg",
+      "bytes": 150475,
+      "sha256": "c437bebd5a9262d42291de26b485186317a1ce939598be61bffd2f17073622c7"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/53f934903160c0a3babdd6e6b57086cc/w768-crop.jpg",
+      "path": "stores/by-store/bata/images/logo.jpg",
+      "bytes": 28696,
+      "sha256": "7712a12103c95b80a91701a91ff9b5c4086566e42945fabbda567f9242411347"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/6b1775178a6b3f654f67834733dec09b/w768.jpg",
+      "path": "stores/by-store/bath-body-works/images/main.jpg",
+      "bytes": 87665,
+      "sha256": "d27914967515760b51a826908f3dbcd340d95d0020c44c1fd52f78505e9e9fe6"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/9acc7fb4b6d821fcad2def764f79d6df/w768-crop.jpg",
+      "path": "stores/by-store/bath-body-works/images/logo.jpg",
+      "bytes": 97860,
+      "sha256": "9708697be198f98a26d81ec07b48085cd105812f4804aa1eb2ab759760816477"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/ee6f70daf20180ca593d61881fc97fcb/w768.jpg",
+      "path": "stores/by-store/beautea/images/main.jpg",
+      "bytes": 133748,
+      "sha256": "bb9b5d27ba3524ff627cc919a5a9fe270439e2cb51d203676e8022e5649a60f6"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/65f70c4c1fd6af2099f9fcd22ad59e55/w768-crop.jpg",
+      "path": "stores/by-store/beautea/images/logo.jpg",
+      "bytes": 33318,
+      "sha256": "03e90485998e5d25956450dd7b09584b038934435d0bc0818e479365a5c3a5e9"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/236b068a257155cd75b9fe7ca2baa9ed/w768.jpg",
+      "path": "stores/by-store/big-apple-donuts-coffee/images/main.jpg",
+      "bytes": 142420,
+      "sha256": "70466f9e7f1ad0cb469119da9961c723f5d633e1bae702eb9e03a4cbc1e6855c"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/5bcc65f2f636d94e115b95f37e70baff/w768-crop.jpg",
+      "path": "stores/by-store/big-apple-donuts-coffee/images/logo.jpg",
+      "bytes": 71473,
+      "sha256": "a72fa5c5154208a1f36f50c16b238f91c73644284150b71cf273ef31e55ba888"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/f928e0c39c4d435837fb2f626877481d/w768.jpg",
+      "path": "stores/by-store/boost-juice-bars/images/main.jpg",
+      "bytes": 166925,
+      "sha256": "77037337a74a624894dff979b113981e895930ea2ede73327cb673582ce5b699"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/ab6f3978ed752778b31a50f6e5921cca/w768-crop.jpg",
+      "path": "stores/by-store/boost-juice-bars/images/logo.jpg",
+      "bytes": 34687,
+      "sha256": "a2c7204b1e75f6bb02a6407227287ca2b1a43f33db2db1ae839fdefdc3aff786"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/eac7f22ad96e47dfac958a534c8c2915/w768.jpg",
+      "path": "stores/by-store/brands-outlet/images/main.jpg",
+      "bytes": 190767,
+      "sha256": "202ef2db596e3b9a3c1998f71293683c86fe68abfdd5e64c0a01c76718c7fda9"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/b5764979a664624e279dd837985996a2/w768-crop.jpg",
+      "path": "stores/by-store/brands-outlet/images/logo.jpg",
+      "bytes": 39563,
+      "sha256": "6fddf3a0f23a676a89d295bdc0f0a3263b350a6cb1ed36d6d1541b309dacf43a"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/8c47924357d457e1b4f51fc53206e95b/w768.jpg",
+      "path": "stores/by-store/butik-nur-farisya/images/main.jpg",
+      "bytes": 104973,
+      "sha256": "7d01d43d62310f48ff83891f5262fb65214213277ed6bebed163e30cb88432a6"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/1e2f3c4634d74354994c929c29066609/w768-crop.jpg",
+      "path": "stores/by-store/butik-nur-farisya/images/logo.jpg",
+      "bytes": 65637,
+      "sha256": "9304a7be1b4ffcd6f6b0a15af1269f277851f0d205c2ad43beb18405d0542a23"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/fbeedeb4f885189258c1c281c391194a/w768.jpg",
+      "path": "stores/by-store/butik-nur-farisya-2/images/main.jpg",
+      "bytes": 141083,
+      "sha256": "579a446b74f8a5dbc1673fb6ca564a1fa0d791043f6eddcb086362c52a77c9bb"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/2275c5311ed3bdf5966ace5cd7386a66/w768-crop.jpg",
+      "path": "stores/by-store/butik-nur-farisya-2/images/logo.jpg",
+      "bytes": 65637,
+      "sha256": "9304a7be1b4ffcd6f6b0a15af1269f277851f0d205c2ad43beb18405d0542a23"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/542c9fd9bf20db46dd95012aa2642f20/w768.jpg",
+      "path": "stores/by-store/butikrainbow/images/main.jpg",
+      "bytes": 157803,
+      "sha256": "7e7da66fa7713f942c6a76f5194788e5e00add69ac0be6006687e05ca95d230f"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/f5a012a8bcff2828b652c6f388b92407/w768-crop.png",
+      "path": "stores/by-store/butikrainbow/images/logo.png",
+      "bytes": 1423,
+      "sha256": "8ea76f6ee69f95eb702c5300c733cc4a02de057a71794fb7a269f5ce7a1689f0"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/dcc4a2188fd6115c8eb24e6b61a6ecb6/w768.jpg",
+      "path": "stores/by-store/candy-castle/images/main.jpg",
+      "bytes": 140154,
+      "sha256": "9e0af2ed2666c5cbc9d551865eeb69fa5474a7b11f0947f4c6cd63999ccc7362"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/9eeae99898a103ce4e9c23f0ed3bf6a5/w768-crop.png",
+      "path": "stores/by-store/candy-castle/images/logo.png",
+      "bytes": 1423,
+      "sha256": "8ea76f6ee69f95eb702c5300c733cc4a02de057a71794fb7a269f5ce7a1689f0"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/4d180a93d8ab27cf14e679a5bf017d07/w768.jpg",
+      "path": "stores/by-store/cartino-sonea/images/main.jpg",
+      "bytes": 121766,
+      "sha256": "fd56e41e45b67a73e1a9a2e539a262615d4331f406422ee0d8562b7fb0199781"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/01f84967553f0832493480b2bce19ed2/w768-crop.jpg",
+      "path": "stores/by-store/cartino-sonea/images/logo.jpg",
+      "bytes": 25918,
+      "sha256": "9fee809c8ad7480596439b8bd0f6521aafd94f9e9e987d97dfdc3468ed9060ec"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/97bd99d3829f6f2cfecb7339edf7af59/w768.jpg",
+      "path": "stores/by-store/chagee/images/main.jpg",
+      "bytes": 94429,
+      "sha256": "6306d4566e6bdf82c292bf52de61034d0b61bb68eaa48fbf4d62da769e01deec"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/fc3dea6da32b0ad023b0fa353d9faa04/w768-crop.jpg",
+      "path": "stores/by-store/chagee/images/logo.jpg",
+      "bytes": 41536,
+      "sha256": "baaad850138f076081e1ecd2eac0f007a72be02c29b544a3c30173f28d1fd9f0"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/417ff0067726546a25c66d4511517ea7/w768.png",
+      "path": "stores/by-store/classic-optical/images/main.png",
+      "bytes": 771999,
+      "sha256": "36f089bea12328c558766034a739f1cf69879843f74d0d9db6ac4af0992369fe"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/fcb0ce583adc23e549b03d2ab167aa3e/w768-crop.jpg",
+      "path": "stores/by-store/classic-optical/images/logo.jpg",
+      "bytes": 35916,
+      "sha256": "cbb0c10c343a4b26c8c3b6a56115df57efe75a7f5aa67f8cb0fdf6831fbdd16e"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/1ba51eda70299a5cd735f7835fe5eac7/w768.jpg",
+      "path": "stores/by-store/compasia/images/main.jpg",
+      "bytes": 69618,
+      "sha256": "7f9ae5f119b16464380e7ce3b84e22d9a015aedac3fba950f367061025cc644e"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/15ccf93da893d1063a31a2c32ff52057/w768-crop.jpg",
+      "path": "stores/by-store/compasia/images/logo.jpg",
+      "bytes": 33934,
+      "sha256": "6211b1224d586cece9fe0d6dd26c3f9d1dc4998c1a8f313eaf01754183495d78"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/3b630422f074d93fb5d61dcd1ca55877/w768.jpg",
+      "path": "stores/by-store/coolblog/images/main.jpg",
+      "bytes": 143498,
+      "sha256": "3896aafafedeb0cf087e6cd4b2433722910707d97f6b01e36679625c24fa91d0"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/3db7f360514116349bdccba321dee2e0/w768-crop.jpg",
+      "path": "stores/by-store/coolblog/images/logo.jpg",
+      "bytes": 47613,
+      "sha256": "953788a5e79e669a7803a76a1dc4ad7e49671fbc9506fbdd3ac372068c5f80ab"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/5fbcfcb9fcfb6d047b0372be6a534ec6/w768.jpg",
+      "path": "stores/by-store/cosway/images/main.jpg",
+      "bytes": 144988,
+      "sha256": "c9664f74544dad33eb67aa8fd6b21c4d16473db28663aaca6a727a3fbbed454e"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/dbaa6b208c76bca7fe98e8f2b55483cd/w768-crop.jpg",
+      "path": "stores/by-store/cosway/images/logo.jpg",
+      "bytes": 28250,
+      "sha256": "041278370b818bdfcb89c1f5d9c2e3b624c6836039ce92d23bbe3b195973ef4b"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/9c0b51e54f053c340644a1053b00fe66/w768.jpg",
+      "path": "stores/by-store/crepe-2-u/images/main.jpg",
+      "bytes": 144840,
+      "sha256": "a076c941350a95fe3307c358464c51497a0acd21d79671781d18dae15c9fbf9e"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/f70ba3a21ebc1bfb56f24d0662755ae0/w768-crop.jpg",
+      "path": "stores/by-store/crepe-2-u/images/logo.jpg",
+      "bytes": 78639,
+      "sha256": "a436f2fb2c36db80ad9b9d790bd474416dbb1aa729973c25567e894a6c0e0879"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/5bd48cb580592bae41dfd17ce1df9ddb/w768.jpg",
+      "path": "stores/by-store/crystal-925/images/main.jpg",
+      "bytes": 121538,
+      "sha256": "e1d71b5850d19ec0ad16bb7f9c1591ea1b2cf4816ba9bfb3649d8cbd06ee2cc4"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/fad884282e5a38a6492e49ad8248b7df/w768-crop.jpg",
+      "path": "stores/by-store/crystal-925/images/logo.jpg",
+      "bytes": 29371,
+      "sha256": "ece76725177d643339216423fb4ea4c034bd4223937799f5f4d19b848ba38e81"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/acee4dd676cad4b47cbbe7a7b475e064/w768.jpg",
+      "path": "stores/by-store/cuckoo/images/main.jpg",
+      "bytes": 128152,
+      "sha256": "49ee21977f669cc7d2a04a7bb824423f2278b7b794847b243a0f400827c2e15f"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/35fc8447f83a627e25342e6a0b459a81/w768-crop.jpg",
+      "path": "stores/by-store/cuckoo/images/logo.jpg",
+      "bytes": 29543,
+      "sha256": "829baa4590fccb17f53677f65f1b2a75af04cbfc6f072ac31cd95a26d34219db"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/3fa7c1c50910595b3f4222fab0c5dcd6/w768.jpg",
+      "path": "stores/by-store/daily-fresh/images/main.jpg",
+      "bytes": 142498,
+      "sha256": "c8d6e9bf06d90b2185db6df6774ed59dca193c84b7b072a710e2ac367a28bb09"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/7fa1d65477f7216f4c78c717b9c2f0b9/w768-crop.jpg",
+      "path": "stores/by-store/daily-fresh/images/logo.jpg",
+      "bytes": 34511,
+      "sha256": "1bb091b3496da85cb86bb6679a8395d06a58ed40116ae40e45d08cb19c59d348"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/d01ec51e45c2892e015436da99795fc2/w768.jpg",
+      "path": "stores/by-store/dees-fashion/images/main.jpg",
+      "bytes": 129445,
+      "sha256": "f3112e60585dd20bf8dab53ae8b5a3f80effaa2adc4a5d239a9799511991b582"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/7496b1c650bcc1703aeb04c684b4d305/w768-crop.jpg",
+      "path": "stores/by-store/dees-fashion/images/logo.jpg",
+      "bytes": 30422,
+      "sha256": "2bf3f7b903ebbada1da763173a6a8aa863f98882e652e0fb186bbdbcbdb36dd0"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/976f6d7b1e1a8700d08ecdedc72b289f/w768.jpg",
+      "path": "stores/by-store/drspecs/images/main.jpg",
+      "bytes": 144758,
+      "sha256": "4a4a2ae1f816f3b4424fc33378b7b8a4b2cdb56d310fd8c05b4be55e53b2951a"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/c0060412da7d23d8d1fec3fd252c856d/w768-crop.jpg",
+      "path": "stores/by-store/drspecs/images/logo.jpg",
+      "bytes": 38664,
+      "sha256": "b160294bf32a2f82a3bc55ac0332355a89cf528f976cfc224162054fc5ad8fd3"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/7bc345fd54ba901309b547c481e4867b/w768.jpg",
+      "path": "stores/by-store/dubuyo-korean/images/main.jpg",
+      "bytes": 181418,
+      "sha256": "6b77a906bedf4217e28f6adfcd25887a8c45220a659fafb9aefb04aef310b707"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/7a8f032f30f695b9c71218f9d69a5f0f/w768-crop.jpg",
+      "path": "stores/by-store/dubuyo-korean/images/logo.jpg",
+      "bytes": 49931,
+      "sha256": "907a714949be6718e124eafb543a1b547cf40330e2c10b70bb6ecee7cc41cba6"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/0bbbde2d3b5badd344fab2e551148743/w768.jpg",
+      "path": "stores/by-store/empire-sushi/images/main.jpg",
+      "bytes": 149971,
+      "sha256": "de167572f41463840056ceb24a44f64e55d4baa2ae7b9984806e2343323721dc"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/6fdd6cc27cd79f776ccaab2f8d13bee3/w768-crop.jpg",
+      "path": "stores/by-store/empire-sushi/images/logo.jpg",
+      "bytes": 82259,
+      "sha256": "0df2b4dc861a4f15949f4375d115abb016e98ce39161f28888749662dfea771c"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/f548b584c9924ce35ede980a5f813a29/w768.jpg",
+      "path": "stores/by-store/energized/images/main.jpg",
+      "bytes": 92157,
+      "sha256": "56f9b5a9423b1d1ee6da1a920295cb9276baf09aa6c6fd95046d143189cd7b49"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/740bbfb7bfc30f9607203a7ca9038e04/w768-crop.jpg",
+      "path": "stores/by-store/energized/images/logo.jpg",
+      "bytes": 26775,
+      "sha256": "e28487e5c14ee3de53ee019acde7e91eaaf27db5b7c4bfe287bfad9fb2fa0985"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/b2c1d8dbf6d3cb06c2f3a867834dfb26/w768.jpg",
+      "path": "stores/by-store/fos/images/main.jpg",
+      "bytes": 119050,
+      "sha256": "72b5401f1c5d4817b241fe2dfacac5885426a82395b8a337c9bc830bac4c749b"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/1f4b3ac6a158ca9b99b5b72550054177/w768-crop.jpg",
+      "path": "stores/by-store/fos/images/logo.jpg",
+      "bytes": 29779,
+      "sha256": "978fa423d752902a51759e2a8e313d353fd358fd28076586bdcd4ca19a11196c"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/93e1b99a5aec6f3a9809bdf67c6d89bc/w768.jpg",
+      "path": "stores/by-store/felancy/images/main.jpg",
+      "bytes": 112595,
+      "sha256": "142becbec7f5e5e21d92c50c9c52b33fc905fa28d761968fce0e6cdf77e99e3f"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/8e7e2bf7880d28609188c357344a398b/w768-crop.jpg",
+      "path": "stores/by-store/felancy/images/logo.jpg",
+      "bytes": 29338,
+      "sha256": "755532400c4f761d03b7bee6d1d4ebf796c05eb790479e3d9a57020593793650"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/0710fde165fa70cfb61b9412536752c2/w768.jpeg",
+      "path": "stores/by-store/focus-point/images/main.jpeg",
+      "bytes": 138125,
+      "sha256": "5d005b821a084954c31957364aae4f2430c490bb1ad886635a00056e7265dd71"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/17a575aa33e6372c1423857cfa23dc68/w768-crop.jpeg",
+      "path": "stores/by-store/focus-point/images/logo.jpeg",
+      "bytes": 25488,
+      "sha256": "d8e6d90451abbbc29c2fbeb944e6fce2ab177dc3e21b63ad2a5890039a2eb7a5"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/30c62c0aaf85bdcbfc6bc60f9c47b904/w768.jpg",
+      "path": "stores/by-store/funky-gift-store/images/main.jpg",
+      "bytes": 106441,
+      "sha256": "38ec24ccb41959cacc122e43df7e1a0e0315c915f7838b1be0214c712ae1e812"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/3828c3994d289b4d659325d278af5f9d/w768-crop.jpg",
+      "path": "stores/by-store/funky-gift-store/images/logo.jpg",
+      "bytes": 32070,
+      "sha256": "1a43ce3f39b265cc854d6b234e9af23e3b92136012f868dacf58cf7edfeb9385"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/24d1bb4da7b5e3fedae6004160ddb6fc/w768.jpg",
+      "path": "stores/by-store/funmax/images/main.jpg",
+      "bytes": 146938,
+      "sha256": "a4ac29dbcdd26df7e2efe8f9ab39107fec151ab280e9b28dc5e45847b8a88ed3"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/b3dab6b8f1eb70d4b6a36bad2c8abad0/w768-crop.jpg",
+      "path": "stores/by-store/funmax/images/logo.jpg",
+      "bytes": 44112,
+      "sha256": "9c467175e61d8e335e97794b11610b01a4b549abf9952721fa2d2c3c603c4198"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/8c697e9e63d8f14e46773f0a98926521/w768.jpg",
+      "path": "stores/by-store/funway-vending/images/main.jpg",
+      "bytes": 140706,
+      "sha256": "c0598122b16e2691b8e5fa673ca4945fc8a11b4683cfecdcfbe4583844e8ad1c"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/ce56f7f7b5551dbbe3a91177d92befed/w768-crop.png",
+      "path": "stores/by-store/funway-vending/images/logo.png",
+      "bytes": 1423,
+      "sha256": "8ea76f6ee69f95eb702c5300c733cc4a02de057a71794fb7a269f5ce7a1689f0"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/296f3117f052ba02009d59f3b40514e8/w768.jpg",
+      "path": "stores/by-store/gadget-go/images/main.jpg",
+      "bytes": 141342,
+      "sha256": "0179251d3f76ce48d8198cbc916f40146452ab174aca3810688ad44be8166b22"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/5cc349ad2a70ac85c5e66bf0f737ae3b/w768-crop.jpg",
+      "path": "stores/by-store/gadget-go/images/logo.jpg",
+      "bytes": 42016,
+      "sha256": "b1e61ea54a01a0afcc890689fbc1010f15d8b42bee4569976deb082a90e7dcdd"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/e8bfa032157787a8c43f05e034379833/w768.jpg",
+      "path": "stores/by-store/gigi-coffee/images/main.jpg",
+      "bytes": 106387,
+      "sha256": "277a787a8c4b4aadf954c26474e9de6d55a63f995bac477ade5dbdcc7f3b21f3"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/1d90df11276e3ae364e453c21d54f88b/w768-crop.jpg",
+      "path": "stores/by-store/gigi-coffee/images/logo.jpg",
+      "bytes": 38562,
+      "sha256": "5e5ba9d8e073cf54d6dba4629bae2d9ae89b13da5118857e906f9581091bf50e"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/fe62514a931b1193c1687014dcabc229/w768.jpg",
+      "path": "stores/by-store/gintell/images/main.jpg",
+      "bytes": 150031,
+      "sha256": "50197b65de2ae3a212efe91aad34c141052d66abba1631503e91735311b5f03a"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/3b9db5fc4e2c0b5f1cd42982cfa0d365/w768-crop.jpg",
+      "path": "stores/by-store/gintell/images/logo.jpg",
+      "bytes": 30701,
+      "sha256": "a47bba4896f400b311fb913bff6548ebbbe052acf70feda62ee2677dad5e04ff"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/e62b087baa19bf3e4b795e0581e2c177/w768.jpg",
+      "path": "stores/by-store/giordano/images/main.jpg",
+      "bytes": 134464,
+      "sha256": "04a65a349638c5297cc1552b96adb7387ca2ab518efa3262286bd264fb68d817"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/7496a93ea1132269f346ac39706292c5/w768-crop.jpg",
+      "path": "stores/by-store/giordano/images/logo.jpg",
+      "bytes": 23081,
+      "sha256": "45ab2be788182dee88806d8f6398fb81483dab0754a57992567fcec3e1f81828"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/bf327738d5a47b526e14c2c802889ac9/w768.jpg",
+      "path": "stores/by-store/golden-screen-cinemas/images/main.jpg",
+      "bytes": 123989,
+      "sha256": "0053de999e98861a5484945bc69db78c8d593706761d32ed3d3b47c5cf4ceec4"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/d35c22f9a75bdb3e9d53b90dcdb6f54c/w768-crop.jpg",
+      "path": "stores/by-store/golden-screen-cinemas/images/logo.jpg",
+      "bytes": 29083,
+      "sha256": "773470c193c126d911ef8e29a874042317c344a2f685faa5a478131401e57d60"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/71793ddc24bce999fb04ef51e5c737c1/w768.jpg",
+      "path": "stores/by-store/guardian/images/main.jpg",
+      "bytes": 156932,
+      "sha256": "b9b84c8c665c5d1cb8302a3131b70b341ffed13c987e56fd80ed257f9d742f55"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/7b67e4065e3dd74f446a0bff03b3cbc6/w768-crop.jpg",
+      "path": "stores/by-store/guardian/images/logo.jpg",
+      "bytes": 30185,
+      "sha256": "1f86c038d4eb1fa1ecadf77bbabe1b45c513239a6b8e56c730f940511dd4ee94"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/294285be301d48fdb8d5e439d05bd6fc/w768.jpg",
+      "path": "stores/by-store/h-and-m-first-floor/images/main.jpg",
+      "bytes": 82660,
+      "sha256": "24738f12d6fcd8271f75ecff536ae6538d6b9674786920623e4a5f3ecca98bd3"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/43659dca2fd2f228ad64712b0e63cce6/w768-crop.jpg",
+      "path": "stores/by-store/h-and-m-first-floor/images/logo.jpg",
+      "bytes": 35732,
+      "sha256": "48e9abab380662e03b51083099e5a4c31119ab52d8f68b49063eda51604a6eb6"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/bb844afeef62af422b2282b9b2dcd916/w768.jpg",
+      "path": "stores/by-store/h-and-m/images/main.jpg",
+      "bytes": 100524,
+      "sha256": "466169d822ec00b33699911442ac3854d406180d1fb3b244d8bf43afbce8d8e3"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/4bbd22b75ccd1524ce375458cbbf25c5/w768-crop.jpg",
+      "path": "stores/by-store/h-and-m/images/logo.jpg",
+      "bytes": 35732,
+      "sha256": "48e9abab380662e03b51083099e5a4c31119ab52d8f68b49063eda51604a6eb6"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/c682a104f663d4aedb0d6e602f2a513e/w768.jpg",
+      "path": "stores/by-store/happy-potato/images/main.jpg",
+      "bytes": 162375,
+      "sha256": "9311e9a72d7a592f0a5434aaac18d6c03753afe5658ef431f2fac081a8d3a029"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/1697ffc92ee4e7a7c8edea7261d7b414/w768-crop.jpg",
+      "path": "stores/by-store/happy-potato/images/logo.jpg",
+      "bytes": 51761,
+      "sha256": "3013cc9b1fd2006baf5a36dac1b98c10e9c21466e57aa0c3d65bb1c7d5caeeda"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/f565e08470a22f555939984d4a65d33d/w768.jpg",
+      "path": "stores/by-store/hla/images/main.jpg",
+      "bytes": 96933,
+      "sha256": "02374fe1861cd752c224d711e8e06f72672b52223775243d5e4445430c1587a0"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/01f15f77b3f15d2ecdf99432e82e6adb/w768-crop.jpg",
+      "path": "stores/by-store/hla/images/logo.jpg",
+      "bytes": 33928,
+      "sha256": "a92ac5f32357521e27f473500ffb233c2c2bdd4200156a206fcad9d1f8c991b8"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/fd66e02fa6d8fefd9f8e61be6b5b2b83/w768.jpg",
+      "path": "stores/by-store/hockhua-tonic/images/main.jpg",
+      "bytes": 159980,
+      "sha256": "96cd58ebc89f38b471f39ea8a31daf59bf57fa3fd8055d125a461c8a2970b435"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/e67cf015847aad3cdebf997da49f6f1e/w768-crop.jpg",
+      "path": "stores/by-store/hockhua-tonic/images/logo.jpg",
+      "bytes": 56814,
+      "sha256": "b110d5a87cfd05401b4269ad2a837ca9c9eaf49fe1f0f980f75d383aeeaf0bd3"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/7e0fb2f32a4732cf9b12771563100091/w768.jpg",
+      "path": "stores/by-store/honor/images/main.jpg",
+      "bytes": 89127,
+      "sha256": "57da02f17deb6750ae955585322987e1fd2793577332f8fc8bd8a849c510ceed"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/a44a8c11fca51ff2033fdb832f025a3b/w768-crop.jpg",
+      "path": "stores/by-store/honor/images/logo.jpg",
+      "bytes": 25268,
+      "sha256": "fd9c15702d9a5cff12319e4951ed199d0d44d43b5a71985ede61964f2acb5876"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/cdf6cbabcc50f9cdb011139de85e8bf9/w768.jpg",
+      "path": "stores/by-store/huawei/images/main.jpg",
+      "bytes": 92572,
+      "sha256": "aa55d50cf659625113f795d320eee0d3940ff0a80fd86b16ccbbd90ad1e39bb5"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/04dd3d77eb96bc5292c8696d1508df13/w768-crop.jpg",
+      "path": "stores/by-store/huawei/images/logo.jpg",
+      "bytes": 31418,
+      "sha256": "d8ae69f5565e7b1834746d680f74739587db6316dee6df1e6a428e26fe02c89d"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/3a0ce490e18ddd45d94bea6ad8f710ea/w768.jpg",
+      "path": "stores/by-store/idos-cosmeceutical/images/main.jpg",
+      "bytes": 100978,
+      "sha256": "c8807b77eee468e699ec05d008e49320da5d4adaca78fa79fd8d18163790c36e"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/e5c3752b4accb590fcf21c804c95e1ed/w768-crop.jpg",
+      "path": "stores/by-store/idos-cosmeceutical/images/logo.jpg",
+      "bytes": 35657,
+      "sha256": "1e6cc23f0b39e85191de2eaac94febfd69bd90f6112d40870f70f253993fad5c"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/101966a5c8663f36a40f61910663b999/w768.jpg",
+      "path": "stores/by-store/ig-mobile/images/main.jpg",
+      "bytes": 92886,
+      "sha256": "ddeec4f6197fcc378eea7ea8a8fc50c846ddfcb1d546b097a97c9359626d9443"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/428c9915c8d5185b338b0a9e02bb4cba/w768-crop.jpg",
+      "path": "stores/by-store/ig-mobile/images/logo.jpg",
+      "bytes": 26791,
+      "sha256": "21d8da7e34e488e3fb50d5ddd0dc77ab38cae381ebf3ea318ed6120119946d96"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/8c957cc53243c511e3313f5ab3ddae3a/w768.jpg",
+      "path": "stores/by-store/inside-scoop/images/main.jpg",
+      "bytes": 154026,
+      "sha256": "ad8a8939b2085632928e8643c6d51866308e478638338edbebb8102bdbe93ee0"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/a09777f9609ac87a95b73900caa6066f/w768-crop.jpg",
+      "path": "stores/by-store/inside-scoop/images/logo.jpg",
+      "bytes": 35004,
+      "sha256": "20b2e2edc39629562ea0c95b3d7e85fc7dad3fac8b4f42e722bc2cc8171fa2c1"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/4895a548f57238f5aeb829c1f0a06f41/w768.jpg",
+      "path": "stores/by-store/kasut-u/images/main.jpg",
+      "bytes": 122509,
+      "sha256": "8595d128f16279bce2190bccd19235f6f277363210a5c814ff55aa9ea6fdccbd"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/36cc6104f1c974702461ff915a0bb04a/w768-crop.jpg",
+      "path": "stores/by-store/kasut-u/images/logo.jpg",
+      "bytes": 31507,
+      "sha256": "a05d0d374a4272699d3a26ccabf9ef05170b21b2d0eb40bef00d24c77bab527c"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/ae0db52d9ccc88b59fef6592c3da40d9/w768.jpg",
+      "path": "stores/by-store/kfc/images/main.jpg",
+      "bytes": 169100,
+      "sha256": "c31036b41505cbf394767b8bc67e4b740ebfcbc42420ab670c5af92cb6a34c04"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/a94eb33c2cb1a01c88a319c0890e3722/w768-crop.jpg",
+      "path": "stores/by-store/kfc/images/logo.jpg",
+      "bytes": 54970,
+      "sha256": "43a85a21858abb73b46a100cc8d55feeaef6dc71f09201742c14ca8c1f778023"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/b8a784b6a4abd894dafb81a4c391db75/w768.jpg",
+      "path": "stores/by-store/kids-play-zone/images/main.jpg",
+      "bytes": 138461,
+      "sha256": "cc396014626adec4cedb1c335dbc87c3138775e86d220090ee4f6ea40f734e57"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/e9aec25e356c05eba613b8542b4c7bc9/w768-crop.jpg",
+      "path": "stores/by-store/kids-play-zone/images/logo.jpg",
+      "bytes": 49534,
+      "sha256": "0f13ff872ad66c0d15a7b3157729552e4d4305fcfbc4a14e55f995a2582ae346"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/74149800dfd942c23b8429b4b8f0308d/w768.png",
+      "path": "stores/by-store/kpix-selfie-studio/images/main.png",
+      "bytes": 721817,
+      "sha256": "1981f01238571730f2c81d7ced3fc41f3b6425961cedbab02f9cd5c361b750cd"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/f36305509d0a3f5bdd44b67da1d3210f/w768-crop.png",
+      "path": "stores/by-store/kpix-selfie-studio/images/logo.png",
+      "bytes": 16982,
+      "sha256": "57e6b9c6ea5e28020f55d0bd75ca5f3577f057aa34a66b39ed49bd3af02f7937"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/a7e007c1a9e27740496f6d00cc3bf0d2/w768.jpg",
+      "path": "stores/by-store/lazo-diamond/images/main.jpg",
+      "bytes": 124996,
+      "sha256": "1501e8d61eb3c761e83ac813a63a3e35ec62cbe564aa5cdda830f2501b2ba7d2"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/c898b7318ec6f1c4a1c7f92921346be2/w768-crop.jpg",
+      "path": "stores/by-store/lazo-diamond/images/logo.jpg",
+      "bytes": 26622,
+      "sha256": "66774bf3610343121627e420628c512fa1ac5b79ed37d1420eb6b157937c66c6"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/7d2fc61ab3847fcde46df61ee2653e6f/w768.jpg",
+      "path": "stores/by-store/lg-subscribe/images/main.jpg",
+      "bytes": 106389,
+      "sha256": "6f81bedd7ebe215a43316fd1cabe01f366737b202962d8af73ed3ed6e61b7523"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/cd380e94d6669fdda129593f844f7395/w768-crop.jpg",
+      "path": "stores/by-store/lg-subscribe/images/logo.jpg",
+      "bytes": 23986,
+      "sha256": "7dc835904b1defbf7a2058e177a7bb194f8448ad0f28eab4c8e0e8a0b437ca5e"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/f3c7407c205b71f35263d7695da3a224/w768.jpg",
+      "path": "stores/by-store/llao-llao/images/main.jpg",
+      "bytes": 118216,
+      "sha256": "2b96ec5cf1d687aa739de031a8c704376f4509685338f80dc5d56a420e8eb527"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/626bf7dc4eacd8643a620eaa12111814/w768-crop.jpg",
+      "path": "stores/by-store/llao-llao/images/logo.jpg",
+      "bytes": 32687,
+      "sha256": "fb14adc7dcdb6c82c4c0f33b579d855f7927e2273790a78ce5a33ceec75b87f9"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/e4042f4281c050cd3b96c6226c839e35/w768.jpg",
+      "path": "stores/by-store/lovely-collection/images/main.jpg",
+      "bytes": 101028,
+      "sha256": "d1ca7eea853d9fe038d369445820e0938b00b5b26d96d88f7700161221043e58"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/70e05497a079509ac4611a5a1bfaea2f/w768-crop.jpg",
+      "path": "stores/by-store/lovely-collection/images/logo.jpg",
+      "bytes": 34348,
+      "sha256": "d1bd35bde3d948ff0131afcd1b50e3b9d0e427d5faec5ff133d207b342a3edb7"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/31088887095d71c040c603dfd769224d/w768.jpg",
+      "path": "stores/by-store/mammabunz/images/main.jpg",
+      "bytes": 138334,
+      "sha256": "df0284a42c3d6836b5e7fd7d3d2ad902111ccbdc7f2add56ae9e3d98a1ebdb3f"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/4d9290afa2bba78c29a01b1f499022d0/w768-crop.jpg",
+      "path": "stores/by-store/mammabunz/images/logo.jpg",
+      "bytes": 50405,
+      "sha256": "4351363ea388f1965d785f7dcbfb7378417b9eacbeb31611c60afd946ee3f3c1"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/cab95fa604624cec151fba9a1b1a5b16/w768.jpg",
+      "path": "stores/by-store/marrybrown/images/main.jpg",
+      "bytes": 181549,
+      "sha256": "ac09ac92424048f9b950e1fc440c6fc51a2e75a7d99cad84e1523590440f3df9"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/62a2e007fabd5f18d0f5a5b01609ad7a/w768-crop.jpg",
+      "path": "stores/by-store/marrybrown/images/logo.jpg",
+      "bytes": 36478,
+      "sha256": "8e36ec1658c8b7fa8ba31d979b8684163aa06f1129f5a03f83b17b62176f80f2"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/d660c4b7bf414d74216b21672fd60fb7/w768.jpg",
+      "path": "stores/by-store/maxis/images/main.jpg",
+      "bytes": 90114,
+      "sha256": "baecfa93b06671fd232d8581556b7a1480cda65225c856b221c11fd11bdffc2b"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/ccc6a6ad0979f1a8a1ff8119d780a811/w768-crop.jpg",
+      "path": "stores/by-store/maxis/images/logo.jpg",
+      "bytes": 35305,
+      "sha256": "c59822651765417a18e28af6df8b5f8d0b45967462effeb12a9c5646cc78f524"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/cd8ec075f9329d328e6ca238474ed1b8/w768.jpg",
+      "path": "stores/by-store/mee-tarik-warisan-asli/images/main.jpg",
+      "bytes": 161729,
+      "sha256": "a347855a638e9b38b04c02eda4594958564b2a8bceed154363505010e809a8ae"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/c42ecbd22cf54b0ce2adce7c99d2e2c5/w768-crop.jpg",
+      "path": "stores/by-store/mee-tarik-warisan-asli/images/logo.jpg",
+      "bytes": 57023,
+      "sha256": "76a4dddae9172910bd12e9ea191a8630622d27b9c9cc1012614f6275cbdbee05"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/69290d45a118b65e69dea727c447ab72/w768.jpg",
+      "path": "stores/by-store/merrige/images/main.jpg",
+      "bytes": 118915,
+      "sha256": "829a1a3702c5b7afc3c332229ccdcd04d9978ce1b99c9d855dcc80aaef7b20f5"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/d0b9f118809cc9cbd31b75e73a58e9c5/w768-crop.jpg",
+      "path": "stores/by-store/merrige/images/logo.jpg",
+      "bytes": 29237,
+      "sha256": "14f39084804908a94b32c80faa5b5b956833ceae921dbc5c2bd67bd23eb568f0"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/4c83901c4bae7bbe1fab179c41fbd04c/w768.jpg",
+      "path": "stores/by-store/mixue/images/main.jpg",
+      "bytes": 124854,
+      "sha256": "6427e05448d056fe2f004c7357e78d44e737e2d244f0d84b8b1d711d77be3f1b"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/004cc8de3a8857630ed6676476029736/w768-crop.jpg",
+      "path": "stores/by-store/mixue/images/logo.jpg",
+      "bytes": 37634,
+      "sha256": "81e83eae800fbfb3ac1d30c06ab86a2db9d11c1ae1ba813114c076d70c4e90bc"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/3f72aa975e8548f4f455912c7cb34458/w768.jpg",
+      "path": "stores/by-store/mj-jewellery/images/main.jpg",
+      "bytes": 124616,
+      "sha256": "0ecdf28f2d6a3ed0da09690c46825468e3d78b2dadfdfe3bf60569c01165a537"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/93709004d28cef69c29da75c50b86ccf/w768-crop.jpg",
+      "path": "stores/by-store/mj-jewellery/images/logo.jpg",
+      "bytes": 26915,
+      "sha256": "00436992355d4d7473d3179f73dcfb0ba3947ba9bb3dfa584a117678332a9ab8"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/cfde2cceab8155a6ffd1a6bde7bc41cf/w768.jpg",
+      "path": "stores/by-store/mr-diy/images/main.jpg",
+      "bytes": 154718,
+      "sha256": "f5118ab3195b37350bb46ab110db06124eb9a040e4db943a7c02325a5f9526d5"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/8a5454e440b1e606149ccf2ecf6442e7/w768-crop.jpg",
+      "path": "stores/by-store/mr-diy/images/logo.jpg",
+      "bytes": 20914,
+      "sha256": "97c8e6aa3218fb4dd3f238220b6d8ae1a28f804b6dc096b9af6f5eeae9ace6ea"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/868f4048e2532e9af5402d358df681e2/w768.jpg",
+      "path": "stores/by-store/mrdakgalbi/images/main.jpg",
+      "bytes": 134485,
+      "sha256": "0658da3ac3fd91f9db2046e7891dc3929ff5dece9741d94aca6f507ecbfc6c4a"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/e35041f29364b3b8bc48ec4e5e3cd54f/w768-crop.jpg",
+      "path": "stores/by-store/mrdakgalbi/images/logo.jpg",
+      "bytes": 63708,
+      "sha256": "ead5842a0cddfb2b05f74ac58f87e73e908ebd7299c1824b059a998f78eb84ce"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/aae52ec2bf7caedfd25488c7cd579e2c/w768.jpg",
+      "path": "stores/by-store/my-chili-noodles/images/main.jpg",
+      "bytes": 176143,
+      "sha256": "2127f62d2996cbe3a8184e3dab7d6d57acd1f796d1aa7df751ed259e6ad03cd6"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/449b224e9c8b68bb339bde3274c9df98/w768-crop.jpg",
+      "path": "stores/by-store/my-chili-noodles/images/logo.jpg",
+      "bytes": 48776,
+      "sha256": "d5d7095aafaa58078c6432e6d6f54f5d4fe544855cfd8c8dbd850d3eaee7142e"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/f1089d89f8dcd059eaaba781a9750409/w768.jpg",
+      "path": "stores/by-store/ogawa/images/main.jpg",
+      "bytes": 138280,
+      "sha256": "5ef36316a51e0e87a6efd62ab559bb23311999a8712c512597f22c63e9773e1a"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/c7e792213bfcbaa13b0d431513d86707/w768-crop.jpg",
+      "path": "stores/by-store/ogawa/images/logo.jpg",
+      "bytes": 31878,
+      "sha256": "d539e32c7f28041b4b3b3e36b9d45d2fd2f5ab3c919380e2dd9687a9fdeb2cec"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/a97d8f1d68dddc31661339d6c9c1fd88/w768.jpg",
+      "path": "stores/by-store/oppo-experience-store/images/main.jpg",
+      "bytes": 90325,
+      "sha256": "d627b6334f60dd3637c86c496e8c18365db6334fa823769cb4e808489cb90e82"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/660cc54b642adec3f109c735e9cfcd6d/w768-crop.jpg",
+      "path": "stores/by-store/oppo-experience-store/images/logo.jpg",
+      "bytes": 29584,
+      "sha256": "c4b32aec85e62ad1f85d1eb47a5ee1ab94cb7a3baf8726b1946ec5f829147db6"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/12cd33589b59a3d353d78913a88dc350/w768.jpg",
+      "path": "stores/by-store/original-classic-oc/images/main.jpg",
+      "bytes": 89867,
+      "sha256": "0374b29d06586ff69713d882b42ad4e1b339529ad8f2a4009d9d082f6a15b828"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/e103d955b1a3521240e887e1f9787acd/w768-crop.jpg",
+      "path": "stores/by-store/original-classic-oc/images/logo.jpg",
+      "bytes": 46663,
+      "sha256": "7f9385b0c6e36caaa1d4970998ea726b47b590a3dfc644a5bcb33a831bbaef97"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/4d15d06cb053d0fe6a6e58adb0b5526a/w768.jpg",
+      "path": "stores/by-store/pacific-departmental-store/images/main.jpg",
+      "bytes": 118884,
+      "sha256": "193bccd6a3692f6b888af63316c5e228bfa960e03effdc5028fe3c447dca6833"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/d74d3c40fb8be5e3a752281eb9b25af6/w768-crop.jpg",
+      "path": "stores/by-store/pacific-departmental-store/images/logo.jpg",
+      "bytes": 34603,
+      "sha256": "90a949b96115ad52ced70718c728d1d2f12bfd7f5c033424cdd24026da0189fb"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/cbec099c8336fb6763ef997b1c0e0aaa/w768.jpg",
+      "path": "stores/by-store/pacific-hypermarket/images/main.jpg",
+      "bytes": 161512,
+      "sha256": "13ab2ae9f3932e73a5a207472421ad92cda8f7b00fd15be89d6e27d0f18a1712"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/418a5bcfe5278042f02319252dd130b0/w768-crop.jpg",
+      "path": "stores/by-store/pacific-hypermarket/images/logo.jpg",
+      "bytes": 40632,
+      "sha256": "64f5365a632da2b08d0298beadc9fface447da28072469ef20a72437c847021a"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/8b4a18440fff4c20539e21582644082f/w768.jpg",
+      "path": "stores/by-store/penyet-express/images/main.jpg",
+      "bytes": 141881,
+      "sha256": "d4877d30466a70b4f96f819e360e9ad3b3503a355993405a4782fdc5a92d1e39"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/cd9a83e40a5cc9ea410c18497decea29/w768-crop.jpg",
+      "path": "stores/by-store/penyet-express/images/logo.jpg",
+      "bytes": 75253,
+      "sha256": "1956843ca6a689f888de03e42732a3934ae604743e49799823c67ec8ef96be74"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/de42d19cee3161430af5a33a125110eb/w768.jpg",
+      "path": "stores/by-store/pezzo-pizza/images/main.jpg",
+      "bytes": 152704,
+      "sha256": "4e602ffb9e729f1c6aa2bc64944f9b991389a758798a92fc73cb3d3864ea388c"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/3fccfafbe6a6a88448fd3dd950957879/w768-crop.jpg",
+      "path": "stores/by-store/pezzo-pizza/images/logo.jpg",
+      "bytes": 46735,
+      "sha256": "7ca9cdc241ae8383cdfa12879ffa2cd5cdc2faaf822992edbcdd6ef54aa70e31"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/9d720ff3c23b97e11c86d8b93393f03f/w768.jpg",
+      "path": "stores/by-store/pizza-hut/images/main.jpg",
+      "bytes": 149546,
+      "sha256": "2863cdb655c3bb67f867595b695d67a17edad9b018f3f3f3ed49e114d245982c"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/0510be0fb17e50c62a5127e81bc49405/w768-crop.jpg",
+      "path": "stores/by-store/pizza-hut/images/logo.jpg",
+      "bytes": 50004,
+      "sha256": "4751f78bdcbf483351efb2fe089e3940b55d2839615745fbaa0f6a442b2502e3"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/392ded6b8cf106bdda1d6d55feb6d619/w768.jpg",
+      "path": "stores/by-store/poney/images/main.jpg",
+      "bytes": 121073,
+      "sha256": "295e799d001264df006cc6bb5c352f16432a486484fcc98cd34d6a159186a0c0"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/549681061e4247e31ff0a18f7ed87386/w768-crop.jpg",
+      "path": "stores/by-store/poney/images/logo.jpg",
+      "bytes": 27822,
+      "sha256": "e3b220f63b036e6bb5a3ef8f767e57f73d9604e793ace78592ef53f5d9d1d2b7"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/fdf3af877c45ac996c8283c04503fc19/w768.jpg",
+      "path": "stores/by-store/pop-meals/images/main.jpg",
+      "bytes": 102896,
+      "sha256": "7a3d41527f69a454f9b0b4fefb771e52aa2ba8518e714ccd4d405363eb5540c8"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/83417952e9a72af05d1e8e942bf2def0/w768-crop.jpg",
+      "path": "stores/by-store/pop-meals/images/logo.jpg",
+      "bytes": 37639,
+      "sha256": "bf699519e092db11e8502d6bdd9dc6b0d237189d44312410e47b9afbe34b9a77"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/ab8896783f4114a5ca5f58b206fa8b24/w768.jpg",
+      "path": "stores/by-store/popular-bookstore/images/main.jpg",
+      "bytes": 130985,
+      "sha256": "130b315a24a3f754ce02dbfe883a3e5af2a158395126ea113844e6d4e4feece6"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/f7d08e48470773cd704d8625fb8cf422/w768-crop.jpg",
+      "path": "stores/by-store/popular-bookstore/images/logo.jpg",
+      "bytes": 38179,
+      "sha256": "5056be374a64739ae39cc03d7591effffd7155c8c45c0d69c989a77405fc6571"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/be52fce86445f33b468d656ca4a3df76/w768.jpg",
+      "path": "stores/by-store/qq-moon/images/main.jpg",
+      "bytes": 115405,
+      "sha256": "5be1919af40b4520b34efb827c9098a329aec8e86d719277b650d6289c1da805"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/24bcac2ed9df43a0186e5737c5d78aa2/w768-crop.jpeg",
+      "path": "stores/by-store/qq-moon/images/logo.jpeg",
+      "bytes": 26262,
+      "sha256": "d567dba49fa55bbc28c76ddd983f6e34da3ed1059bda635f6541972d1232be34"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/9ebe9e1d733803b4203b2ad5a098ffc3/w768.jpg",
+      "path": "stores/by-store/rcbpc/images/main.jpg",
+      "bytes": 121556,
+      "sha256": "0b8f7fdb9e0afeefc0d8a0fc42694ee72363087960ebe9f1873ff6c8f03b14ba"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/987871025a251b51ecfefde364d5c1d5/w768-crop.jpg",
+      "path": "stores/by-store/rcbpc/images/logo.jpg",
+      "bytes": 34751,
+      "sha256": "f381a228811f2399a692455d3b2e047cde52c9fefdbe19f3b75da74b8dfd782c"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/cf385ec4205449c9acad8391e3073b74/w768.jpg",
+      "path": "stores/by-store/rest-n-go/images/main.jpg",
+      "bytes": 93288,
+      "sha256": "43e99e116a62aa058c8b719acfb91cf2baf125d2bb2e1b33458b5c6463503388"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/e12f7e00fbe5cb74f189a37a7b87e563/w768-crop.jpg",
+      "path": "stores/by-store/rest-n-go/images/logo.jpg",
+      "bytes": 40565,
+      "sha256": "a902b22527c5ae361f6871bad312e096513e4cd36fa10da92ac46d82574e5106"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/3416d7c2f795b214de5e45b1cb76f13c/w768.jpg",
+      "path": "stores/by-store/sacco-house/images/main.jpg",
+      "bytes": 121979,
+      "sha256": "6732b2a4bd53060da28c92d16ec35408f286a1cfbbd537b6ca0fefef8e43d29d"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/83a164e8a841e820a20a35b562f7b47c/w768-crop.jpg",
+      "path": "stores/by-store/sacco-house/images/logo.jpg",
+      "bytes": 29126,
+      "sha256": "84c4f4653a1345f6b3efc58ac54bebbf7a34f99802ba22d493c27712f2d64f5c"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/27bc5209201ae5ad293cf32f8872e338/w768.jpg",
+      "path": "stores/by-store/sasa/images/main.jpg",
+      "bytes": 140554,
+      "sha256": "9b6fb402a0dc899c9bec16352555eae7e9061b4ac8bcc63129b1ae9e89583598"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/7dd24f4a2391e26b9e8470fc4076b23b/w768-crop.jpg",
+      "path": "stores/by-store/sasa/images/logo.jpg",
+      "bytes": 41545,
+      "sha256": "1e1880de9639302df9f8d9348ed92aa84470ccc79eabac39c4739a28c7327199"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/9dc5bb0fca316c2f41993607e9c4d2c8/w768.png",
+      "path": "stores/by-store/secret-recipe/images/main.png",
+      "bytes": 848403,
+      "sha256": "2378ef7a9ed2d8f2b33b2498e1e714dfcbfa9d2b2ddfe3c8e725b56dda0f7bec"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/051123b96f87bbc5cb1588ff8808b1ce/w768-crop.jpg",
+      "path": "stores/by-store/secret-recipe/images/logo.jpg",
+      "bytes": 34565,
+      "sha256": "656466d26c34775a702b306481a3124d54a848cad875f8e0402e80972ca94ae8"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/49050e3dfff99b6f3542650c20925b57/w768.jpg",
+      "path": "stores/by-store/shihlin-taiwan-street-snack/images/main.jpg",
+      "bytes": 180562,
+      "sha256": "b705bca5907a060ae61082329d912abb16faf6fc8f3ff60938c5f04d3c2ed79d"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/50a974259a60666c27e048f6fd7070f3/w768-crop.jpg",
+      "path": "stores/by-store/shihlin-taiwan-street-snack/images/logo.jpg",
+      "bytes": 50402,
+      "sha256": "e311015baa6ec253f422df18f19e5e79902312e5ffbedf5869a8b862cdfe6340"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/8d47476438422e30d54e7eeae2c6574a/w768.jpg",
+      "path": "stores/by-store/simson-time/images/main.jpg",
+      "bytes": 106239,
+      "sha256": "1bbb57cfb75b7d22a0d4099c236084eb3c0a58cff486c29a64d5bec69792a62e"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/0d1410daac68752f089b590fae7af07d/w768-crop.jpg",
+      "path": "stores/by-store/simson-time/images/logo.jpg",
+      "bytes": 30000,
+      "sha256": "12be18268c9e161387ae5593eb286b5e790d3b04b4536036711ba1158bafb8a2"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/805ab82df3e7e45049f089fbfede6f5c/w768.jpg",
+      "path": "stores/by-store/siti-khadijah/images/main.jpg",
+      "bytes": 118561,
+      "sha256": "86e97078afb39f9269dd270e4ddf36335bdd6fd01f557358777b85d5e064b7f6"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/a5d63459ddad2357b363651df3f39b3e/w768-crop.jpg",
+      "path": "stores/by-store/siti-khadijah/images/logo.jpg",
+      "bytes": 31543,
+      "sha256": "fe220fe18eca34eed784830a4d15db9a76d7d5da47c4a07a7b6a155fa181d131"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/07db00fb9d4993fbcd08985b2da1879e/w768.jpg",
+      "path": "stores/by-store/skechers/images/main.jpg",
+      "bytes": 117349,
+      "sha256": "10793760822b9d43d810bae014e128a12f8f68dcdaecc4c83eab5c0aa9e56374"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/82a2fd7c5c7189375c5929314ee8cac0/w768-crop.jpg",
+      "path": "stores/by-store/skechers/images/logo.jpg",
+      "bytes": 31648,
+      "sha256": "ce18d92d9e931753732d22555ec4f75d7b92a24487f42bcde225b1218619f0a2"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/e3609e2a5cc9678c2201b2cdef939d44/w768.jpg",
+      "path": "stores/by-store/slipper2u/images/main.jpg",
+      "bytes": 152403,
+      "sha256": "171fb6aa3e704d874103b8007fd858edf9557ff0329f88794e73b3b27607cde7"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/956d6f9258b13ad3427ae7aa13d3af9e/w768-crop.jpg",
+      "path": "stores/by-store/slipper2u/images/logo.jpg",
+      "bytes": 26572,
+      "sha256": "b12b8e4dfc484a37a79d311e4ecdcd49317634daa34ff5dbb47336e30b91ce0e"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/2385df21a21b412e1cbab102bb3463c2/w768.jpg",
+      "path": "stores/by-store/small-bear-garden/images/main.jpg",
+      "bytes": 195917,
+      "sha256": "924ad7e3eac453746979aa8b8ddadd5e61f60c73363f0b5691cf0f852c5064d3"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/1ef09638a9e226567cad734e77c81969/w768-crop.jpg",
+      "path": "stores/by-store/small-bear-garden/images/logo.jpg",
+      "bytes": 37930,
+      "sha256": "d43455f2c8d999aa4a681c5ab984eb11112c2fe17099d24ab56c227383584e49"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/a36b3e91d3d34e9d7e8572b3654f4909/w768.jpg",
+      "path": "stores/by-store/smj-currency-exchange/images/main.jpg",
+      "bytes": 118449,
+      "sha256": "cd1e0fbb21b067081b433968c29dc53323f2f7bcf316e6911420ec09d3fd4b85"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/ae7c45c2231bedabed67172c20ffe2d9/w768-crop.jpg",
+      "path": "stores/by-store/smj-currency-exchange/images/logo.jpg",
+      "bytes": 31212,
+      "sha256": "fe5468f5f841c7b7fc74d6da1821acbc0b646ed03d19d2c56b6c59d62bef05f1"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/9c4e27b3e84eb5833ee37f03f9c05031/w768.jpg",
+      "path": "stores/by-store/sorella-pierre-cardin/images/main.jpg",
+      "bytes": 88206,
+      "sha256": "b231e354b40483724556725c537c2b67dd0634927092c19e821d444f980c95c9"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/f701fcd76f0c1cecc06c8815972cf642/w768-crop.jpg",
+      "path": "stores/by-store/sorella-pierre-cardin/images/logo.jpg",
+      "bytes": 47683,
+      "sha256": "576e0f3bb4412a9ec0f1f524ad052651662ddf6037950c551599b473e27686e4"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/60951401826915440a800ceeee1bbafa/w768.jpg",
+      "path": "stores/by-store/spiffy/images/main.jpg",
+      "bytes": 147537,
+      "sha256": "f0fe8002fece41c9eadc394b46feb7ff82d4339f655ddeb935588a3f748c5231"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/71c29bfcf7ff1459564d6dd3fcd555c2/w768-crop.jpg",
+      "path": "stores/by-store/spiffy/images/logo.jpg",
+      "bytes": 26167,
+      "sha256": "446f25ad1b28367428f77d62d20c67326919825cc3765e4d577ebb2dc8dc467c"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/133e5e356306bb35f4e9701bf45392b5/w768.jpg",
+      "path": "stores/by-store/sports-direct/images/main.jpg",
+      "bytes": 128874,
+      "sha256": "42e0ea314c5fc6ac1fc859d97eb7eadbaa4ed87364e7e90023e102b6b5c8ec1a"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/2ed50bf7a22ec73016afc5964425b426/w768-crop.jpg",
+      "path": "stores/by-store/sports-direct/images/logo.jpg",
+      "bytes": 50907,
+      "sha256": "7abaedddeed53a01dd38de6ead19736231857406f3925680728992d00afc34dc"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/980caa4278f3a9b4a6292453a841900e/w768.jpeg",
+      "path": "stores/by-store/subway/images/main.jpeg",
+      "bytes": 107272,
+      "sha256": "3616327648687e421ec5bea839337ff14ded63c10976c43795bc957193788f79"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/f21b37a90f93068906d8a20bdedb57a8/w768-crop.jpg",
+      "path": "stores/by-store/subway/images/logo.jpg",
+      "bytes": 33557,
+      "sha256": "d6bb2d66e809b85252cf7bed9beda751b9a57609613e5e37e8484cd2e94f4ead"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/e55d99db125b8ebcd9fdc3d81dbb3b21/w768.jpg",
+      "path": "stores/by-store/sushi-go/images/main.jpg",
+      "bytes": 178928,
+      "sha256": "5de15d2b59bd9923e6ed7bfe2199bd7fa1dac354060fe14289cac5539908287c"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/f92e1c4d29df52cdbcd9d42f3bf8d184/w768-crop.jpg",
+      "path": "stores/by-store/sushi-go/images/logo.jpg",
+      "bytes": 29900,
+      "sha256": "c44f6e2b1e4ed7f4444236a94c4a730bd39f603c90ee6a98cd8f9cf5609f46ac"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/ca69e474b5175b7a843a73c517b8248c/w768.jpg",
+      "path": "stores/by-store/sushi-king/images/main.jpg",
+      "bytes": 148582,
+      "sha256": "164d6b49f7ffa96577efa09a476e374f55aa2f0e4c482c533d8ce05d5f3fa8c3"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/dec5f85b90497b9a9acd4749dc93a6d4/w768-crop.jpg",
+      "path": "stores/by-store/sushi-king/images/logo.jpg",
+      "bytes": 43452,
+      "sha256": "86fb1a8ba91475cf5ca1fab69c1ebd71b32f60b9daf0a4ce5d3ce40a3af090bd"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/cabb8d72a454122a712abee7937c0944/w768.jpg",
+      "path": "stores/by-store/sweetly-snack-store/images/main.jpg",
+      "bytes": 162911,
+      "sha256": "14b5d1a10e9b7d71a0a8b0cecc0c8c623b1351ac0158215856f7e7569094151c"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/a38077adcbcd8b985284658658891f82/w768-crop.jpg",
+      "path": "stores/by-store/sweetly-snack-store/images/logo.jpg",
+      "bytes": 43029,
+      "sha256": "9b09afa1606c9830d005ce285f025f10d065bcacaed7f5795a9661defd671033"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/c41ba32352ef6dc6eeb7651074564d2e/w768.jpg",
+      "path": "stores/by-store/sweetly-snack-store-1k/images/main.jpg",
+      "bytes": 149544,
+      "sha256": "a2cf25ca0ff91f72d6907610ba93a447717af568a622ffe647038693d8595616"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/6ec5a23591b393cc6c2beb89f8d4d607/w768-crop.jpg",
+      "path": "stores/by-store/sweetly-snack-store-1k/images/logo.jpg",
+      "bytes": 43029,
+      "sha256": "9b09afa1606c9830d005ce285f025f10d065bcacaed7f5795a9661defd671033"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/e372b1ce67e92f643b59f21ed47ffe23/w768.jpg",
+      "path": "stores/by-store/tealive/images/main.jpg",
+      "bytes": 108489,
+      "sha256": "7cf07459e400b207afcdfcbf30643fa5b4a36d9fc644c193b0a9ed4324797da8"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/a825d89db3b7485bc61b8f63ec6d6e94/w768-crop.jpg",
+      "path": "stores/by-store/tealive/images/logo.jpg",
+      "bytes": 27546,
+      "sha256": "016b2ccc202d6e2df75e40ea360101ed06f36961e9d9df5390bf11434d467bbb"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/6e6724321b456fbc9caa3a7c673bd089/w768.jpg",
+      "path": "stores/by-store/texas-chicken/images/main.jpg",
+      "bytes": 147358,
+      "sha256": "f0e311bbfe2783e6fb0e08a84666bedc80026b704dc048bc68e10e4214a1ac06"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/c6d275f4a1604e3efb51ec4e8e7965c6/w768-crop.jpg",
+      "path": "stores/by-store/texas-chicken/images/logo.jpg",
+      "bytes": 39336,
+      "sha256": "d6d38c43144b943cc318399872e229b376aea7d422124d084f4ddea6a85518d2"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/21379b012b31a5f0a15a339ee7b1afc0/w768.jpg",
+      "path": "stores/by-store/the-body-shop/images/main.jpg",
+      "bytes": 141539,
+      "sha256": "e836ab010e428bb05fed7764ae4087107bb99f771b6c187e28c74280bc5c8f6a"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/0ee673909669d9e5a0030a524084d155/w768-crop.jpg",
+      "path": "stores/by-store/the-body-shop/images/logo.jpg",
+      "bytes": 33586,
+      "sha256": "c06ee61cdaf9c92d7a07040294bea196e638a7a5902fcf7ecf22f6fcb6c74185"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/a53837a607d86fc14080147954d63c52/w768.jpg",
+      "path": "stores/by-store/the-chicken-rice-shop/images/main.jpg",
+      "bytes": 157633,
+      "sha256": "d178a4f11039a180ffc4637cfd472c301bd815ee0e8e669d6cdcc95a3e9de498"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/38d64686de2f79903d608f7eca5d4d3d/w768-crop.jpg",
+      "path": "stores/by-store/the-chicken-rice-shop/images/logo.jpg",
+      "bytes": 70963,
+      "sha256": "961a0e2fd777e8d24fe06af11032b9da9f6b682ef7312ad7405fe2b7c2a5c557"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/5fafafc2918386276decf269a6fee97f/w768.jpg",
+      "path": "stores/by-store/the-coffee-bean-tea-leaf/images/main.jpg",
+      "bytes": 143249,
+      "sha256": "97bce29e429c24505cd2290f0f5252663e48b5c3670a5c53b6cc01c96d982ba9"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/34588bf634a290ad2cdb62e19ebd11bf/w768-crop.jpg",
+      "path": "stores/by-store/the-coffee-bean-tea-leaf/images/logo.jpg",
+      "bytes": 48125,
+      "sha256": "bfbd4390965285fcf64b401fd58f9081bf111317183da527a6aa562e266302f4"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/72afc130c529e592e75097e55ac64d6a/w768.jpg",
+      "path": "stores/by-store/the-green-party/images/main.jpg",
+      "bytes": 178470,
+      "sha256": "49fd05fa34aec943866684e5a8f222eedb1415a5337a56da5a0d6064c1131ec4"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/20f654cde0cf9e1b0f472cee3a002bd7/w768-crop.jpg",
+      "path": "stores/by-store/the-green-party/images/logo.jpg",
+      "bytes": 56239,
+      "sha256": "84102a3de87c37ba945e517aed384e122aa2a459a9f10fd715fb15f66f27b5c6"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/23a1ea9eb5fc6ea70ff01270c2d18aa3/w768.jpg",
+      "path": "stores/by-store/the-roti-shop/images/main.jpg",
+      "bytes": 168673,
+      "sha256": "1c67e42408fa0c16187cdb1f171f0108fba96a12c211ada9ce861c953fac9945"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/3d69552499b1214114343f9494c6ffea/w768-crop.jpg",
+      "path": "stores/by-store/the-roti-shop/images/logo.jpg",
+      "bytes": 45929,
+      "sha256": "2ffd5142b4a0095538b90d329516a4347fcdb6672202335455517f459c262329"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/2515aaf0fb155abf7a6da664d449ce6f/w768.jpg",
+      "path": "stores/by-store/tiny-molly-fantasy-kids-box/images/main.jpg",
+      "bytes": 144732,
+      "sha256": "22fc7a598f52efdaa93cc12ab056e2842db18c72f41382d80356b1f6b2cafceb"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/9e29f9ead91eadbe058e099aab781bba/w768-crop.jpg",
+      "path": "stores/by-store/tiny-molly-fantasy-kids-box/images/logo.jpg",
+      "bytes": 61803,
+      "sha256": "f128518e31e6bc9b215323c3784045c4a5f0b04c622aab1f407633ab3d2a25d8"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/59173a4b8f92775aab991702f6c0cef9/w768.jpg",
+      "path": "stores/by-store/tiny-mollyfantasy-kids-box/images/main.jpg",
+      "bytes": 128891,
+      "sha256": "1c7d8d2b3c3c4a049ba3931dae9205766d10d6e0b3c375ceb61bef2929a72837"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/8e0d1df52776929ff4573a7bb5e81d0b/w768-crop.jpg",
+      "path": "stores/by-store/tiny-mollyfantasy-kids-box/images/logo.jpg",
+      "bytes": 61803,
+      "sha256": "f128518e31e6bc9b215323c3784045c4a5f0b04c622aab1f407633ab3d2a25d8"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/2f82c17359e5189ea40427961ad86efd/w768.jpg",
+      "path": "stores/by-store/u-mobile-experience-centre/images/main.jpg",
+      "bytes": 125677,
+      "sha256": "2ce5d167506e2b326c34d5d4ea50fd15e6e901e5b2d0f3e9779b3dcfb9255f65"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/c5f426d14ffe349d14a2cb25d718896f/w768-crop.jpeg",
+      "path": "stores/by-store/u-mobile-experience-centre/images/logo.jpeg",
+      "bytes": 28584,
+      "sha256": "5e136a90c175869920da537fab7e0b2b3d614ecaa91025bbaefed9c77c0801dd"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/e8d44db193532cb89f0bc9a315dcdf1a/w768.jpg",
+      "path": "stores/by-store/urban-republic-by-switc/images/main.jpg",
+      "bytes": 98047,
+      "sha256": "178f7604c468543d59a19b457d6f7b8b0339476e25e28ecf3c1802d7ffc16b26"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/bb863f9dbdad4538f4dc491e0de80ec6/w768-crop.jpeg",
+      "path": "stores/by-store/urban-republic-by-switc/images/logo.jpeg",
+      "bytes": 34329,
+      "sha256": "20fc329514db9b3cbe4dc9e7892285bdb011547e4b53d91bb592c566ffbbda21"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/1b1681b26d6e6263bf2488de6d2625da/w768.jpg",
+      "path": "stores/by-store/visual-optical/images/main.jpg",
+      "bytes": 118764,
+      "sha256": "39255b22648566ccfa74e91c5793b7afdd6d8bda9cb8e362e16a4354dfd06882"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/aa53fda82f28bf5cab9c5a48a5bf21bc/w768-crop.jpg",
+      "path": "stores/by-store/visual-optical/images/logo.jpg",
+      "bytes": 28592,
+      "sha256": "4df0dc05bf82d53d39cfcaa4fd31e6b49c69de0a317722ab637f4955086df100"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/866b79701872de1b0bf6cb6debb6d339/w768.jpg",
+      "path": "stores/by-store/vivo/images/main.jpg",
+      "bytes": 94142,
+      "sha256": "0617422800c3c4e52df7c7fac3b08b502afac8e75c681cbbed3079c1c30300c3"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/c3490a224de01c07e7c64f2706a1eb73/w768-crop.jpg",
+      "path": "stores/by-store/vivo/images/logo.jpg",
+      "bytes": 28104,
+      "sha256": "2e8ec8806300c8966b8089d324485913a8ba04333e3eb399681fc899249c5a9f"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/589ee3ddbd9a39e80d3bfb22811e63a6/w768.jpg",
+      "path": "stores/by-store/watsons/images/main.jpg",
+      "bytes": 166669,
+      "sha256": "a4978e894d8a84ae205dfd233dfccb46bc125fa8fe52a03aaefe1d6e2a7f0cc9"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/7cd611e31859d522ddcb55a142a2f8a3/w768-crop.jpg",
+      "path": "stores/by-store/watsons/images/logo.jpg",
+      "bytes": 34008,
+      "sha256": "8e978c3b1cd0d4883deaa859ae3adbb80426a35311f2875ac81ee862a6bef5f9"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/fa77b30f138d07022b3d42740dddebdc/w768.jpg",
+      "path": "stores/by-store/xes-premium/images/main.jpg",
+      "bytes": 140890,
+      "sha256": "ed8e6e3595b924d13f0c44016be1f0dec066620d111a0236982ae495747023d6"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/f12db47164eecf0fafcc66c47c1ebac9/w768-crop.jpg",
+      "path": "stores/by-store/xes-premium/images/logo.jpg",
+      "bytes": 34196,
+      "sha256": "4a08c82a4fc7265b2f0462cfa1f5c67d433f96443acc0355d250e1127634d714"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/7ca4c7269382e2d6e6560718287106a2/w768.jpg",
+      "path": "stores/by-store/xiaomi/images/main.jpg",
+      "bytes": 91301,
+      "sha256": "2d9f9ae35effff246ea1d58420629b374f72cf804a3f2ddbf2f64f7c83c7b3a1"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/84e6169ab038c88c4a5f4325fbeb4d95/w768-crop.jpg",
+      "path": "stores/by-store/xiaomi/images/logo.jpg",
+      "bytes": 27739,
+      "sha256": "b922fac24120cc1b379164e053d3d79ff939a8c0ed3fbd0465ac42a5ffafae89"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/3dcebaeec7e3960dff143362cb69f86e/w768.jpg",
+      "path": "stores/by-store/yfs-concept-store/images/main.jpg",
+      "bytes": 152816,
+      "sha256": "d423f67dbfe2e2b58d5d96c7888c131703e5d76362f0a80e9edab09fc884b8ae"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/b0d0ae0d3463787014c29ecb808608b2/w768-crop.jpg",
+      "path": "stores/by-store/yfs-concept-store/images/logo.jpg",
+      "bytes": 29697,
+      "sha256": "6a0ce374d757306fb339a9243143c2b721123d6b5b333c06b36efbce533a69f0"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/ad9c63f67879004d709687580775a035/w768.jpg",
+      "path": "stores/by-store/young-hearts/images/main.jpg",
+      "bytes": 115575,
+      "sha256": "48934600df77ab91d62361b45b7ed31df669a29aa84b19e20463dba199a6c732"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/8a1fc47c1a257577998ae075e463eae6/w768-crop.jpg",
+      "path": "stores/by-store/young-hearts/images/logo.jpg",
+      "bytes": 31448,
+      "sha256": "148b96fa3e543fe86e7a357fc2cee797250c69999b5fad58e47e22748efe067c"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/9fcf015a5d61c67eaee47eaaf9010073/w768.jpg",
+      "path": "stores/by-store/zero/images/main.jpg",
+      "bytes": 142366,
+      "sha256": "d10bacd10638c2d469b6754b0f11ba16f05fce35b72d8657707e20a4f39fa0f2"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/7f43dcc4d8e8068fbdf753295feda373/w768-crop.jpg",
+      "path": "stores/by-store/zero/images/logo.jpg",
+      "bytes": 36023,
+      "sha256": "12421e2394c3d8a1b33eb86bc8ec67190e545c96795085f39dc7913abb295720"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/67c2a6551a183e8193495b5d3c882312/w768.jpg",
+      "path": "stores/by-store/zus-coffee/images/main.jpg",
+      "bytes": 102233,
+      "sha256": "8edcc9f5f6efbab396bb33d2e7a0336d6cd9d7a4605c3703bff3dc11bd48cf48"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/shops/8d3b28b2f84ba6d6035e4c67692df585/w768-crop.jpg",
+      "path": "stores/by-store/zus-coffee/images/logo.jpg",
+      "bytes": 46928,
+      "sha256": "be316b5f8fad6e9ce9e4dd11bb68fba00f30892c4243a826fd99bc99a8950409"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/promotions/92ca5775e009d5c729dd8a4846ecfc9b/w768.jpg",
+      "path": "deals/by-deal/new-skechers-x-sanrio-collection-characters-foamies-2026-04-24-1820/images/main.jpg",
+      "bytes": 107230,
+      "sha256": "36d8c6d3e76cd0838d60b8ecb11c8bbbc36020d7f1ba3018053b26799b29ad9f"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/promotions/e76ec5230d5d74d3c2110395f5ffcc45/w768.jpg",
+      "path": "deals/by-deal/new-skechers-x-sanrio-collection-characters-foamies-2026-04-24-1820/images/alternative-01.jpg",
+      "bytes": 107230,
+      "sha256": "36d8c6d3e76cd0838d60b8ecb11c8bbbc36020d7f1ba3018053b26799b29ad9f"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/promotions/0a43cb74f8dddb5e35c0b97f8a75ad31/w768.jpg",
+      "path": "deals/by-deal/introducing-2026-05-05-6009/images/main.jpg",
+      "bytes": 101405,
+      "sha256": "a66f3e07d51bced3e63006a5c5f7045af993b518d8e3d6fdc9b6afdae822eee3"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/promotions/b404edba523cd185caa3595720ae894f/w768.jpg",
+      "path": "deals/by-deal/introducing-2026-05-05-6009/images/alternative-01.jpg",
+      "bytes": 101405,
+      "sha256": "a66f3e07d51bced3e63006a5c5f7045af993b518d8e3d6fdc9b6afdae822eee3"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/promotions/cdac9e780aadf3d6f43b72bde26f4a77/w768.jpg",
+      "path": "deals/by-deal/skechers-max-cushioning-glide-step-collection-2026-05-12-1294/images/main.jpg",
+      "bytes": 121458,
+      "sha256": "8e00048a6b24894e16f505016aa847eda74f21fd58d1d5f04e2ae33e201d615e"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/promotions/bc2d83b5bcad6e837662318d8bd3c17c/w768.jpg",
+      "path": "deals/by-deal/skechers-max-cushioning-glide-step-collection-2026-05-12-1294/images/alternative-01.jpg",
+      "bytes": 121458,
+      "sha256": "8e00048a6b24894e16f505016aa847eda74f21fd58d1d5f04e2ae33e201d615e"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/promotions/7f606ae81df063e4fdc1f240dec6a18b/w768.jpg",
+      "path": "deals/by-deal/new-vivo-x300-fe-x300-ultra-2026-06-18-3983/images/main.jpg",
+      "bytes": 73021,
+      "sha256": "45ebd41492cdcb82058c5f914c76f0a122813f126fd134a123db7261dec0da1e"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/promotions/2fa875d43d64e6fc55e96deba956d8f2/w768.jpg",
+      "path": "deals/by-deal/new-vivo-x300-fe-x300-ultra-2026-06-18-3983/images/alternative-01.jpg",
+      "bytes": 73021,
+      "sha256": "45ebd41492cdcb82058c5f914c76f0a122813f126fd134a123db7261dec0da1e"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/promotions/b515e610c472e2f65056fcf5b0f09f7b/w768.jpg",
+      "path": "deals/by-deal/new-vivo-y31s-5g-2026-06-18-484/images/main.jpg",
+      "bytes": 59601,
+      "sha256": "7dfb2057af37aa6915d31c6b8278b61a6b1c084d6fadf7b1e3c7b8afe5728da1"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/promotions/902018b1e514a08884ec669860145786/w768.jpg",
+      "path": "deals/by-deal/new-vivo-y31s-5g-2026-06-18-484/images/alternative-01.jpg",
+      "bytes": 59601,
+      "sha256": "7dfb2057af37aa6915d31c6b8278b61a6b1c084d6fadf7b1e3c7b8afe5728da1"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/promotions/ec13551d53e8d8c462a343b246601770/w768.png",
+      "path": "deals/by-deal/new-arrivals-2026-07-28-7626/images/main.png",
+      "bytes": 851650,
+      "sha256": "263e49f4fb65ac16183216ee7bbc44ff7ff5762300ef02eb3031e4595e849016"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/promotions/3436db6bf32adc6f95c739a5a2557bcc/w768.png",
+      "path": "deals/by-deal/new-arrivals-2026-07-28-7626/images/alternative-01.png",
+      "bytes": 851650,
+      "sha256": "263e49f4fb65ac16183216ee7bbc44ff7ff5762300ef02eb3031e4595e849016"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/promotions/0040613e4eaf2ff0a72b1e0acefe1990/w768.jpg",
+      "path": "deals/by-deal/collect-stamps-and-enjoy-free-ayam-set-2026-08-09-8866/images/main.jpg",
+      "bytes": 189103,
+      "sha256": "ed4bfa799581ce5aad61c511b7afcd5474151e06f95ee5e28ebc59361d5c1da1"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/promotions/9f42f63508ddc94838fcbd0ce6448f08/w768.jpg",
+      "path": "deals/by-deal/collect-stamps-and-enjoy-free-ayam-set-2026-08-09-8866/images/alternative-01.jpg",
+      "bytes": 189103,
+      "sha256": "ed4bfa799581ce5aad61c511b7afcd5474151e06f95ee5e28ebc59361d5c1da1"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/promotions/09a5f01d73557b5347cb88603a172fdd/w768.jpg",
+      "path": "deals/by-deal/new-mb-milo-coco-blast-2026-09-24-2079/images/main.jpg",
+      "bytes": 160023,
+      "sha256": "4f804390e0fcb4784be40264bd0af2078c8bde88826e6f9ffcba3e63914331e3"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/promotions/558059b5657a50628c194fed266c19fd/w768.jpg",
+      "path": "deals/by-deal/new-mb-milo-coco-blast-2026-09-24-2079/images/alternative-01.jpg",
+      "bytes": 160023,
+      "sha256": "4f804390e0fcb4784be40264bd0af2078c8bde88826e6f9ffcba3e63914331e3"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/promotions/f355d7e8d40be0bacb943ea828ab8191/w768.jpg",
+      "path": "deals/by-deal/new-all-new-coffee-series-2026-09-24-4203/images/main.jpg",
+      "bytes": 83820,
+      "sha256": "327b97f798680eac91346f6ab67e6e4e4d68b104fd63848b0955b459820b77ef"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/promotions/adcd5c6822356241e949587c2d1b1d19/w768.jpg",
+      "path": "deals/by-deal/new-all-new-coffee-series-2026-09-24-4203/images/alternative-01.jpg",
+      "bytes": 83820,
+      "sha256": "327b97f798680eac91346f6ab67e6e4e4d68b104fd63848b0955b459820b77ef"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/sunwaychristmas-2024-redemption-activities-social-media-01-large-1732257724487/w768.jpg",
+      "path": "events/by-event/christmas-colourama/images/image-01.jpg",
+      "bytes": 157651,
+      "sha256": "35924aa84a597d8013cdf1251cb5e3ba423edd9610d8e2ae410aa6d7e44caf44"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/sunwaychristmas-2024-redemption-activities-social-media-03-large-1732257911149/w768.jpg",
+      "path": "events/by-event/christmas-colourama/images/image-02.jpg",
+      "bytes": 153411,
+      "sha256": "1e93f2ccdaa344a8d18630debad7f1f84908f86b3de51b4bd176b7473f7e794e"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/sunwaychristmas-2024-redemption-activities-social-media-04-large-1732258120485/w768.jpg",
+      "path": "events/by-event/christmas-colourama/images/image-03.jpg",
+      "bytes": 156221,
+      "sha256": "3084bda8f3dd1502cf9e214f22b2f2a4cda5719b579318b3a2c6358385c6f1b5"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/sunwaychristmas-2024-redemption-activities-social-media-02-large-1732258901417/w768.jpg",
+      "path": "events/by-event/christmas-colourama/images/image-04.jpg",
+      "bytes": 148607,
+      "sha256": "dbcc6ae046df4fba0a47787493e40a43541f9817e3dff7fe1c4f2dba91cb0396"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/sunwaychristmas-2024-workshops-social-media-01-large-1732258925606/w768.jpg",
+      "path": "events/by-event/christmas-colourama/images/image-05.jpg",
+      "bytes": 241887,
+      "sha256": "2d5c9b6b085496c8723c040165c9e3647a8c798d8e1b3327b56e9b8f722a7d18"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/sunwaychristmas-2024-workshops-social-media-02-large-1732258934178/w768.jpg",
+      "path": "events/by-event/christmas-colourama/images/image-06.jpg",
+      "bytes": 150102,
+      "sha256": "9d13e0db8c5bc3c68494eafe490851d9f4ce6a52ee593069f00b1dffe8a9fecd"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/sunwaychristmas-2024-workshops-social-media-03-large-1732258953816/w768.jpg",
+      "path": "events/by-event/christmas-colourama/images/image-07.jpg",
+      "bytes": 145149,
+      "sha256": "f103b0fd772243ca0ff09bf80e84670f21d74ad0a9d3ae3c561bfe7f1b8be58f"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/sunwaychristmas-2024-workshops-social-media-05-large-1732258977036/w768.jpg",
+      "path": "events/by-event/christmas-colourama/images/image-08.jpg",
+      "bytes": 154626,
+      "sha256": "16026fa574bd9a755be7007d7ebefa265ff4955bc02aa87525746205b9a49294"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/sunwaychristmas-2024-workshops-social-media-06-large-1732258986239/w768.jpg",
+      "path": "events/by-event/christmas-colourama/images/image-09.jpg",
+      "bytes": 180602,
+      "sha256": "4d028ffc5d157df0f9f2c7791a3a6b48fc355312c56f28dfb816f81aabb5d9d9"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/sunwaychristmas-2024-workshops-social-media-07-large-1732259003404/w768.jpg",
+      "path": "events/by-event/christmas-colourama/images/image-10.jpg",
+      "bytes": 160156,
+      "sha256": "2fb5ecd06857761bc4aa53b93fc2528f7bfdec463ec0c393a4c7533188f9a3e1"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/sunwaychristmas-2024-workshops-social-media-08-large-1732259012449/w768.jpg",
+      "path": "events/by-event/christmas-colourama/images/image-11.jpg",
+      "bytes": 158353,
+      "sha256": "c221cf74d3f8f1ca98e2a6084403741338b4e9cd5455303eaec663ec43ac1a8d"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/events/841366267fd105ad7a534d507b291489/w768.jpg",
+      "path": "events/by-event/recycle-now-with-kloth-cares-bin-2025-05-22-9351/images/image-01.jpg",
+      "bytes": 160118,
+      "sha256": "599b7646d9abd500a71faac634e36cf2ebf028f099da26cea70ac6951f0768e4"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/events/199847b065b60f111e174a8c3af99387/w768.jpg",
+      "path": "events/by-event/sunway-malls-is-now-on-sunway-super-app-2026-06-24-6699/images/image-01.jpg",
+      "bytes": 98894,
+      "sha256": "92f048687b9eac5c917db60b5933ff7e7a63734bb65c385fb46dd2203d49900b"
+    },
+    {
+      "url": "https://www.sunwaykluangmall.com/static/events/6e740eac08db4cab8d48c6d18d170079/w768.jpeg",
+      "path": "events/by-event/spend-win-campaign-2026-10-13-1696/images/image-01.jpeg",
+      "bytes": 149775,
+      "sha256": "87da632e96c86d5ec0a5390ac298556494697f3004952bbad5aee34bf677a5e4"
+    }
+  ],
+  "failures": []
+}

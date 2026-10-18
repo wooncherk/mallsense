@@ -1,0 +1,82 @@
+{
+  "_id": "9bc9b0d9c601658e6c7d8fc18363da6c",
+  "tags": [],
+  "categoryTree": [
+    {
+      "title": "Anchor Tenants",
+      "refcode": "ANCHOR_TENANTS",
+      "subs": []
+    },
+    {
+      "title": "Cinema",
+      "refcode": "CINEMA",
+      "subs": []
+    }
+  ],
+  "deals": [],
+  "alternativeLocations": [],
+  "groups": [],
+  "title": "GOLDEN SCREEN CINEMAS",
+  "text": "Golden Screen Cinemas Sdn. Bhd. (GSC) is a wholly-owned subsidiary of the PPB Group (a member of the Kuok Group), operating a total of over 639 screens in over 76 locations across Malaysia and Vietnam, with 498 screens in 52 locations in Malaysia, and 141 screens in 24 locations in Vietnam through a partnership with Galaxy Studio. \n\nAs the leading cinema exhibitor in Malaysia, GSC delivers innovative, integrated, and enriching lifestyle experiences through state-of-the-art cinematic technologies, merchandising, F&B, events, and more. GSC also owns Aurum Theatre, a boutique luxury cinema unlike any other in Malaysia, featuring opulent seats, bespoke service, and continental dining. \n\nTailored for audiences that enjoy arthouse films, GSC International Screens was launched in 1999, celebrating cultural diversity through film on the big screens.",
+  "venue": "2-10",
+  "level": "2",
+  "sourceId": null,
+  "category": {
+    "title": "Anchor Tenants",
+    "refcode": "anchor_tenants",
+    "code": "anchor_tenants"
+  },
+  "website": "https://www.gsc.com.my/",
+  "slug": "golden-screen-cinemas",
+  "facebook": "",
+  "instagram": "",
+  "tiktok": "",
+  "xiaohongshu": "",
+  "keywords": "",
+  "contact": {
+    "email": "",
+    "phone": ""
+  },
+  "alternativeImages": [],
+  "logo": {
+    "local": "d35c22f9a75bdb3e9d53b90dcdb6f54c.jpg",
+    "orig": "km_tenant_logo_2_10[1].jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/d35c22f9a75bdb3e9d53b90dcdb6f54c/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "mainImage": {
+    "local": "bf327738d5a47b526e14c2c802889ac9.jpg",
+    "orig": "2_10_gsc_shopfront_photo.jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/bf327738d5a47b526e14c2c802889ac9/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "id": "9bc9b0d9c601658e6c7d8fc18363da6c"
+}

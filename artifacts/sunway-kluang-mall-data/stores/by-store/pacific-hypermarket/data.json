@@ -1,0 +1,77 @@
+{
+  "_id": "e118f1a876b7ff02eac647f643186a7b",
+  "tags": [],
+  "categoryTree": [
+    {
+      "title": "Anchor Tenants",
+      "refcode": "ANCHOR_TENANTS",
+      "subs": []
+    }
+  ],
+  "deals": [],
+  "alternativeLocations": [],
+  "groups": [],
+  "title": "PACIFIC HYPERMARKET",
+  "text": "Pacific Grocer & Department Store is running a 2 in 1 shopping concept, offering up to 100,000 selections of merchandise to shoppers. \n\n“Jimat Setiap Hari”, this motto serves as a focal point in Pacific’s concept, where quality goods are offered at reasonable prices and is one of the main attraction factors for shopping at Pacific Grocer. Departmental store is a highly-targeted retail business with merchandise and goods that appeal more to fashion-conscious shoppers.",
+  "venue": "G-88",
+  "level": "G",
+  "sourceId": null,
+  "category": {
+    "title": "Anchor Tenants",
+    "refcode": "anchor_tenants",
+    "code": "anchor_tenants"
+  },
+  "website": "https://pacificgrocer-dept.com.my/",
+  "slug": "pacific-hypermarket",
+  "facebook": "",
+  "instagram": "",
+  "tiktok": "",
+  "xiaohongshu": "",
+  "keywords": "",
+  "contact": {
+    "email": "",
+    "phone": ""
+  },
+  "alternativeImages": [],
+  "logo": {
+    "local": "418a5bcfe5278042f02319252dd130b0.jpg",
+    "orig": "km_tenant_logo_g_88[1].jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/418a5bcfe5278042f02319252dd130b0/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "mainImage": {
+    "local": "cbec099c8336fb6763ef997b1c0e0aaa.jpg",
+    "orig": "g_88_pacific_hypermarket_shopfront_photo.jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/cbec099c8336fb6763ef997b1c0e0aaa/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "id": "e118f1a876b7ff02eac647f643186a7b"
+}

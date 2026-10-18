@@ -1,0 +1,77 @@
+{
+  "_id": "33c8e685397e9cdf87c889274387f77f",
+  "tags": [],
+  "categoryTree": [
+    {
+      "title": "Health/Beauty",
+      "refcode": "HEALTH_BEAUTY",
+      "subs": []
+    }
+  ],
+  "deals": [],
+  "alternativeLocations": [],
+  "groups": [],
+  "title": "SASA",
+  "text": "",
+  "venue": "G-37-39",
+  "level": "G",
+  "sourceId": null,
+  "category": {
+    "title": "Health/Beauty",
+    "refcode": "health_beauty",
+    "code": "health_beauty"
+  },
+  "website": "",
+  "mainImage": {
+    "local": "27bc5209201ae5ad293cf32f8872e338.jpg",
+    "orig": "g_37_sasa_shopfront_photo.jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/27bc5209201ae5ad293cf32f8872e338/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "slug": "sasa",
+  "facebook": "",
+  "instagram": "",
+  "tiktok": "",
+  "xiaohongshu": "",
+  "keywords": "",
+  "contact": {
+    "email": "",
+    "phone": ""
+  },
+  "alternativeImages": [],
+  "logo": {
+    "local": "7dd24f4a2391e26b9e8470fc4076b23b.jpg",
+    "orig": "km_tenant_logo_g_37[1].jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/7dd24f4a2391e26b9e8470fc4076b23b/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "id": "33c8e685397e9cdf87c889274387f77f"
+}

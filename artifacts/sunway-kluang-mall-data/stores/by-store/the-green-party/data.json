@@ -1,0 +1,82 @@
+{
+  "_id": "609707dbcd9fe355025f67822a34f3d1",
+  "tags": [],
+  "categoryTree": [
+    {
+      "title": "Homewares & Furnishings",
+      "refcode": "HOMEWARES_FURNISHINGS",
+      "subs": []
+    },
+    {
+      "title": "Gifts",
+      "refcode": "GIFTS",
+      "subs": []
+    }
+  ],
+  "deals": [],
+  "alternativeLocations": [],
+  "groups": [],
+  "title": "THE GREEN PARTY",
+  "text": "The Green Party is a retail store, primarily operating in Malaysia and Singapore, that focuses on trendy lifestyle goods with a focus on green and nature-inspired products. \n\nThey aim to provide a \"One Stop Shopping\" experience with a wide range of products, including household goods, collectibles, and gifts, while promoting sustainable living. ",
+  "venue": "2-02",
+  "level": "2",
+  "sourceId": null,
+  "category": {
+    "title": "Homewares & Furnishings",
+    "refcode": "homewares_furnishings",
+    "code": "homewares_furnishings"
+  },
+  "website": "https://www.facebook.com/thegreenpartymalaysia/",
+  "mainImage": {
+    "local": "72afc130c529e592e75097e55ac64d6a.jpg",
+    "orig": "2_02a_the_green_party_shopfront_photo.jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/72afc130c529e592e75097e55ac64d6a/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "slug": "the-green-party",
+  "facebook": "",
+  "instagram": "",
+  "tiktok": "",
+  "xiaohongshu": "",
+  "keywords": "",
+  "contact": {
+    "email": "",
+    "phone": ""
+  },
+  "alternativeImages": [],
+  "logo": {
+    "local": "20f654cde0cf9e1b0f472cee3a002bd7.jpg",
+    "orig": "shop_2_02a[1].jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/20f654cde0cf9e1b0f472cee3a002bd7/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "id": "609707dbcd9fe355025f67822a34f3d1"
+}

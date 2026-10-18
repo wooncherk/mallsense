@@ -1,0 +1,77 @@
+{
+  "_id": "7bd338092ee883b6770adaa587c09459",
+  "tags": [],
+  "categoryTree": [
+    {
+      "title": "Health/Beauty",
+      "refcode": "HEALTH_BEAUTY",
+      "subs": []
+    }
+  ],
+  "deals": [],
+  "alternativeLocations": [],
+  "groups": [],
+  "title": "IDO'S COSMECEUTICAL",
+  "text": "",
+  "venue": "1-58-60",
+  "level": "1",
+  "sourceId": null,
+  "category": {
+    "title": "Health/Beauty",
+    "refcode": "health_beauty",
+    "code": "health_beauty"
+  },
+  "website": "",
+  "slug": "idos-cosmeceutical",
+  "facebook": "",
+  "instagram": "",
+  "tiktok": "",
+  "xiaohongshu": "",
+  "keywords": "",
+  "contact": {
+    "email": "",
+    "phone": ""
+  },
+  "alternativeImages": [],
+  "logo": {
+    "local": "e5c3752b4accb590fcf21c804c95e1ed.jpg",
+    "orig": "km_tenant_logo_1_58[1].jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/e5c3752b4accb590fcf21c804c95e1ed/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "mainImage": {
+    "local": "3a0ce490e18ddd45d94bea6ad8f710ea.jpg",
+    "orig": "1_58_idos_cosmeceutical_shopfront_photo.jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/3a0ce490e18ddd45d94bea6ad8f710ea/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "id": "7bd338092ee883b6770adaa587c09459"
+}

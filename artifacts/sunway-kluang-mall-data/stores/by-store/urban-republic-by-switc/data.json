@@ -1,0 +1,89 @@
+{
+  "_id": "98f6d44252a66badb4a91424a9070c5e",
+  "category": {
+    "title": "Gadget/Electronic",
+    "refcode": "gadget_electronic",
+    "code": "gadget_electronic"
+  },
+  "tags": [],
+  "categoryTree": [
+    {
+      "title": "Gadget/Electronic",
+      "refcode": "GADGET_ELECTRONIC",
+      "subs": []
+    }
+  ],
+  "deals": [],
+  "alternativeLocations": [],
+  "groups": [],
+  "title": "URBAN REPUBLIC BY SWITCH",
+  "text": "Urban Republic is a lifestyle technology store offering a wide range of smartphones, gadgets, accessories and smart devices. \n\nDiscover the latest tech and lifestyle products designed to keep you connected and on the go.",
+  "venue": "1-52",
+  "level_label": "1",
+  "sourceId": null,
+  "website": "https://shop.urbanrepublic.com.my/",
+  "slug": "urban-republic-by-switc",
+  "facebook": "",
+  "instagram": "",
+  "tiktok": "",
+  "xiaohongshu": "",
+  "keywords": "",
+  "contact": {
+    "email": "",
+    "phone": ""
+  },
+  "level": {
+    "code": "1",
+    "label": "1",
+    "title": "1"
+  },
+  "alternativeImages": [
+    {
+      "_id": "6aba1392c2067aaf3fb131f2",
+      "local": "1c4bf4601326bfaf8dc1708a4149f012.jpg",
+      "orig": "1_52_urbanrepublic_shopfront_photo.jpg",
+      "refresh": null
+    }
+  ],
+  "logo": {
+    "local": "bb863f9dbdad4538f4dc491e0de80ec6.jpeg",
+    "orig": "skm_tenant_logo_1_52.jpg.jpeg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/bb863f9dbdad4538f4dc491e0de80ec6/",
+      "thumbs": [
+        "w1920crop.jpeg",
+        "w1440crop.jpeg",
+        "w960crop.jpeg",
+        "w768crop.jpeg",
+        "w512crop.jpeg",
+        "w380crop.jpeg",
+        "w320crop.jpeg",
+        "w180crop.jpeg"
+      ],
+      "ext": ".jpeg"
+    }
+  },
+  "mainImage": {
+    "local": "e8d44db193532cb89f0bc9a315dcdf1a.jpg",
+    "orig": "1_52_urbanrepublic_shopfront_photo.jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/e8d44db193532cb89f0bc9a315dcdf1a/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "id": "98f6d44252a66badb4a91424a9070c5e"
+}

@@ -1,0 +1,77 @@
+{
+  "_id": "e32129246e8219bfd6dfa204b5efa61e",
+  "tags": [],
+  "categoryTree": [
+    {
+      "title": "Jewellery/Timepieces/Optical",
+      "refcode": "JEWELLERY_TIMEPIECES_OPTICAL",
+      "subs": []
+    }
+  ],
+  "deals": [],
+  "alternativeLocations": [],
+  "groups": [],
+  "title": "CRYSTAL 925",
+  "text": "Crystal 925 (also branded as “九紫玄術家 Crystal 925”) is a store specialising in crystals, gemstone jewellery and Feng Shui/geomancy (玄学) services.",
+  "venue": "1-73A",
+  "level": "1",
+  "sourceId": null,
+  "category": {
+    "title": "Jewellery/Timepieces/Optical",
+    "refcode": "jewellery_timepieces_optical",
+    "code": "jewellery_timepieces_optical"
+  },
+  "website": "",
+  "mainImage": {
+    "local": "5bd48cb580592bae41dfd17ce1df9ddb.jpg",
+    "orig": "1_73a_famous_silver_shopfront_photo.jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/5bd48cb580592bae41dfd17ce1df9ddb/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "slug": "crystal-925",
+  "facebook": "",
+  "instagram": "",
+  "tiktok": "",
+  "xiaohongshu": "",
+  "keywords": "",
+  "contact": {
+    "email": "",
+    "phone": ""
+  },
+  "alternativeImages": [],
+  "logo": {
+    "local": "fad884282e5a38a6492e49ad8248b7df.jpg",
+    "orig": "km_tenant_logo_1_73a[1].jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/fad884282e5a38a6492e49ad8248b7df/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "id": "e32129246e8219bfd6dfa204b5efa61e"
+}

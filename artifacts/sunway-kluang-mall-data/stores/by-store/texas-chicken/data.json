@@ -1,0 +1,77 @@
+{
+  "_id": "cd121b47ba34d27895a44c9325c3e102",
+  "tags": [],
+  "categoryTree": [
+    {
+      "title": "Food & Beverages",
+      "refcode": "FOOD_BEVERAGES",
+      "subs": []
+    }
+  ],
+  "deals": [],
+  "alternativeLocations": [],
+  "groups": [],
+  "title": "TEXAS CHICKEN",
+  "text": "Serving really good chicken for those who enjoy really good chicken. The Texas Way. \n\nAt Malaysia’s Texas Chicken™, they deliver authentic traditions, bold tastes and straightforward, consistent food you can trust. After all, Texas Chicken more than fresh-fried chicken in Malaysia. The crisp, satisfying bite of a meal earned through hard work. The feeling of community that comes through shared moments and simple pleasures.",
+  "venue": "LG-08",
+  "level": "LG",
+  "sourceId": null,
+  "category": {
+    "title": "Food & Beverages",
+    "refcode": "food_beverages",
+    "code": "food_beverages"
+  },
+  "website": "https://malaysia.texaschicken.com/",
+  "slug": "texas-chicken",
+  "facebook": "",
+  "instagram": "",
+  "tiktok": "",
+  "xiaohongshu": "",
+  "keywords": "",
+  "contact": {
+    "email": "",
+    "phone": ""
+  },
+  "alternativeImages": [],
+  "logo": {
+    "local": "c6d275f4a1604e3efb51ec4e8e7965c6.jpg",
+    "orig": "km_tenant_logo_lg_08[1].jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/c6d275f4a1604e3efb51ec4e8e7965c6/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "mainImage": {
+    "local": "6e6724321b456fbc9caa3a7c673bd089.jpg",
+    "orig": "lg08_texas_shopfront_photo.jpg",
+    "refresh": null,
+    "_meta": {
+      "url": "https://www.sunwaykluangmall.com/static/shops/",
+      "thumbsUrl": "https://www.sunwaykluangmall.com/static/shops/6e6724321b456fbc9caa3a7c673bd089/",
+      "thumbs": [
+        "w1920crop.jpg",
+        "w1440crop.jpg",
+        "w960crop.jpg",
+        "w768crop.jpg",
+        "w512crop.jpg",
+        "w380crop.jpg",
+        "w320crop.jpg",
+        "w180crop.jpg"
+      ],
+      "ext": ".jpg"
+    }
+  },
+  "id": "cd121b47ba34d27895a44c9325c3e102"
+}
