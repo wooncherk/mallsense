@@ -18,19 +18,22 @@ public class ShopperChatService : IShopperChatService
     private readonly IPromotionRepository _promotionRepository;
     private readonly IIntentSignalRepository _intentRepository;
     private readonly ISemanticSearchService _semanticSearchService;
+    private readonly IKnowledgeRepository? _knowledgeRepository;
 
     public ShopperChatService(
         IGeminiClient geminiClient,
         ITenantRepository tenantRepository,
         IPromotionRepository promotionRepository,
         IIntentSignalRepository intentRepository,
-        ISemanticSearchService semanticSearchService)
+        ISemanticSearchService semanticSearchService,
+        IKnowledgeRepository? knowledgeRepository = null)
     {
         _geminiClient = geminiClient;
         _tenantRepository = tenantRepository;
         _promotionRepository = promotionRepository;
         _intentRepository = intentRepository;
         _semanticSearchService = semanticSearchService;
+        _knowledgeRepository = knowledgeRepository;
     }
 
     public async Task<ShopperChatResponse> ProcessShopperMessageAsync(
@@ -62,10 +65,11 @@ public class ShopperChatService : IShopperChatService
             // 2. Fetch ground-truth verified tenants & promotions and run semantic retrieval.
             var allTenants = await _tenantRepository.GetAllAsync(cancellationToken);
             var activePromotions = await _promotionRepository.GetAllAsync(activeOnly: true, cancellationToken);
+            var tenantKnowledge = await GetPublishedTenantKnowledgeAsync(allTenants.Select(tenant => tenant.Id), cancellationToken);
             var searchQuery = string.IsNullOrWhiteSpace(structuredIntent.SearchQuery) ? request.Message : structuredIntent.SearchQuery;
             var semanticScores = await _semanticSearchService.ScoreAsync(searchQuery!,
                 allTenants.Select(tenant => new SemanticSearchDocument(
-                    tenant.Id.ToString(), BuildTenantSearchText(tenant, activePromotions), tenant.Name)).ToList(),
+                    tenant.Id.ToString(), BuildTenantSearchText(tenant, activePromotions, tenantKnowledge.GetValueOrDefault(tenant.Id)), tenant.Name)).ToList(),
                 cancellationToken);
 
             // 3. Grounded matching (Strict rule: zero hallucination)
@@ -370,13 +374,31 @@ public class ShopperChatService : IShopperChatService
             .ToList();
     }
 
-    private static string BuildTenantSearchText(Tenant tenant, IReadOnlyList<Promotion> activePromotions)
+    private static string BuildTenantSearchText(Tenant tenant, IReadOnlyList<Promotion> activePromotions, string? relatedKnowledge)
     {
         var promotions = activePromotions.Where(promotion => promotion.TenantId == tenant.Id)
             .Select(promotion => $"{promotion.Title}. {promotion.OfferSummary}. Audience: {promotion.TargetAudience}. Occasions: {promotion.Occasions}.");
-        return $"Store: {tenant.Name}. Category: {tenant.Category}. Description: {tenant.Description}. " +
+        return $"Store: {tenant.Name}. Category: {tenant.Category}. Description: {TenantSearchMarkdown.ToSearchText(tenant.Description)}. " +
                $"Tags: {tenant.Tags}. Price level: {tenant.PriceLevel}. Floor: {tenant.FloorNumber}. " +
-               string.Join(' ', promotions);
+               string.Join(' ', promotions) + " " + relatedKnowledge;
+    }
+
+    private async Task<IReadOnlyDictionary<Guid, string>> GetPublishedTenantKnowledgeAsync(IEnumerable<Guid> tenantIds, CancellationToken token)
+    {
+        if (_knowledgeRepository is null) return new Dictionary<Guid, string>();
+        var ids = tenantIds.ToHashSet();
+        var collections = (await _knowledgeRepository.GetCollectionsAsync(token))
+            .Where(collection => collection.ScopeType.Equals("Tenant", StringComparison.OrdinalIgnoreCase) &&
+                collection.ScopeReferenceId.HasValue && ids.Contains(collection.ScopeReferenceId.Value) &&
+                collection.Visibility == KnowledgeVisibility.Published).ToArray();
+        if (collections.Length == 0) return new Dictionary<Guid, string>();
+        var sources = await _knowledgeRepository.GetSourcesAsync(collections.Select(collection => collection.Id), token);
+        var owners = collections.ToDictionary(collection => collection.Id, collection => collection.ScopeReferenceId!.Value);
+        var textByTenant = sources.Where(source => source.Status == KnowledgeStatus.Published)
+            .GroupBy(source => owners[source.CollectionId])
+            .ToDictionary(group => group.Key, group => string.Join(" ", group.Select(source =>
+                $"Related tenant knowledge: {source.Title}. {TenantSearchMarkdown.ToSearchText(source.AiSummary)} {TenantSearchMarkdown.ToSearchText(source.Content, 1800)}")));
+        return textByTenant.ToDictionary(item => item.Key, item => TenantSearchMarkdown.ToSearchText(item.Value, 5000));
     }
 
     private async Task<string> GenerateConversationalReplyAsync(

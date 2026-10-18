@@ -79,13 +79,14 @@ export const DealsEventsView: React.FC<DealsEventsViewProps> = ({ onNavigateToSt
       .finally(() => setLoading(false));
   }, []);
 
-  useEffect(() => {
+  useEffect(() => { setAgentResult(null); }, [submittedQuery]);
+
+  const runAiSearch = () => {
     const query = submittedQuery.trim();
-    if (query.length < 2) { setAgentResult(null); setAgentLoading(false); return; }
-    setAgentResult(null);
+    if (query.length < 2 || agentLoading) return;
     setAgentLoading(true);
     void searchStorefront(query, undefined, 'DealsEvents').then(setAgentResult).catch(() => setAgentResult(null)).finally(() => setAgentLoading(false));
-  }, [submittedQuery]);
+  };
 
   const offers = useMemo(() => sources.map(parseOffer), [sources]);
   const storeForOffer = (offer: OfferDocument) => stores.find((candidate) => candidate.id === offer.tenantId)
@@ -158,10 +159,10 @@ export const DealsEventsView: React.FC<DealsEventsViewProps> = ({ onNavigateToSt
         <h2 className="text-3xl font-bold tracking-[-0.04em] md:text-4xl">Deals & events</h2>
         <p className="mt-2 text-sm leading-6 text-base-content/55">Offers and activities happening around the mall.</p>
       </div>
-      <form className="surface-card flex min-h-16 items-center gap-3 px-5" onSubmit={(event) => { event.preventDefault(); setSubmittedQuery(searchQuery.trim()); }}>
+      <form className="surface-card flex min-h-16 items-center gap-3 px-5" onSubmit={(event) => { event.preventDefault(); setAgentResult(null); setSubmittedQuery(searchQuery.trim()); }}>
         <Search size={19} className="shrink-0 text-base-content/45" />
         <input className="w-full bg-transparent text-sm outline-none placeholder:text-base-content/35" type="search" placeholder="Search deals, events or a budget" value={searchQuery} onChange={(event) => setSearchQuery(event.target.value)} />
-        <button className="btn btn-primary btn-sm rounded-full px-5" disabled={agentLoading || searchQuery.trim().length < 2} type="submit">Search</button>
+        <button className="btn btn-primary btn-sm rounded-full px-5" disabled={searchQuery.trim().length < 2} type="submit">Search</button>
       </form>
     </section>
 
@@ -177,7 +178,8 @@ export const DealsEventsView: React.FC<DealsEventsViewProps> = ({ onNavigateToSt
     {!agentLoading && agentResult && <section className="surface-card p-5" aria-live="polite"><div className="flex items-start gap-3"><span className="grid size-8 shrink-0 place-items-center rounded-full bg-primary/10 text-primary"><Sparkles size={16} /></span><div className="min-w-0 flex-1"><div className="flex flex-wrap items-center justify-between gap-3"><h3 className="text-sm font-semibold">{hasAgentMatches ? 'Suggestions for you' : 'Ask the Sunway Kluang Mall AI'}</h3><button type="button" className="btn btn-ghost btn-sm rounded-full border border-base-300" onClick={() => { recordBehavior({ eventType: 'AskAiContinued', query: submittedQuery }); onAskAiPage(submittedQuery); }}><Bot size={14} />{hasAgentMatches ? 'Ask more' : 'Continue in Ask AI'}</button></div><AgentMarkdown>{hasAgentMatches ? agentResult.answer : 'This request is not specifically about a deal or event. Continue in Ask AI and your question will be carried over.'}</AgentMarkdown></div></div></section>}
 
     {loading ? <div className="py-20 text-center text-base-content/45"><span className="loading loading-spinner loading-md" /><p className="mt-3">Loading deals and events…</p></div>
-      : !agentLoading && filteredOffers.length === 0 && !agentResult ? <div className="surface-card py-16 text-center text-sm text-base-content/50">No deals or events matched your filters.</div>
+      : !agentLoading && filteredOffers.length === 0 && !agentResult && submittedQuery ? <div className="surface-card py-12 text-center"><p className="text-sm text-base-content/60">No deals or events match “{submittedQuery}”.</p></div>
+        : !agentLoading && filteredOffers.length === 0 && !agentResult ? <div className="surface-card py-16 text-center text-sm text-base-content/50">No deals or events matched your filters.</div>
         : !agentLoading && filteredOffers.length === 0 ? null
         : <section className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">{filteredOffers.map((offer) => {
           const store = storeForOffer(offer);
@@ -205,6 +207,8 @@ export const DealsEventsView: React.FC<DealsEventsViewProps> = ({ onNavigateToSt
             </div>
           </article>;
         })}</section>}
+
+    {!loading && submittedQuery && !agentResult && <div className="surface-card flex flex-wrap items-center justify-center gap-3 p-5 text-center"><p className="text-sm text-base-content/60">Not seeing what you’re looking for?</p><button className="btn btn-primary btn-sm rounded-full" disabled={agentLoading} onClick={runAiSearch}><Sparkles size={14} />{agentLoading ? 'Searching with AI…' : 'Try AI search'}</button></div>}
 
     {selectedPoster && <div className="fixed inset-0 z-[100] flex flex-col bg-black/90 p-3 backdrop-blur-sm md:p-6" role="dialog" aria-modal="true" aria-label="Poster gallery" onMouseDown={(event) => { if (event.target === event.currentTarget) setSelectedPosterId(null); }}>
       <div className="flex items-center justify-between gap-4 text-white">

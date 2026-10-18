@@ -32,14 +32,15 @@ export const DirectoryView: React.FC<DirectoryViewProps> = ({ onNavigateToStore,
       .finally(() => setLoading(false));
   }, []);
 
-  useEffect(() => {
+  useEffect(() => { setAgentResult(null); }, [submittedQuery, selectedFloor]);
+
+  const runAiSearch = () => {
     const query = submittedQuery.trim();
-    if (query.length < 2) { setAgentResult(null); return; }
-    setAgentResult(null);
+    if (query.length < 2 || agentLoading) return;
     setAgentLoading(true);
     void searchStorefront(query, selectedFloor === 'all' ? undefined : selectedFloor, 'Directory')
       .then(setAgentResult).catch(() => setAgentResult(null)).finally(() => setAgentLoading(false));
-  }, [submittedQuery, selectedFloor]);
+  };
 
   const filteredStores = stores.filter((store) => {
     const query = submittedQuery.trim().toLowerCase();
@@ -58,7 +59,7 @@ export const DirectoryView: React.FC<DirectoryViewProps> = ({ onNavigateToStore,
     <div className="space-y-9">
       <section className="grid gap-6 lg:grid-cols-[.8fr_1.2fr] lg:items-end">
         <div><h2 className="text-3xl font-bold tracking-[-0.04em] md:text-4xl">Find a store</h2><p className="mt-2 max-w-xl text-sm leading-6 text-base-content/55">Search stores, restaurants and services across the mall.</p></div>
-        <form className="surface-card flex min-h-16 items-center gap-3 px-5 focus-within:border-primary/50" onSubmit={(event) => { event.preventDefault(); setSubmittedQuery(searchQuery.trim()); }}><Search size={20} className="shrink-0 text-primary" /><input className="w-full bg-transparent text-sm outline-none placeholder:text-base-content/35" type="search" placeholder="Ask for a store, product, service, facility, or mall information" value={searchQuery} onChange={(event) => setSearchQuery(event.target.value)} /><button className="btn btn-primary btn-sm rounded-full" disabled={agentLoading || searchQuery.trim().length < 2} type="submit"><Sparkles size={14} /> Search</button></form>
+        <form className="surface-card flex min-h-16 items-center gap-3 px-5 focus-within:border-primary/50" onSubmit={(event) => { event.preventDefault(); setAgentResult(null); setSubmittedQuery(searchQuery.trim()); }}><Search size={20} className="shrink-0 text-primary" /><input className="w-full bg-transparent text-sm outline-none placeholder:text-base-content/35" type="search" placeholder="Search stores, products, services or facilities" value={searchQuery} onChange={(event) => setSearchQuery(event.target.value)} /><button className="btn btn-primary btn-sm rounded-full" disabled={searchQuery.trim().length < 2} type="submit">Search</button></form>
       </section>
 
       <section className="flex flex-wrap items-center justify-between gap-4 border-y border-base-300/80 py-4">
@@ -73,7 +74,7 @@ export const DirectoryView: React.FC<DirectoryViewProps> = ({ onNavigateToStore,
 
       {!agentLoading && agentResult && agentResult.resultFocus !== 'Stores' && agentResult.knowledge.length > 0 && <section><div className="mb-3 flex items-center gap-2"><Sparkles size={15} className="text-primary" /><h3 className="text-sm font-semibold">Related deals and information</h3></div><div className="grid gap-3 sm:grid-cols-2">{agentResult.knowledge.slice(0, 4).map((item) => <article key={item.sourceId} className="surface-card p-4"><div className="text-sm font-semibold">{item.title}</div><p className="mt-1 line-clamp-2 text-xs leading-5 text-base-content/50">{item.snippet}</p></article>)}</div></section>}
 
-      {loading ? <div className="py-20 text-center text-base-content/45"><span className="loading loading-spinner loading-md" /><p className="mt-3">Loading directory...</p></div> : filteredStores.length === 0 && agentResult ? null : filteredStores.length === 0 ? <div className="surface-card py-20 text-center text-base-content/50">No stores matched your filters. Try another search or category.</div> : (
+      {loading ? <div className="py-20 text-center text-base-content/45"><span className="loading loading-spinner loading-md" /><p className="mt-3">Loading directory...</p></div> : filteredStores.length === 0 && submittedQuery && !agentResult ? <div className="surface-card py-12 text-center"><p className="text-base-content/60">No stores match “{submittedQuery}”.</p></div> : filteredStores.length === 0 && agentResult ? null : filteredStores.length === 0 ? <div className="surface-card py-20 text-center text-base-content/50">No stores matched your filters. Try another search or category.</div> : (
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {filteredStores.map((store) => {
             const image = store.storefrontImageUrl;
@@ -87,6 +88,7 @@ export const DirectoryView: React.FC<DirectoryViewProps> = ({ onNavigateToStore,
           })}
         </div>
       )}
+      {!loading && submittedQuery && !agentResult && <div className="surface-card flex flex-wrap items-center justify-center gap-3 p-5 text-center"><p className="text-sm text-base-content/60">Not seeing what you’re looking for?</p><button className="btn btn-primary btn-sm rounded-full" disabled={agentLoading} onClick={runAiSearch}><Sparkles size={14} />{agentLoading ? 'Searching with AI…' : 'Try AI search'}</button></div>}
     </div>
   );
 };

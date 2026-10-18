@@ -37,6 +37,7 @@ import type {
   ShopperConversationSummaryDto,
 } from '../types';
 import { AgentMarkdown } from './AgentMarkdown';
+import { MarkdownDescription } from './MarkdownDescription';
 
 interface Message {
   id: string;
@@ -135,6 +136,7 @@ export const ShopperView: React.FC<ShopperViewProps> = ({
   const [destinationNodeId, setDestinationNodeId] = useState<string>('');
   const [accessibleOnly, setAccessibleOnly] = useState(false);
   const [route, setRoute] = useState<RouteResponse | null>(null);
+  const [navError, setNavError] = useState('');
   const [navigatingTo, setNavigatingTo] = useState<string>('');
   const [navLoading, setNavLoading] = useState(false);
   const [overviewLoading, setOverviewLoading] = useState(false);
@@ -159,19 +161,20 @@ export const ShopperView: React.FC<ShopperViewProps> = ({
   useEffect(() => {
     getNavigationLocations().then((data) => {
       setNodes(data);
-      const entA = data.find((n) => n.label.includes('Entrance A'));
-      if (entA) setStartNodeId(entA.id);
+      const origin = data.find((n) => n.label.includes('Entrance A')) ?? data[0];
+      if (origin) setStartNodeId(origin.id);
 
       if (initialDestinationId) {
-        setDestinationNodeId(initialDestinationId);
         const dest = data.find((n) => n.id === initialDestinationId);
+        if (dest) setDestinationNodeId(dest.id);
         if (dest) setNavigatingTo(dest.label);
-        if (entA) {
-          calculatePath(entA.id, initialDestinationId, accessibleOnly);
+        if (origin && dest) {
+          calculatePath(origin.id, dest.id, accessibleOnly);
         }
       } else {
         const popular = data.find((n) => n.label.includes('Popular'));
-        if (popular) setDestinationNodeId(popular.id);
+        const destination = popular ?? data.find((n) => n.id !== origin?.id) ?? origin;
+        if (destination) setDestinationNodeId(destination.id);
       }
     });
   }, [initialDestinationId]);
@@ -414,12 +417,16 @@ export const ShopperView: React.FC<ShopperViewProps> = ({
     setNavLoading(true);
     setOverviewLoading(false);
     setRoute(null);
+    setNavError('');
     try {
       const res = await getRoute(start, dest, undefined, accessible);
       if (requestId !== navRequestIdRef.current) return;
       setRoute(res);
       setNavLoading(false);
-      if (!res.found) return;
+      if (!res.found) {
+        setNavError(`No walkable route connects ${nodes.find((node) => node.id === start)?.label ?? 'the selected origin'} to ${nodes.find((node) => node.id === dest)?.label ?? 'the selected destination'}. Check that each floor has connected walkways and that matching lifts or escalators are linked between floors${accessible ? ', with accessible links enabled' : ''}.`);
+        return;
+      }
 
       setOverviewLoading(true);
       try {
@@ -429,8 +436,10 @@ export const ShopperView: React.FC<ShopperViewProps> = ({
       } catch {
         // Keep the deterministic overview returned with the route.
       }
-    } catch {
-      // ignore
+    } catch (error) {
+      if (requestId === navRequestIdRef.current) {
+        setNavError(error instanceof Error ? `Route calculation failed: ${error.message}. Please try again.` : 'Route calculation failed. Please try again.');
+      }
     } finally {
       if (requestId === navRequestIdRef.current) {
         setNavLoading(false);
@@ -442,6 +451,21 @@ export const ShopperView: React.FC<ShopperViewProps> = ({
   const latestRecommendations = [...messages]
     .reverse()
     .find((message) => message.recommendations?.length)?.recommendations ?? [];
+  const routeOverviewMarkdown = route?.conversationalDirections
+    .replace(/\s+(?=\d+\.\s)/g, '\n') ?? '';
+  const routeInstructionGroups = route?.steps.reduce<typeof route.steps>((groups, step) => {
+    const previous = groups[groups.length - 1];
+    if (previous && previous.floorChange === 0 && step.floorChange === 0 && !previous.visibleStoreName && previous.currentFloor === step.currentFloor) {
+      groups[groups.length - 1] = {
+        ...step,
+        distanceMeters: Math.round((previous.distanceMeters + step.distanceMeters) * 10) / 10,
+        visibleStoreName: step.visibleStoreName,
+      };
+    } else {
+      groups.push(step);
+    }
+    return groups;
+  }, []) ?? [];
   const latestAssistantId = [...messages].reverse().find((message) => message.sender === 'assistant')?.id;
   const conversationTitle = messages.find((message) => message.sender === 'user')?.text || 'New conversation';
   const visibleMessages = messages.filter((message) => message.id !== 'welcome');
@@ -600,7 +624,7 @@ export const ShopperView: React.FC<ShopperViewProps> = ({
                 </div>
 
                 <p style={{ fontSize: '13px', color: '#52525b', lineHeight: '1.4' }}>
-                  {card.description}
+                  <MarkdownDescription markdown={card.description} className="text-sm leading-relaxed" />
                 </p>
 
                 <div style={{ background: '#f4f4f5', borderLeft: '3px solid var(--text-primary)', padding: '8px 10px', borderRadius: '4px', fontSize: '12px', color: 'var(--text-primary)' }}>
@@ -656,6 +680,7 @@ export const ShopperView: React.FC<ShopperViewProps> = ({
                   fontSize: '13px',
                 }}
               >
+                <option value="">Select an origin</option>
                 {nodes.map((n) => (
                   <option key={n.id} value={n.id}>
                     Level {n.floorNumber}: {n.label}
@@ -685,6 +710,7 @@ export const ShopperView: React.FC<ShopperViewProps> = ({
                   fontSize: '13px',
                 }}
               >
+                <option value="">Select a destination</option>
                 {nodes.map((n) => (
                   <option key={n.id} value={n.id}>
                     Level {n.floorNumber}: {n.label}
@@ -723,8 +749,9 @@ export const ShopperView: React.FC<ShopperViewProps> = ({
             </div>
 
             <button
+              type="button"
               onClick={() => calculatePath(startNodeId, destinationNodeId, accessibleOnly)}
-              disabled={navLoading}
+              disabled={navLoading || !startNodeId || !destinationNodeId}
               className="btn-minimal-primary"
               style={{ padding: '12px' }}
             >
@@ -734,7 +761,7 @@ export const ShopperView: React.FC<ShopperViewProps> = ({
 
           {/* Navigation Output */}
           <div className="minimal-card flex min-h-[32rem] flex-col gap-6 p-6 md:p-8 lg:min-h-0">
-            {route ? (
+            {route?.found ? (
               <>
                 <div style={{ display: 'flex', gap: '24px', borderBottom: '1px solid var(--border-subtle)', paddingBottom: '16px' }}>
                   <div>
@@ -750,19 +777,19 @@ export const ShopperView: React.FC<ShopperViewProps> = ({
                 {/* Landmark overview loads independently so it never blocks the route result. */}
                 <div style={{ background: '#f8fafc', border: '1px solid var(--border-subtle)', padding: '16px 20px', borderRadius: 'var(--radius-sm)' }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '12px', color: '#4338ca', fontWeight: 700, marginBottom: '6px' }}>
-                    <Sparkles size={14} /> ROUTE OVERVIEW
+                    <Sparkles size={14} /> LANDMARK DIRECTIONS
                   </div>
-                  <p style={{ fontSize: '14px', color: 'var(--text-primary)', lineHeight: '1.6' }}>
-                    {overviewLoading ? 'Preparing a landmark-based overview…' : route.conversationalDirections}
-                  </p>
+                  <div style={{ fontSize: '14px', color: 'var(--text-primary)', lineHeight: '1.6' }}>
+                    {overviewLoading ? <p>Preparing a landmark-based overview…</p> : <AgentMarkdown compact>{routeOverviewMarkdown}</AgentMarkdown>}
+                  </div>
                 </div>
 
                 {/* Step sequence */}
                 <div style={{ fontSize: '13px', fontWeight: 700, color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-                  Waypoint Steps:
+                  Store and landmark checkpoints:
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', maxHeight: '440px', overflowY: 'auto' }}>
-                  {route.steps.map((step, idx) => (
+                  {routeInstructionGroups.map((step, idx) => (
                     <div
                       key={idx}
                       style={{
@@ -794,16 +821,25 @@ export const ShopperView: React.FC<ShopperViewProps> = ({
                       </span>
                       <div style={{ flex: 1 }}>
                         <div style={{ fontSize: '13px', fontWeight: 600, color: 'var(--text-primary)' }}>
-                          {step.instruction}
+                          {step.floorChange > 0
+                            ? `Look for the lift, escalator, or floor connection to Level ${step.currentFloor + step.floorChange}`
+                            : step.floorChange < 0
+                              ? `Look for the lift, escalator, or floor connection to Level ${step.currentFloor + step.floorChange}`
+                            : `Look for ${step.visibleStoreName ?? 'the next store named above'} (about ${step.distanceMeters} m)`}
                         </div>
                         <div style={{ fontSize: '11px', color: 'var(--text-muted)', marginTop: '2px' }}>
-                          {step.fromNodeLabel} → {step.toNodeLabel} ({step.distanceMeters}m)
+                          Level {step.currentFloor}{step.floorChange !== 0 ? ` → Level ${step.currentFloor + step.floorChange}` : ''}
+                          {step.floorChange !== 0 ? ` · You are on Level ${step.currentFloor}` : ' · Store cues are in the directions above'}
                         </div>
                       </div>
                     </div>
                   ))}
                 </div>
               </>
+            ) : navError ? (
+              <div role="alert" style={{ display: 'grid', flex: 1, placeItems: 'center', textAlign: 'center', color: '#991b1b', padding: '48px 24px', lineHeight: 1.6 }}>
+                <div><div style={{ fontWeight: 700, marginBottom: '8px' }}>Route unavailable</div><div>{navError}</div></div>
+              </div>
             ) : (
               <div style={{ display: 'grid', flex: 1, placeItems: 'center', textAlign: 'center', color: 'var(--text-muted)', padding: '96px 24px' }}>
                 Select an origin and destination to solve wayfinding route.

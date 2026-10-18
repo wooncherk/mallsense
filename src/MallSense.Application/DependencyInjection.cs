@@ -18,6 +18,7 @@ public static class DependencyInjection
         services.AddScoped<IAuthService, AuthService>();
         services.AddScoped<IKnowledgeService, KnowledgeService>();
         services.AddScoped<ISemanticSearchService, SemanticSearchService>();
+        services.AddScoped<TenantSearchAiService>();
 
         return services;
     }

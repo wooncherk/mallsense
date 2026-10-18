@@ -215,7 +215,16 @@ function NodeBuilderCanvas() {
 
   const connectSelectedNodeToFloor = (targetNodeId: string) => {
     if (!selectedNode) return;
-    void run(async () => { await saveNavigationEdge(connectionDefaults(selectedNode.id, targetNodeId)); await reload(); setMessage('Floor transition saved. No 3D model is required.'); });
+    void run(async () => { await saveNavigationEdge(connectionDefaults(selectedNode.id, targetNodeId)); await reload(); setMessage('Floor transition saved.'); });
+  };
+
+  const showNodeOnFloor = (nodeId: string) => {
+    const target = graphNodes.find((node) => node.id === nodeId);
+    if (!target) return;
+    setFloor(target.floorNumber);
+    setSelectedNodeId(target.id);
+    setSelectedEdgeId(null);
+    setTimeout(() => void fitView({ padding: .2, nodes: [{ id: target.id }] }), 30);
   };
 
   const addCustomType = () => {
@@ -357,19 +366,52 @@ function NodeBuilderCanvas() {
 
   const askAi = () => run(async () => {
     const operatorMessage = aiMessage.trim() || (aiFiles.length ? `Review ${aiFiles.length} uploaded evidence file(s) and propose a safe draft.` : 'Refine the current draft.');
-    const text = `${operatorMessage}\n\nReview and preserve the complete multi-floor graph. Map exact same-floor tenant-name and unit-number matches, keep positions faithful to each floor plan, connect supported matching lifts/escalators/stairs across floors, separate overlapping nodes, and self-check the complete returned graph. Do not run or claim that Check graph has passed before the proposal is applied.`;
+    const bulkRequest = aiFiles.length > 0 || /whole mall|all floors|entire graph|floor plan|floorplan|complete map/i.test(operatorMessage);
+    const targetFloor = selectedNode?.floorNumber ?? graphNodes.find((node) => node.id === selectedEdge?.sourceNodeId)?.floorNumber ?? floor ?? 0;
+    const connectionIntent = /\b(connect|connection|link|join|match|pair)\b/i.test(operatorMessage);
+    const crossFloorIntent = /\b(cross[- ]floor|different floor|another floor|other floor|between floors|floor to floor|level to level|endpoint|matching endpoint)\b/i.test(operatorMessage)
+      || (selectedNode != null && (selectedNode.nodeType === 3 || selectedNode.nodeType === 4) && connectionIntent);
+    const relevantNodeIds = new Set<string>();
+    if (selectedNode) {
+      relevantNodeIds.add(selectedNode.id);
+      graphEdges.filter((edge) => edge.sourceNodeId === selectedNode.id || edge.targetNodeId === selectedNode.id)
+        .forEach((edge) => { relevantNodeIds.add(edge.sourceNodeId); relevantNodeIds.add(edge.targetNodeId); });
+    }
+    if (selectedEdge) { relevantNodeIds.add(selectedEdge.sourceNodeId); relevantNodeIds.add(selectedEdge.targetNodeId); }
+    if (!bulkRequest && connectionIntent && crossFloorIntent) {
+      const selectedEndpointType = selectedNode?.nodeType === 3 || selectedNode?.nodeType === 4 ? selectedNode.nodeType : null;
+      const requestedEndpointType = /\blift\b/i.test(operatorMessage) ? 4 : /\b(escalator|stairs?)\b/i.test(operatorMessage) ? 3 : null;
+      const endpointTypes = new Set([selectedEndpointType, requestedEndpointType].filter((type): type is 3 | 4 => type != null));
+      const otherFloorEndpoints = graphNodes.filter((node) => node.floorNumber !== targetFloor && endpointTypes.has(node.nodeType as 3 | 4));
+      otherFloorEndpoints.forEach((node) => {
+        relevantNodeIds.add(node.id);
+        graphEdges.filter((edge) => edge.sourceNodeId === node.id || edge.targetNodeId === node.id)
+          .forEach((edge) => { relevantNodeIds.add(edge.sourceNodeId); relevantNodeIds.add(edge.targetNodeId); });
+      });
+    }
+    const contextNodes = bulkRequest ? graphNodes : graphNodes.filter((node) => relevantNodeIds.size > 0
+      ? relevantNodeIds.has(node.id)
+      : node.floorNumber === floor);
+    const contextNodeIds = new Set(contextNodes.map((node) => node.id));
+    const contextEdges = bulkRequest ? graphEdges : graphEdges.filter((edge) =>
+      (contextNodeIds.has(edge.sourceNodeId) && contextNodeIds.has(edge.targetNodeId)) &&
+      (relevantNodeIds.size === 0 || relevantNodeIds.has(edge.sourceNodeId) || relevantNodeIds.has(edge.targetNodeId)));
+    const text = bulkRequest
+      ? `${operatorMessage}\n\nThis is a bulk map task. Review the complete multi-floor graph, preserve supported existing locations, and self-check the complete returned graph. Map exact tenant-name and unit-number matches. Do not claim Check graph has passed before apply.`
+      : `${operatorMessage}\n\nThis is a targeted map edit. Return only the node(s) and connection(s) that need to be added or changed; do not echo unrelated map data. Use the supplied stable node IDs as keys when referring to existing locations. For a connection change, return both endpoint nodes unchanged as context plus only the changed connection. Do not delete anything unless explicitly requested. Preserve tenant links unless this request explicitly changes a tenant assignment.${crossFloorIntent && connectionIntent ? ' Other-floor endpoint candidates and their immediate route connections are included when available. For a cross-floor link, select a candidate only when its label, description, and route context support the match. If evidence is ambiguous, do not invent a connection; explain the uncertainty. When supported, return the existing endpoint nodes unchanged using their stable IDs and add only the connection between them.' : ''} Do not claim Check graph has passed before apply.`;
     const nextConversation: NavigationAiTurn[] = [...aiConversation, { role: 'user', message: operatorMessage }];
     const evidenceFiles = aiFiles;
     setAiConversation(nextConversation);
     setAiMessage('');
     setAiFiles([]);
     const draft = await generateNavigationAiDraft({
-      floorNumber: floor ?? 0, message: text, conversation: nextConversation,
-      currentNodes: graphNodes.map((node) => ({
+      floorNumber: targetFloor,
+      message: text, conversation: nextConversation,
+      currentNodes: contextNodes.map((node) => ({
         key: node.id, floorNumber: node.floorNumber, label: node.label, type: nodeName.get(node.nodeType) || 'Landmark',
         x: node.coordinateX, y: node.coordinateY, description: node.description, confidence: 1,
       })),
-      currentEdges: graphEdges.map((edge) => ({
+      currentEdges: contextEdges.map((edge) => ({
         from: edge.sourceNodeId, to: edge.targetNodeId, distanceMeters: edge.distanceMeters,
         accessible: edge.isAccessible, bidirectional: edge.isBidirectional, directionHint: edge.directionHint,
       })),
@@ -377,7 +419,7 @@ function NodeBuilderCanvas() {
     });
     setAiDraft(draft);
     setAiConversation([...nextConversation, { role: 'assistant', message: draft.assistantMessage }]);
-    setMessage('AI map proposal is ready. Review the before/after summary, then apply it.');
+    setMessage('AI map proposal is ready. Review the targeted changes, then apply them.');
   });
 
   const applyAiDraft = () => aiDraft && run(async () => {
@@ -484,7 +526,7 @@ function NodeBuilderCanvas() {
         </div>
 
         {(selectedNode || selectedEdge) && <aside className="border-t border-base-300 bg-base-100 p-5 xl:border-l xl:border-t-0">
-          {selectedNode ? <NodeEditor node={selectedNode} allNodes={graphNodes} edges={graphEdges} tenants={tenants} busy={busy} onSave={saveSelectedNode} onDelete={removeNode} onConnectFloor={connectSelectedNodeToFloor} /> : selectedEdge && <EdgeEditor edge={selectedEdge} nodes={graphNodes} busy={busy} onSave={saveSelectedEdge} onDelete={removeEdge} />}
+          {selectedNode ? <NodeEditor node={selectedNode} allNodes={graphNodes} edges={graphEdges} tenants={tenants} busy={busy} onSave={saveSelectedNode} onDelete={removeNode} onConnectFloor={connectSelectedNodeToFloor} onShowNode={showNodeOnFloor} /> : selectedEdge && <EdgeEditor edge={selectedEdge} nodes={graphNodes} busy={busy} onSave={saveSelectedEdge} onDelete={removeEdge} />}
         </aside>}
       </div>
     </section>
@@ -507,7 +549,7 @@ function AiGraphAssistant({ conversation, files, setFiles, message, setMessage, 
     <div className="min-h-0 flex-1 space-y-3 overflow-y-auto bg-base-200/25 p-4">
       {conversation.map((turn, index) => <div key={`${turn.role}-${index}`} className={`rounded-xl px-3 py-2 text-xs leading-5 ${turn.role === 'user' ? 'ml-5 bg-secondary text-secondary-content' : 'mr-5 bg-base-200 text-base-content/70'}`}>{turn.message}</div>)}
       {busy && <div className="mr-5 rounded-xl border border-base-300 bg-base-100 p-3"><div className="flex items-center gap-2"><span className="loading loading-spinner loading-sm text-secondary" /><div><div className="text-xs font-bold">Preparing map proposal</div><p className="mt-1 text-[11px] text-base-content/45">Reviewing your request and current map…</p></div></div></div>}
-      {draft && <div className="rounded-xl border border-primary/20 bg-primary/5 p-4 text-xs"><div className="flex items-center justify-between gap-3"><div className="font-bold">Proposed map update</div><span className="badge badge-sm">{draft.confidencePercentage}% confidence</span></div><div className="mt-3 grid grid-cols-2 gap-2"><div className="rounded-lg border border-base-300 bg-base-100 p-3"><div className="font-bold text-base-content/45">BEFORE</div><div className="mt-1 font-bold">{beforeNodes} locations</div><div className="text-base-content/50">{beforeEdges} connections</div></div><div className="rounded-lg border border-primary/25 bg-base-100 p-3"><div className="font-bold text-primary">AFTER</div><div className="mt-1 font-bold">{draft.nodes.length} locations</div><div className="text-base-content/50">{draft.edges.length} connections</div></div></div>{draft.warnings.slice(0, 3).map((warning) => <div key={warning} className="mt-2 text-warning">• {warning}</div>)}<button className="btn btn-primary btn-sm mt-4 w-full" disabled={busy || draft.nodes.length === 0} onClick={apply}><Sparkles size={14} /> Apply to map</button><p className="mt-2 text-center text-[10px] text-base-content/40">The map changes only after you apply this proposal.</p></div>}
+      {draft && <div className="rounded-xl border border-primary/20 bg-primary/5 p-4 text-xs"><div className="flex items-center justify-between gap-3"><div className="font-bold">Proposed map update</div><span className="badge badge-sm">{draft.confidencePercentage}% confidence</span></div><p className="mt-2 text-base-content/65">{draft.assistantMessage}</p><div className="mt-3 rounded-lg border border-primary/20 bg-base-100 p-3"><div className="font-bold text-primary">Proposed actions</div>{draft.actions.length ? <ul className="mt-2 list-inside list-disc space-y-1">{draft.actions.map((action, index) => <li key={`${action}-${index}`}>{action}</li>)}</ul> : <div className="mt-2 text-base-content/50">No map changes proposed.</div>}</div><div className="mt-2 text-[10px] text-base-content/45">{beforeNodes} locations and {beforeEdges} connections currently on the map · {draft.nodes.length} locations and {draft.edges.length} connections in this proposal</div>{draft.warnings.slice(0, 3).map((warning) => <div key={warning} className="mt-2 text-warning">• {warning}</div>)}<button className="btn btn-primary btn-sm mt-4 w-full" disabled={busy || (draft.nodes.length === 0 && draft.edges.length === 0)} onClick={apply}><Sparkles size={14} /> Apply actions</button><p className="mt-2 text-center text-[10px] text-base-content/40">The map changes only after you apply this proposal.</p></div>}
     </div>
 
     <div className="shrink-0 border-t border-base-300 bg-base-100 p-4">
@@ -518,7 +560,7 @@ function AiGraphAssistant({ conversation, files, setFiles, message, setMessage, 
   </div>;
 }
 
-function NodeEditor({ node, allNodes, edges, tenants, busy, onSave, onDelete, onConnectFloor }: { node: NavigationNode; allNodes: NavigationNode[]; edges: NavigationEdge[]; tenants: StoreDto[]; busy: boolean; onSave: (patch: Partial<SaveNavigationNodeInput>) => void; onDelete: () => void; onConnectFloor: (targetNodeId: string) => void }) {
+function NodeEditor({ node, allNodes, edges, tenants, busy, onSave, onDelete, onConnectFloor, onShowNode }: { node: NavigationNode; allNodes: NavigationNode[]; edges: NavigationEdge[]; tenants: StoreDto[]; busy: boolean; onSave: (patch: Partial<SaveNavigationNodeInput>) => void; onDelete: () => void; onConnectFloor: (targetNodeId: string) => void; onShowNode: (nodeId: string) => void }) {
   const [label, setLabel] = useState(node.label);
   const [nodeFloor, setNodeFloor] = useState(node.floorNumber);
   const [description, setDescription] = useState(node.description || '');
@@ -526,10 +568,13 @@ function NodeEditor({ node, allNodes, edges, tenants, busy, onSave, onDelete, on
   const [tenantId, setTenantId] = useState(node.tenantId || '');
   const [transitionTarget, setTransitionTarget] = useState('');
   const connectedIds = new Set(edges.flatMap((edge) => edge.sourceNodeId === node.id ? [edge.targetNodeId] : edge.targetNodeId === node.id ? [edge.sourceNodeId] : []));
+  const linkedEndpoints = edges.filter((edge) => edge.sourceNodeId === node.id || edge.targetNodeId === node.id)
+    .map((edge) => allNodes.find((candidate) => candidate.id === (edge.sourceNodeId === node.id ? edge.targetNodeId : edge.sourceNodeId)))
+    .filter((candidate): candidate is NavigationNode => Boolean(candidate && candidate.floorNumber !== node.floorNumber));
   const transitionTargets = allNodes.filter((candidate) => candidate.id !== node.id && candidate.floorNumber !== node.floorNumber && candidate.nodeType === node.nodeType && !connectedIds.has(candidate.id));
   useEffect(() => { setLabel(node.label); setNodeFloor(node.floorNumber); setDescription(node.description || ''); setType(node.nodeType); setTenantId(node.tenantId || ''); setTransitionTarget(''); }, [node]);
   return <div><h3 className="flex items-center gap-2 font-bold"><Pencil size={15} /> Edit location</h3><p className="mt-1 text-xs text-base-content/45">Change its name, level, type, tenant, or visitor description.</p><div className="mt-4 grid gap-3"><label className="text-xs font-bold text-base-content/50">Location name<input className="input input-bordered mt-1 w-full" value={label} onChange={(event) => setLabel(event.target.value)} placeholder="Location name" /></label><label className="text-xs font-bold text-base-content/50">Level<input className="input input-bordered mt-1 w-full" type="number" value={nodeFloor} onChange={(event) => setNodeFloor(Number(event.target.value))} /></label><label className="text-xs font-bold text-base-content/50">Routing behaviour<select className="select select-bordered mt-1 w-full" value={type} onChange={(event) => setType(Number(event.target.value))}>{nodeTypes.map(([id, name]) => <option key={id} value={id}>{name}</option>)}</select></label><select className="select select-bordered" value={tenantId} onChange={(event) => setTenantId(event.target.value)}><option value="">No tenant</option>{tenants.map((tenant) => <option key={tenant.id} value={tenant.id}>{tenant.name} · {tenant.unitNumber}</option>)}</select><textarea className="textarea textarea-bordered min-h-24" value={description} onChange={(event) => setDescription(event.target.value)} placeholder="What can shoppers see here?" /><button className="btn btn-primary" disabled={busy || !label.trim() || !Number.isFinite(nodeFloor)} onClick={() => onSave({ label, floorNumber: nodeFloor, description, nodeType: type, tenantId: tenantId || null })}><Save size={14} /> Save changes</button>
-    {(node.nodeType === 3 || node.nodeType === 4) && <div className="rounded-xl border border-base-300 p-3"><div className="text-sm font-bold">Connect to another floor</div><p className="mt-1 text-xs text-base-content/50">Link this {node.nodeType === 4 ? 'lift' : 'escalator/stair'} endpoint to the matching endpoint on a different level. A 3D model is not needed.</p>{transitionTargets.length ? <div className="mt-3 grid gap-2"><select className="select select-bordered select-sm w-full" value={transitionTarget} onChange={(event) => setTransitionTarget(event.target.value)}><option value="">Choose matching endpoint</option>{transitionTargets.map((candidate) => <option key={candidate.id} value={candidate.id}>Level {candidate.floorNumber} · {candidate.label}</option>)}</select><button className="btn btn-warning btn-sm" disabled={!transitionTarget || busy} onClick={() => onConnectFloor(transitionTarget)}>Connect floors</button></div> : <p className="mt-3 text-xs text-warning">Create a matching {node.nodeType === 4 ? 'lift' : 'escalator/stair'} node on another floor first.</p>}</div>}
+    {(node.nodeType === 3 || node.nodeType === 4) && <div className="rounded-xl border border-base-300 p-3"><div className="text-sm font-bold">Connect to another floor</div><p className="mt-1 text-xs text-base-content/50">Link this {node.nodeType === 4 ? 'lift' : 'escalator/stair'} endpoint to the matching endpoint on a different level.</p>{linkedEndpoints.length > 0 && <div className="mt-3"><div className="mb-1 text-xs font-semibold text-success">Already linked</div><div className="grid gap-1">{linkedEndpoints.map((endpoint) => <button key={endpoint.id} type="button" className="btn btn-ghost btn-xs justify-start text-left" onClick={() => onShowNode(endpoint.id)}>Level {endpoint.floorNumber} · {endpoint.label} <span className="ml-auto text-[10px] opacity-60">View</span></button>)}</div></div>}{transitionTargets.length ? <div className="mt-3 grid gap-2"><select className="select select-bordered select-sm w-full" value={transitionTarget} onChange={(event) => setTransitionTarget(event.target.value)}><option value="">Choose matching endpoint</option>{transitionTargets.map((candidate) => <option key={candidate.id} value={candidate.id}>Level {candidate.floorNumber} · {candidate.label}</option>)}</select><button className="btn btn-warning btn-sm" disabled={!transitionTarget || busy} onClick={() => onConnectFloor(transitionTarget)}>Connect floors</button></div> : linkedEndpoints.length === 0 ? <p className="mt-3 text-xs text-warning">Create a matching {node.nodeType === 4 ? 'lift' : 'escalator/stair'} node on another floor first.</p> : null}</div>}
     <button className="btn btn-error btn-outline btn-sm" onClick={onDelete}><Trash2 size={14} /> Remove location</button></div></div>;
 }
 

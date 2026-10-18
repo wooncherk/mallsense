@@ -571,6 +571,24 @@ export async function updateStorefrontImage(storeId: string, storefrontImageUrl:
   return res.json();
 }
 
+export async function validateTenantSearch(storeId: string, description: string, generateNewQuestions = false) {
+  const res = await fetch(`${API_BASE}/stores/${storeId}/search-validation`, {
+    method: 'POST', headers: { 'Content-Type': 'application/json', ...getAuthHeaders() },
+    body: JSON.stringify({ description, generateNewQuestions }),
+  });
+  if (!res.ok) return readApiError(res, 'Search validation failed');
+  return res.json() as Promise<import('./types').TenantSearchValidationResult>;
+}
+
+export async function enrichTenantDescription(storeId: string, description: string) {
+  const res = await fetch(`${API_BASE}/stores/${storeId}/description-enrichment`, {
+    method: 'POST', headers: { 'Content-Type': 'application/json', ...getAuthHeaders() },
+    body: JSON.stringify({ description }),
+  });
+  if (!res.ok) return readApiError(res, 'Description enrichment failed');
+  return res.json() as Promise<import('./types').TenantDescriptionEnrichmentResult>;
+}
+
 export async function deleteStore(storeId: string): Promise<void> {
   const res = await fetch(`${API_BASE}/stores/${storeId}`, { method: 'DELETE', headers: getAuthHeaders() });
   if (!res.ok) return readApiError(res, 'Failed to delete tenant');

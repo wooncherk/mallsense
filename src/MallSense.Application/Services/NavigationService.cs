@@ -41,7 +41,11 @@ public class NavigationService : INavigationService
             DirectionHint: s.DirectionHint,
             FloorChange: s.FloorChange,
             CurrentFloor: s.CurrentFloor,
-            Instruction: FormatPhysicalInstruction(s)
+            Instruction: FormatPhysicalInstruction(s),
+            VisibleStoreName: route.Nodes.FirstOrDefault(n => n.Id == s.ToNodeId) is { } target &&
+                (target.NodeType == MallSense.Domain.Enums.NodeType.Shop || target.TenantId.HasValue)
+                    ? target.Label
+                    : null
         )).ToList();
 
         return new RouteResponse(
@@ -198,9 +202,8 @@ public class NavigationService : INavigationService
         }));
 
         var prompt = $$"""
-            Convert the following admin-maintained, deterministic navigation graph route into friendly, natural landmark-based directions for a shopping mall visitor.
-            The graph is the sole source of truth. Preserve the step order, floors, accessibility route, distances and named landmarks. Never add a shop, connector, turn or distance that is not supplied.
-            Return only concise shopper instructions; do not mention nodes, edges, graphs, coordinates, admin tools, or internal IDs.
+            Rewrite this route for a mall visitor who navigates by recognizing storefronts, not by reading a map.
+            Use visible STORE NAMES as the main cues. Say things like "Look for [store]" or "You'll pass [store]" in route order, then identify the destination store. Preserve floor changes and accessibility. Do not mention corridor, aisle, walkway, concourse, or junction names; compass directions; left/right turns; or internal node labels. Do not invent a store or landmark. If a route segment has no named store, keep it brief and point to the next named store. Return concise numbered shopper instructions.
 
             Route steps:
             {{stepsSummary}}
@@ -221,12 +224,26 @@ public class NavigationService : INavigationService
 
     private static string GenerateTemplateDirections(CalculatedRoute route)
     {
-        var parts = new List<string>();
-        foreach (var step in route.Steps)
-        {
-            parts.Add(FormatPhysicalInstruction(step));
-        }
-        return string.Join(" ", parts);
+        if (route.Nodes.Count == 0) return "Follow the mall directory to your selected destination.";
+
+        var destination = route.Nodes[^1];
+        var stores = route.Nodes
+            .Where(node => node.NodeType == MallSense.Domain.Enums.NodeType.Shop || node.TenantId.HasValue)
+            .Select(node => node.Label)
+            .Distinct(StringComparer.OrdinalIgnoreCase)
+            .ToList();
+        if (!stores.Contains(destination.Label, StringComparer.OrdinalIgnoreCase)) stores.Add(destination.Label);
+
+        var checkpoints = stores.Count > 1
+            ? $"Look for {string.Join(", then ", stores.Take(stores.Count - 1))} along the way. "
+            : string.Empty;
+        var floorChanges = route.Steps
+            .Where(step => step.FloorChange != 0)
+            .Select(step => step.CurrentFloor + step.FloorChange)
+            .Distinct()
+            .Select(floor => $"Move to Level {floor} using a lift, escalator, or marked floor connection.");
+
+        return $"{checkpoints}{string.Join(" ", floorChanges)} Look for {destination.Label} on Level {destination.FloorNumber}.".Trim();
     }
 
     private static string FormatPhysicalInstruction(NavigationStep step)
