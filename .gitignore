@@ -1,9 +1,50 @@
-bin/
-obj/
-.local-dotnet/
-App_Data/
+## Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+## Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+## Rider
+.idea/
+
+## User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+## Dependency directory
+packages/
+*.nuget.props
+*.nuget.targets
+.dotnet/
+
+## Local SQLite databases
 *.db
 *.db-shm
 *.db-wal
-.vs/
-*.user
+/src/MallSense.WebApi/appsettings.json
