@@ -41,7 +41,7 @@ builder.Services.AddCors(options =>
 
 var app = builder.Build();
 
-// Create the local SQLite schema before serving requests. Development data is seeded below.
+// Create the local SQLite schema before serving requests. Existing databases are left intact.
 using (var scope = app.Services.CreateScope())
 {
     var dbContext = scope.ServiceProvider.GetRequiredService<MallDbContext>();
@@ -49,10 +49,6 @@ using (var scope = app.Services.CreateScope())
     await dbContext.EnsureTenantSchemaAsync();
     await dbContext.EnsureShopperConversationSchemaAsync();
     await dbContext.EnsureBehaviorAnalyticsSchemaAsync();
-    if (app.Environment.IsDevelopment())
-    {
-        await MallDbContextSeed.SeedAsync(dbContext);
-    }
 }
 
 // Configure the HTTP request pipeline
