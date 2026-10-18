@@ -38,7 +38,8 @@ public record RouteStepDto(
     string DirectionHint,
     int FloorChange,
     int CurrentFloor,
-    string Instruction
+    string Instruction,
+    string? VisibleStoreName
 );
 
 public record RouteResponse(
@@ -169,6 +170,7 @@ public record NavigationAiDraftRequest(
 public record NavigationAiEvidenceDto(string FileName, string MimeType, byte[] Bytes);
 public record NavigationAiDraftDto(
     string AssistantMessage,
+    IReadOnlyList<string> Actions,
     IReadOnlyList<string> ClarificationQuestions,
     IReadOnlyList<NavigationAiDraftNodeDto> Nodes,
     IReadOnlyList<NavigationAiDraftEdgeDto> Edges,

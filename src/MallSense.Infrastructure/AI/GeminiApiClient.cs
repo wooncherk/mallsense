@@ -250,6 +250,132 @@ public class GeminiApiClient : IGeminiClient
         }
     }
 
+    public async Task<string> GenerateJsonWithFunctionAsync(
+        string prompt,
+        string? jsonSchema,
+        string? systemInstruction,
+        string functionName,
+        string functionDescription,
+        string functionParametersSchema,
+        Func<JsonElement, CancellationToken, Task<string>> executeFunction,
+        CancellationToken cancellationToken = default)
+    {
+        if (!IsLiveApiConfigured)
+            return await GenerateJsonAsync(prompt, jsonSchema, systemInstruction, cancellationToken);
+
+        var url = $"https://generativelanguage.googleapis.com/v1beta/models/{_modelName}:generateContent?key={_apiKey}";
+        var contents = new JsonArray
+        {
+            new JsonObject
+            {
+                ["role"] = "user",
+                ["parts"] = new JsonArray { new JsonObject { ["text"] = prompt } }
+            }
+        };
+        var requestBody = new JsonObject
+        {
+            ["contents"] = contents,
+            ["tools"] = new JsonArray
+            {
+                new JsonObject
+                {
+                    ["functionDeclarations"] = new JsonArray
+                    {
+                        new JsonObject
+                        {
+                            ["name"] = functionName,
+                            ["description"] = functionDescription,
+                            ["parameters"] = JsonNode.Parse(functionParametersSchema)
+                        }
+                    }
+                }
+            },
+            ["toolConfig"] = new JsonObject
+            {
+                ["functionCallingConfig"] = new JsonObject { ["mode"] = "AUTO" }
+            },
+            ["generationConfig"] = new JsonObject { ["responseMimeType"] = "application/json" }
+        };
+        if (!string.IsNullOrWhiteSpace(jsonSchema))
+            requestBody["generationConfig"]!["responseSchema"] = JsonNode.Parse(jsonSchema);
+        if (!string.IsNullOrWhiteSpace(systemInstruction))
+            requestBody["systemInstruction"] = new JsonObject
+            {
+                ["parts"] = new JsonArray { new JsonObject { ["text"] = systemInstruction } }
+            };
+
+        try
+        {
+            for (var toolTurn = 0; toolTurn <= 3; toolTurn++)
+            {
+                var responseJson = await PostGeminiRawAsync(url, requestBody, cancellationToken);
+                using var document = JsonDocument.Parse(responseJson);
+                var candidate = document.RootElement.GetProperty("candidates").EnumerateArray().FirstOrDefault();
+                if (candidate.ValueKind == JsonValueKind.Undefined)
+                    throw new JsonException("Gemini returned no candidate for the tool-enabled chat request.");
+
+                var modelContent = candidate.GetProperty("content");
+                var parts = modelContent.GetProperty("parts");
+                var functionCall = parts.EnumerateArray()
+                    .Select(part => part.TryGetProperty("functionCall", out var call) ? call : default)
+                    .FirstOrDefault(call => call.ValueKind == JsonValueKind.Object);
+                if (functionCall.ValueKind != JsonValueKind.Object)
+                {
+                    var text = string.Concat(parts.EnumerateArray()
+                        .Where(part => part.TryGetProperty("text", out _))
+                        .Select(part => part.GetProperty("text").GetString()));
+                    if (string.IsNullOrWhiteSpace(text))
+                        throw new JsonException("Gemini returned neither a function call nor a final response.");
+                    return text;
+                }
+
+                if (toolTurn == 3)
+                    throw new InvalidOperationException("Gemini exceeded the maximum number of tenant lookup tool turns.");
+
+                var calledName = functionCall.TryGetProperty("name", out var nameElement) ? nameElement.GetString() : null;
+                if (!string.Equals(calledName, functionName, StringComparison.Ordinal))
+                    throw new InvalidOperationException($"Gemini requested an unsupported function: {calledName ?? "(unnamed)"}.");
+                using var emptyArgumentsDocument = JsonDocument.Parse("{}");
+                var arguments = functionCall.TryGetProperty("args", out var argsElement)
+                    ? argsElement
+                    : emptyArgumentsDocument.RootElement;
+                var functionResult = await executeFunction(arguments, cancellationToken);
+                var resultNode = JsonNode.Parse(functionResult) ?? new JsonObject();
+                var functionResponse = new JsonObject
+                {
+                    ["name"] = functionName,
+                    ["response"] = resultNode
+                };
+                if (functionCall.TryGetProperty("id", out var callIdElement) && callIdElement.ValueKind == JsonValueKind.String)
+                    functionResponse["id"] = callIdElement.GetString();
+
+                contents.Add(JsonNode.Parse(modelContent.GetRawText()));
+                contents.Add(new JsonObject
+                {
+                    ["role"] = "user",
+                    ["parts"] = new JsonArray
+                    {
+                        new JsonObject
+                        {
+                            ["functionResponse"] = functionResponse
+                        }
+                    }
+                });
+            }
+        }
+        catch (OperationCanceledException) { throw; }
+        catch (Exception ex)
+        {
+            _logger.LogError("Live Gemini function-calling request failed: {Message}", ex.Message);
+            if (!_allowSimulationFallback)
+                throw new InvalidOperationException("Gemini is temporarily unavailable. The request was not replaced with simulated content; please retry.", ex);
+            _logger.LogWarning("Gemini:AllowSimulationFallback is enabled. Falling back to structured JSON generation without function calls.");
+            return await GenerateJsonAsync(prompt, jsonSchema, systemInstruction, cancellationToken);
+        }
+
+        throw new InvalidOperationException("Gemini function-calling request did not complete.");
+    }
+
     public async Task<string> AnalyzeImageAsync(
         byte[] imageBytes,
         string mimeType,
@@ -306,13 +432,18 @@ public class GeminiApiClient : IGeminiClient
 
     private async Task<string> PostGeminiAsync(string url, JsonObject requestBody, CancellationToken cancellationToken)
     {
+        return ExtractTextFromGeminiResponse(await PostGeminiRawAsync(url, requestBody, cancellationToken));
+    }
+
+    private async Task<string> PostGeminiRawAsync(string url, JsonObject requestBody, CancellationToken cancellationToken)
+    {
         const int maxAttempts = 3;
         for (var attempt = 1; attempt <= maxAttempts; attempt++)
         {
             using var content = new StringContent(requestBody.ToJsonString(), Encoding.UTF8, "application/json");
             using var response = await _httpClient.PostAsync(url, content, cancellationToken);
             var responseJson = await response.Content.ReadAsStringAsync(cancellationToken);
-            if (response.IsSuccessStatusCode) return ExtractTextFromGeminiResponse(responseJson);
+            if (response.IsSuccessStatusCode) return responseJson;
 
             var transient = response.StatusCode == HttpStatusCode.TooManyRequests || (int)response.StatusCode >= 500;
             if (!transient || attempt == maxAttempts)

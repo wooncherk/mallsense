@@ -3,6 +3,8 @@ using MallSense.Application.DTOs;
 using MallSense.Application.Exceptions;
 using MallSense.Application.Interfaces;
 using MallSense.Domain.Enums;
+using MallSense.Application.Services;
+using MallSense.Domain.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using System.Security.Claims;
 
@@ -14,11 +16,44 @@ namespace MallSense.WebApi.Controllers;
 public class StoresController : ControllerBase
 {
     private readonly IStoreService _storeService;
+    private readonly TenantSearchAiService _tenantSearchAi;
+    private readonly ITenantRepository _tenantRepository;
 
-    public StoresController(IStoreService storeService)
+    public StoresController(IStoreService storeService, TenantSearchAiService tenantSearchAi, ITenantRepository tenantRepository)
     {
         _storeService = storeService;
+        _tenantSearchAi = tenantSearchAi;
+        _tenantRepository = tenantRepository;
     }
+
+    [HttpPost("{id:guid}/search-validation")]
+    [Authorize(Roles = "Admin,TenantStaff")]
+    public async Task<ActionResult<TenantSearchValidationResult>> ValidateSearch(Guid id, [FromBody] TenantSearchValidationRequest request, CancellationToken cancellationToken)
+    {
+        if (!await CanAccessTenantAsync(id, cancellationToken)) return Forbid();
+        try { return Ok(await _tenantSearchAi.ValidateAsync(id, request.Description, request.GenerateNewQuestions, cancellationToken)); }
+        catch (KeyNotFoundException) { return NotFound(new { error = "Tenant not found." }); }
+        catch (InvalidOperationException ex) { return StatusCode(StatusCodes.Status503ServiceUnavailable, new { error = ex.Message }); }
+    }
+
+    [HttpPost("{id:guid}/description-enrichment")]
+    [Authorize(Roles = "Admin,TenantStaff")]
+    public async Task<ActionResult<TenantDescriptionEnrichmentResult>> EnrichDescription(Guid id, [FromBody] TenantSearchValidationRequest request, CancellationToken cancellationToken)
+    {
+        if (!await CanAccessTenantAsync(id, cancellationToken)) return Forbid();
+        try {
+            var result = await _tenantSearchAi.EnrichAsync(id, request.Description, cancellationToken);
+            if (result.Description.Length > 1500) return StatusCode(StatusCodes.Status503ServiceUnavailable, new { error = "AI generated a description over 1500 characters. Retry." });
+            return Ok(result);
+        }
+        catch (KeyNotFoundException) { return NotFound(new { error = "Tenant not found." }); }
+        catch (InvalidOperationException ex) { return StatusCode(StatusCodes.Status503ServiceUnavailable, new { error = ex.Message }); }
+    }
+
+    private async Task<bool> CanAccessTenantAsync(Guid id, CancellationToken token) =>
+        User.IsInRole("Admin") || (User.IsInRole("TenantStaff") &&
+            Guid.TryParse(User.FindFirstValue("tenant_id"), out var actorTenantId) && actorTenantId == id &&
+            await _tenantRepository.GetByIdAsync(id, token) is not null);
 
     /// <summary>
     /// Retrieves all stores, optionally filtered by category.

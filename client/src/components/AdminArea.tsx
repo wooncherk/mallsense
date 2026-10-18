@@ -23,12 +23,17 @@ import {
   MessageSquareText,
   ChevronLeft,
   TrendingUp,
+  Sparkles,
+  SearchCheck,
+  Star,
+  Save,
 } from 'lucide-react';
-import { createStore, createUser, deleteStore, getAllStores, getKnowledgeSources, getUserConversation, getUserConversations, getUsers, updateStore, updateStorefrontImage, updateUserAccess } from '../api';
-import type { KnowledgeSourceDto, ManagedUserDto, ShopperConversationHistoryDto, ShopperConversationSummaryDto, StoreDto, UserProfileDto, UserRole } from '../types';
-import { KnowledgeWorkspace } from './KnowledgeWorkspace';
+import { createStore, createUser, deleteStore, enrichTenantDescription, getAllStores, getKnowledgeSources, getUserConversation, getUserConversations, getUsers, updateStore, updateStorefrontImage, updateUserAccess, validateTenantSearch } from '../api';
+import type { KnowledgeSourceDto, ManagedUserDto, ShopperConversationHistoryDto, ShopperConversationSummaryDto, StoreDto, TenantDescriptionEnrichmentResult, TenantSearchValidationResult, UserProfileDto, UserRole } from '../types';
+import { KnowledgeWorkspace, MarkdownEditor } from './KnowledgeWorkspace';
 import { BusinessIntelligenceView } from './BusinessIntelligenceView';
 import { mallConfig } from '../mallConfig';
+import { MarkdownDescription } from './MarkdownDescription';
 const NodeBuilder = lazy(() => import('./NodeBuilder').then((module) => ({ default: module.NodeBuilder })));
 
 function fileToDataUrl(file: File) {
@@ -220,6 +225,25 @@ export function AdminArea({ profile, section, onSectionChange, onExit, onSignOut
     }
   };
 
+  const saveTenantAndValidate = async (input: Omit<StoreDto, 'id' | 'navigationNodeId' | 'storefrontImageUrl'>) => {
+    if (!editingTenant) throw new Error('Tenant is no longer selected.');
+    setUserError(''); setManagementBusy(true);
+    try {
+      const saved = await updateStore(editingTenant.id, input);
+      setTenants((current) => current.map((item) => item.id === saved.id ? saved : item));
+      setEditingTenant(saved);
+      const result = await validateTenantSearch(saved.id, saved.description);
+      const updated = { ...saved, searchValidationRating: result.rating, searchValidationSummary: result.summary,
+        searchValidationDescriptionHash: result.descriptionHash, searchValidationAtUtc: result.validatedAtUtc, searchValidationIsCurrent: true };
+      setTenants((current) => current.map((item) => item.id === updated.id ? updated : item));
+      setEditingTenant(updated);
+      return result;
+    } catch (error) {
+      setUserError(error instanceof Error ? error.message : 'Unable to save and validate tenant.');
+      throw error;
+    } finally { setManagementBusy(false); }
+  };
+
   const addTenant = async (input: Omit<StoreDto, 'id' | 'navigationNodeId' | 'storefrontImageUrl'>, imageFile?: File) => {
     setUserError(''); setManagementBusy(true);
     try {
@@ -333,7 +357,7 @@ export function AdminArea({ profile, section, onSectionChange, onExit, onSignOut
               <section className="surface-card p-5"><div className="flex flex-col gap-3 md:flex-row"><label className="input input-bordered flex flex-1 items-center gap-2"><Search size={16} className="text-base-content/40" /><input className="grow" value={tenantSearch} onChange={(event) => setTenantSearch(event.target.value)} placeholder="Search tenants" /></label><TenantFilterMenu category={tenantCategoryFilter} setCategory={setTenantCategoryFilter} status={tenantStatusFilter} setStatus={setTenantStatusFilter} floor={tenantFloorFilter} setFloor={setTenantFloorFilter} floors={tenantFloors} /></div></section>
               <section className="overflow-hidden rounded-2xl border border-base-300 bg-base-100">
                 <div className="flex items-center justify-between border-b border-base-300 px-5 py-4"><h3 className="font-bold">Tenants</h3><span className="text-xs text-base-content/45">{filteredTenants.length} items</span></div>
-                <div className="overflow-x-auto"><table className="table"><thead><tr><th>Image</th><th>Tenant</th><th>Category</th><th>Location</th><th>Status</th><th className="text-right">Actions</th></tr></thead><tbody>{filteredTenants.map((tenant) => { const image = tenantImage(tenant); return <tr key={tenant.id} className="hover:bg-base-200/50"><td><div className="block size-14 overflow-hidden rounded-lg border border-base-300 bg-gradient-to-br from-base-200 to-base-300">{image ? <img src={image} alt="" className="h-full w-full object-cover" /> : <span className="grid h-full place-items-center text-base-content/30"><Store size={20} /><span className="sr-only">Default storefront image</span></span>}</div></td><td><button className="text-left font-semibold hover:text-primary" onClick={() => setEditingTenant(tenant)}>{tenant.name}</button><div className="text-xs text-base-content/45">{tenant.contactEmail || 'No contact email'}</div></td><td>{storeCategoryLabel(tenant.category)}</td><td>Level {tenant.floorNumber} · {tenant.unitNumber}</td><td><span className={`badge badge-sm ${tenant.isActive ? 'badge-success badge-soft' : 'badge-ghost'}`}>{tenant.isActive ? 'Active' : 'Inactive'}</span></td><td><div className="flex justify-end gap-1"><button className="btn btn-ghost btn-xs" onClick={() => setEditingTenant(tenant)}><Edit3 size={13} /> Edit</button><div className="dropdown dropdown-end"><button type="button" tabIndex={0} className="btn btn-ghost btn-xs btn-square" aria-label={`More actions for ${tenant.name}`}><EllipsisVertical size={15} /></button><ul tabIndex={0} className="menu dropdown-content z-20 mt-1 w-40 rounded-box border border-base-300 bg-base-100 p-1 shadow-lg"><li><button className="text-error" disabled={managementBusy} onClick={() => void removeTenant(tenant)}><Trash2 size={13} /> Delete</button></li></ul></div></div></td></tr>; })}{filteredTenants.length === 0 && <tr><td colSpan={6} className="py-10 text-center text-base-content/45">No tenants match this search.</td></tr>}</tbody></table></div>
+                <div className="overflow-x-auto"><table className="table"><thead><tr><th>Image</th><th>Tenant</th><th>Category</th><th>Location</th><th>Search rank</th><th>Status</th><th className="text-right">Actions</th></tr></thead><tbody>{filteredTenants.map((tenant) => { const image = tenantImage(tenant); return <tr key={tenant.id} className="hover:bg-base-200/50"><td><div className="block size-14 overflow-hidden rounded-lg border border-base-300 bg-gradient-to-br from-base-200 to-base-300">{image ? <img src={image} alt="" className="h-full w-full object-cover" /> : <span className="grid h-full place-items-center text-base-content/30"><Store size={20} /><span className="sr-only">Default storefront image</span></span>}</div></td><td><button className="text-left font-semibold hover:text-primary" onClick={() => setEditingTenant(tenant)}>{tenant.name}</button><div className="text-xs text-base-content/45">{tenant.contactEmail || 'No contact email'}</div></td><td>{storeCategoryLabel(tenant.category)}</td><td>Level {tenant.floorNumber} · {tenant.unitNumber}</td><td><div className="flex items-center gap-1" title={tenant.searchValidationSummary || 'Search validation has not been run'}>{tenant.searchValidationRating ? <><span className={`flex ${tenant.searchValidationIsCurrent ? 'text-warning' : 'text-base-content/30'}`}>{[1,2,3,4,5].map((star) => <Star key={star} size={13} fill={star <= tenant.searchValidationRating! ? 'currentColor' : 'none'} />)}</span><span className="text-xs">{tenant.searchValidationRating}/5</span>{!tenant.searchValidationIsCurrent && <span className="badge badge-warning badge-xs">Stale</span>}</> : <span className="badge badge-ghost badge-sm">Not run</span>}</div>{tenant.searchValidationAtUtc && <div className="mt-1 text-[10px] text-base-content/40">{new Date(tenant.searchValidationAtUtc).toLocaleDateString()}</div>}</td><td><span className={`badge badge-sm ${tenant.isActive ? 'badge-success badge-soft' : 'badge-ghost'}`}>{tenant.isActive ? 'Active' : 'Inactive'}</span></td><td><div className="flex justify-end gap-1"><button className="btn btn-ghost btn-xs" onClick={() => setEditingTenant(tenant)}><Edit3 size={13} /> Edit</button><div className="dropdown dropdown-end"><button type="button" tabIndex={0} className="btn btn-ghost btn-xs btn-square" aria-label={`More actions for ${tenant.name}`}><EllipsisVertical size={15} /></button><ul tabIndex={0} className="menu dropdown-content z-20 mt-1 w-40 rounded-box border border-base-300 bg-base-100 p-1 shadow-lg"><li><button className="text-error" disabled={managementBusy} onClick={() => void removeTenant(tenant)}><Trash2 size={13} /> Delete</button></li></ul></div></div></td></tr>; })}{filteredTenants.length === 0 && <tr><td colSpan={7} className="py-10 text-center text-base-content/45">No tenants match this search.</td></tr>}</tbody></table></div>
               </section>
             </div>
           )}
@@ -370,7 +394,7 @@ export function AdminArea({ profile, section, onSectionChange, onExit, onSignOut
             </div>
           )}
 
-          {editingTenant && <TenantManagementModal tenant={editingTenant} image={tenantImage(editingTenant)} busy={managementBusy} imageBusy={tenantImageBusy === editingTenant.id} onImageChange={(file) => updateTenantImage(editingTenant, file)} onClose={() => setEditingTenant(null)} onSave={saveTenant} />}
+          {editingTenant && <TenantManagementModal tenant={editingTenant} image={tenantImage(editingTenant)} busy={managementBusy} imageBusy={tenantImageBusy === editingTenant.id} onImageChange={(file) => updateTenantImage(editingTenant, file)} onClose={() => setEditingTenant(null)} onSave={saveTenant} onSaveAndValidate={saveTenantAndValidate} />}
           {creatingTenant && <TenantManagementModal busy={managementBusy} imageBusy={false} onClose={() => setCreatingTenant(false)} onSave={addTenant} />}
           {creatingUser && <CreateUserModal tenants={tenants} busy={managementBusy} onClose={() => setCreatingUser(false)} onSave={addUser} />}
           {editingUser && <UserManagementModal user={editingUser} tenants={tenants} busy={managementBusy} onClose={() => setEditingUser(null)} onSave={(role, tenantId) => changeUserAccess(editingUser, role, tenantId)} />}
@@ -445,7 +469,7 @@ function UserFilterMenu({ role, setRole, tenantId, setTenantId, tenants }: {
   return <details className="dropdown dropdown-end md:self-start"><summary className={`btn list-none border-base-300 ${activeCount ? 'btn-primary' : 'btn-ghost bg-base-100'}`}><SlidersHorizontal size={16} /> Filters{activeCount > 0 && <span className="badge badge-sm">{activeCount}</span>}</summary><div className="dropdown-content z-40 mt-2 w-[min(92vw,36rem)] rounded-2xl border border-base-300 bg-base-100 p-5 shadow-2xl"><div className="flex items-center justify-between border-b border-base-300 pb-3"><div><div className="font-bold">Filter users</div><div className="mt-1 text-xs text-base-content/45">Filter by account role or tenant assignment.</div></div><button className="btn btn-ghost btn-xs" disabled={!activeCount} onClick={() => { setRole('all'); setTenantId('all'); }}>Clear all</button></div><div className="mt-4 grid gap-5 md:grid-cols-2"><div className="grid content-start gap-2"><span className="text-xs font-bold uppercase tracking-wider text-base-content/45">Role</span>{[['all', 'All roles'], ['Guest', 'Guest'], ['Shopper', 'Shopper'], ['TenantStaff', 'Tenant staff'], ['Admin', 'Administrator']].map(([value, label]) => <label key={value} className="flex cursor-pointer items-center gap-2 text-sm"><input className="radio radio-primary radio-sm" type="radio" name="user-role-filter" checked={role === value} onChange={() => setRole(value)} />{label}</label>)}</div><label className="grid content-start gap-2"><span className="text-xs font-bold uppercase tracking-wider text-base-content/45">Tenant assignment</span><select className="select select-bordered w-full" value={tenantId} onChange={(event) => setTenantId(event.target.value)}><option value="all">All assignments</option><option value="unassigned">Unassigned</option>{tenants.map((tenant) => <option key={tenant.id} value={tenant.id}>{tenant.name}</option>)}</select></label></div></div></details>;
 }
 
-function TenantManagementModal({ tenant, image, busy, imageBusy = false, onImageChange, onClose, onSave }: {
+function TenantManagementModal({ tenant, image, busy, imageBusy = false, onImageChange, onClose, onSave, onSaveAndValidate }: {
   tenant?: StoreDto;
   image?: string;
   busy: boolean;
@@ -453,6 +477,7 @@ function TenantManagementModal({ tenant, image, busy, imageBusy = false, onImage
   onImageChange?: (file?: File) => Promise<void>;
   onClose: () => void;
   onSave: (input: Omit<StoreDto, 'id' | 'navigationNodeId' | 'storefrontImageUrl'>, imageFile?: File) => Promise<void>;
+  onSaveAndValidate?: (input: Omit<StoreDto, 'id' | 'navigationNodeId' | 'storefrontImageUrl'>) => Promise<TenantSearchValidationResult>;
 }) {
   const [name, setName] = useState(tenant?.name || '');
   const [description, setDescription] = useState(tenant?.description || '');
@@ -466,6 +491,29 @@ function TenantManagementModal({ tenant, image, busy, imageBusy = false, onImage
   const [pendingImage, setPendingImage] = useState<File | undefined>();
   const [pendingImagePreview, setPendingImagePreview] = useState('');
   const [imageError, setImageError] = useState('');
+  const [aiBusy, setAiBusy] = useState(false);
+  const [generateNewQuestions, setGenerateNewQuestions] = useState(false);
+  const [aiError, setAiError] = useState('');
+  const [validation, setValidation] = useState<TenantSearchValidationResult | null>(null);
+  const [enrichment, setEnrichment] = useState<TenantDescriptionEnrichmentResult | null>(null);
+
+  const validateSearch = async () => {
+    if (!tenant) return;
+    setAiBusy(true); setAiError(''); setValidation(null);
+    try {
+      setValidation(await validateTenantSearch(tenant.id, description, generateNewQuestions));
+      setGenerateNewQuestions(false);
+    }
+    catch (error) { setAiError(error instanceof Error ? error.message : 'Search validation failed.'); }
+    finally { setAiBusy(false); }
+  };
+  const enrichDescription = async () => {
+    if (!tenant) return;
+    setAiBusy(true); setAiError(''); setEnrichment(null);
+    try { setEnrichment(await enrichTenantDescription(tenant.id, description)); }
+    catch (error) { setAiError(error instanceof Error ? error.message : 'Description enrichment failed.'); }
+    finally { setAiBusy(false); }
+  };
 
   const selectImage = async (file?: File) => {
     if (!file) return;
@@ -487,24 +535,41 @@ function TenantManagementModal({ tenant, image, busy, imageBusy = false, onImage
     unitNumber: unitNumber.trim(), contactEmail: contactEmail.trim() || null,
     contactPhone: contactPhone.trim() || null, openingHours: openingHours.trim() || null, isActive,
   }, pendingImage);
+  const saveAndValidate = async () => {
+    if (!onSaveAndValidate) return;
+    setAiBusy(true); setAiError(''); setValidation(null);
+    try {
+      const result = await onSaveAndValidate({ name: name.trim(), description: description.trim(), category, floorNumber,
+        unitNumber: unitNumber.trim(), contactEmail: contactEmail.trim() || null, contactPhone: contactPhone.trim() || null,
+        openingHours: openingHours.trim() || null, isActive });
+      setValidation(result);
+    } catch (error) { setAiError(error instanceof Error ? error.message : 'Unable to save and validate tenant.'); }
+    finally { setAiBusy(false); }
+  };
   const displayedImage = pendingImagePreview || image;
 
-  return <div className="modal modal-open"><div className="modal-box w-[96vw] max-w-3xl">
+  return <div className="modal modal-open"><div className="modal-box max-h-[92vh] w-[96vw] max-w-6xl overflow-y-auto">
     <button className="btn btn-circle btn-ghost btn-sm absolute right-4 top-4" aria-label="Close tenant management" onClick={onClose}><X size={16} /></button>
     <div className="pr-10"><h3 className="text-xl font-bold">{tenant ? 'Manage tenant' : 'Create tenant'}</h3><p className="mt-1 text-sm text-base-content/50">{tenant ? 'Update the directory information shoppers and mall staff use.' : 'Add a new tenant to the mall directory.'}</p></div>
-    <div className="mt-6 flex items-center gap-4 rounded-xl border border-base-300 bg-base-200/40 p-4"><div className="size-20 shrink-0 overflow-hidden rounded-xl border border-base-300 bg-gradient-to-br from-base-200 to-base-300">{displayedImage ? <img src={displayedImage} alt="" className="h-full w-full object-cover" /> : <span className="grid h-full place-items-center text-base-content/30"><Store size={24} /></span>}</div><div><div className="font-semibold">Storefront image</div><div className="mt-1 text-xs text-base-content/50">Shown on the public Directory card.</div><label className="btn btn-ghost btn-sm mt-3 cursor-pointer border border-base-300"><ImagePlus size={14} />{displayedImage ? 'Change image' : 'Add image'}<input hidden type="file" accept="image/png,image/jpeg,image/webp,image/gif" disabled={imageBusy} onChange={(event) => { void selectImage(event.target.files?.[0]); event.target.value = ''; }} /></label>{imageError && <div className="mt-2 text-xs text-error">{imageError}</div>}</div></div>
-    <div className="mt-6 grid gap-4 md:grid-cols-2">
-      <label className="form-control md:col-span-2"><span className="label-text mb-1.5 font-semibold">Tenant name</span><input className="input input-bordered w-full" value={name} onChange={(event) => setName(event.target.value)} /></label>
-      <label className="form-control"><span className="label-text mb-1.5 font-semibold">Category</span><select className="select select-bordered w-full" value={category} onChange={(event) => setCategory(Number(event.target.value))}>{storeCategories.map(([value, label]) => <option key={value} value={value}>{label}</option>)}</select></label>
-      {tenant && <label className="form-control"><span className="label-text mb-1.5 font-semibold">Status</span><select className="select select-bordered w-full" value={isActive ? 'active' : 'inactive'} onChange={(event) => setIsActive(event.target.value === 'active')}><option value="active">Active</option><option value="inactive">Inactive</option></select></label>}
-      <label className="form-control"><span className="label-text mb-1.5 font-semibold">Floor</span><input className="input input-bordered w-full" type="number" min={-5} max={50} value={floorNumber} onChange={(event) => setFloorNumber(Number(event.target.value))} /></label>
-      <label className="form-control"><span className="label-text mb-1.5 font-semibold">Unit number</span><input className="input input-bordered w-full" value={unitNumber} onChange={(event) => setUnitNumber(event.target.value)} /></label>
-      <label className="form-control"><span className="label-text mb-1.5 font-semibold">Contact email</span><input className="input input-bordered w-full" type="email" value={contactEmail} onChange={(event) => setContactEmail(event.target.value)} /></label>
-      <label className="form-control"><span className="label-text mb-1.5 font-semibold">Contact phone</span><input className="input input-bordered w-full" value={contactPhone} onChange={(event) => setContactPhone(event.target.value)} /></label>
-      <label className="form-control md:col-span-2"><span className="label-text mb-1.5 font-semibold">Opening hours</span><input className="input input-bordered w-full" value={openingHours} onChange={(event) => setOpeningHours(event.target.value)} placeholder="Daily, 10:00 AM–10:00 PM" /></label>
-      <label className="form-control md:col-span-2"><span className="label-text mb-1.5 font-semibold">Description</span><textarea className="textarea textarea-bordered min-h-28 w-full" maxLength={500} value={description} onChange={(event) => setDescription(event.target.value)} /></label>
+    <div className="mt-7 grid gap-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
+      <section className="space-y-5"><h4 className="text-sm font-bold uppercase tracking-wider text-base-content/45">Tenant details</h4>
+        <div className="flex items-center gap-4 rounded-xl border border-base-300 bg-base-200/40 p-4"><div className="size-20 shrink-0 overflow-hidden rounded-xl border border-base-300 bg-gradient-to-br from-base-200 to-base-300">{displayedImage ? <img src={displayedImage} alt="" className="h-full w-full object-cover" /> : <span className="grid h-full place-items-center text-base-content/30"><Store size={24} /></span>}</div><div><div className="font-semibold">Storefront image</div><div className="mt-1 text-xs text-base-content/50">Shown on the public Directory card.</div><label className="btn btn-ghost btn-sm mt-3 cursor-pointer border border-base-300"><ImagePlus size={14} />{displayedImage ? 'Change image' : 'Add image'}<input hidden type="file" accept="image/png,image/jpeg,image/webp,image/gif" disabled={imageBusy} onChange={(event) => { void selectImage(event.target.files?.[0]); event.target.value = ''; }} /></label>{imageError && <div className="mt-2 text-xs text-error">{imageError}</div>}</div></div>
+        <label className="form-control"><span className="label-text mb-1.5 font-semibold">Tenant name</span><input className="input input-bordered w-full" value={name} onChange={(event) => setName(event.target.value)} /></label>
+        <div className="grid gap-x-4 gap-y-5 sm:grid-cols-2"><label className="form-control"><span className="label-text mb-2 font-semibold">Category</span><select className="select select-bordered w-full" value={category} onChange={(event) => setCategory(Number(event.target.value))}>{storeCategories.map(([value, label]) => <option key={value} value={value}>{label}</option>)}</select></label>
+        {tenant && <label className="form-control"><span className="label-text mb-1.5 font-semibold">Status</span><select className="select select-bordered w-full" value={isActive ? 'active' : 'inactive'} onChange={(event) => setIsActive(event.target.value === 'active')}><option value="active">Active</option><option value="inactive">Inactive</option></select></label>}
+        <label className="form-control"><span className="label-text mb-1.5 font-semibold">Floor</span><input className="input input-bordered w-full" type="number" min={-5} max={50} value={floorNumber} onChange={(event) => setFloorNumber(Number(event.target.value))} /></label>
+        <label className="form-control"><span className="label-text mb-1.5 font-semibold">Unit number</span><input className="input input-bordered w-full" value={unitNumber} onChange={(event) => setUnitNumber(event.target.value)} /></label>
+        <label className="form-control"><span className="label-text mb-1.5 font-semibold">Contact email</span><input className="input input-bordered w-full" type="email" value={contactEmail} onChange={(event) => setContactEmail(event.target.value)} /></label>
+        <label className="form-control"><span className="label-text mb-1.5 font-semibold">Contact phone</span><input className="input input-bordered w-full" value={contactPhone} onChange={(event) => setContactPhone(event.target.value)} /></label></div>
+        <label className="form-control mt-1"><span className="label-text mb-2 font-semibold">Opening hours</span><input className="input input-bordered w-full" value={openingHours} onChange={(event) => setOpeningHours(event.target.value)} placeholder="Daily, 10:00 AM–10:00 PM" /></label>
+      </section>
+      <section className="min-w-0 space-y-5"><div className="flex flex-wrap items-center justify-between gap-3"><div><h4 className="text-sm font-bold uppercase tracking-wider text-base-content/45">Search description</h4><p className="mt-1 text-xs text-base-content/45">Use Markdown headings and lists to organize useful shopper details.</p></div>{tenant && <div className="flex flex-wrap gap-2"><button className="btn btn-primary btn-sm" disabled={aiBusy} onClick={() => void validateSearch()}><SearchCheck size={14} /> Validate search</button><button className="btn btn-secondary btn-sm" disabled={aiBusy} onClick={() => void enrichDescription()}><Sparkles size={14} /> Enrich</button></div>}</div>{tenant && <label className="flex cursor-pointer items-start gap-2 rounded-lg border border-base-300 bg-base-100 px-3 py-2.5 text-xs"><input className="checkbox checkbox-sm checkbox-primary mt-0.5" type="checkbox" checked={generateNewQuestions} disabled={aiBusy} onChange={(event) => setGenerateNewQuestions(event.target.checked)} /><span><span className="font-semibold">Generate new search questions</span><span className="mt-0.5 block text-base-content/50">When unchecked, validation reuses this tenant’s saved questions if available.</span></span></label>}<MarkdownEditor value={description} onChange={(value) => { setDescription(value); setValidation(null); setEnrichment(null); }} title="" onTitleChange={() => {}} hideDocumentHeader compact maxLength={1500} placeholder="Describe what shoppers can find here…" /><div className="text-right text-xs text-base-content/40">{description.length}/1500</div>
+        {aiError && <div className="alert alert-error py-2 text-sm">{aiError}</div>}
+        {enrichment && <div className="rounded-xl border border-primary/30 bg-primary/5 p-4"><div className="flex items-center gap-2 font-semibold"><Sparkles size={15} /> Enriched Markdown draft</div><div className="mt-2 rounded-lg bg-base-100 p-3 text-sm"><MarkdownDescription markdown={enrichment.description} /></div>{enrichment.changes.length > 0 && <ul className="mt-2 list-inside list-disc text-xs text-base-content/60">{enrichment.changes.map((change, index) => <li key={index}>{change}</li>)}</ul>}<div className="mt-3 flex gap-2"><button className="btn btn-primary btn-xs" disabled={enrichment.description.length > 1500} onClick={() => { setDescription(enrichment.description); setEnrichment(null); }}>Apply draft</button><button className="btn btn-ghost btn-xs" onClick={() => setEnrichment(null)}>Discard</button></div></div>}
+        {validation && <div className="rounded-xl border border-base-300 bg-base-200/40 p-4"><div className="flex items-center gap-2 font-semibold"><span className="flex text-warning">{[1,2,3,4,5].map((star) => <Star key={star} size={15} fill={star <= validation.rating ? 'currentColor' : 'none'} />)}</span><span>{validation.rating}/5 search rating</span></div><p className="mt-2 text-sm">{validation.summary}</p><div className="mt-3 grid gap-2">{validation.questions.map((item, index) => <div key={`${item.question}-${index}`} className="rounded-lg bg-base-100 p-3"><div className="text-sm font-medium">“{item.question}”</div><div className="mt-1 text-xs text-base-content/60">{item.tenantRank ? `Ranked #${item.tenantRank}` : 'Not in top 5'} · {item.isRelevant ? 'Relevant' : 'Needs improvement'} — {item.assessment}</div></div>)}</div></div>}
+      </section>
     </div>
-    <div className="modal-action"><button className="btn btn-ghost" disabled={busy} onClick={onClose}>Cancel</button><button className="btn btn-primary" disabled={busy || name.trim().length < 2 || !unitNumber.trim()} onClick={() => void submit()}>{busy ? <span className="loading loading-spinner loading-sm" /> : tenant ? <Edit3 size={15} /> : <Plus size={15} />} {tenant ? 'Save tenant' : 'Create tenant'}</button></div>
+    <div className="modal-action"><button className="btn btn-ghost" disabled={busy || aiBusy} onClick={onClose}>Cancel</button>{tenant && onSaveAndValidate && <button className="btn btn-secondary" disabled={busy || aiBusy || name.trim().length < 2 || !unitNumber.trim()} onClick={() => void saveAndValidate()}>{aiBusy ? <span className="loading loading-spinner loading-sm" /> : <><Save size={15} /> Save &amp; validate</>}</button>}<button className="btn btn-primary" disabled={busy || aiBusy || name.trim().length < 2 || !unitNumber.trim()} onClick={() => void submit()}>{busy ? <span className="loading loading-spinner loading-sm" /> : tenant ? <Edit3 size={15} /> : <Plus size={15} />} {tenant ? 'Save tenant' : 'Create tenant'}</button></div>
   </div><button className="modal-backdrop" onClick={onClose}>close</button></div>;
 }
 

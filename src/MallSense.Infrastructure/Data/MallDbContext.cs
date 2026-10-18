@@ -133,6 +133,27 @@ public class MallDbContext : DbContext
                 alter.CommandText = "ALTER TABLE Tenants ADD COLUMN StorefrontImageUrl TEXT NULL;";
                 await alter.ExecuteNonQueryAsync(cancellationToken);
             }
+            // Add nullable AI search validation fields to existing tenant databases.
+            var validationColumns = new (string Name, string SqlType)[]
+            {
+                ("SearchValidationRating", "INTEGER NULL"),
+                ("SearchValidationSummary", "TEXT NULL"),
+                ("SearchValidationDescriptionHash", "TEXT NULL"),
+                ("SearchValidationQuestionsJson", "TEXT NULL"),
+                ("SearchValidationAtUtc", "TEXT NULL")
+            };
+            foreach (var (name, sqlType) in validationColumns)
+            {
+                await using var columnCheck = connection.CreateCommand();
+                columnCheck.CommandText = $"SELECT COUNT(*) FROM pragma_table_info('Tenants') WHERE name = '{name}';";
+                var exists = Convert.ToInt32(await columnCheck.ExecuteScalarAsync(cancellationToken)) > 0;
+                if (!exists)
+                {
+                    await using var alter = connection.CreateCommand();
+                    alter.CommandText = $"ALTER TABLE Tenants ADD COLUMN {name} {sqlType};";
+                    await alter.ExecuteNonQueryAsync(cancellationToken);
+                }
+            }
         }
         finally
         {
@@ -149,7 +170,7 @@ public class MallDbContext : DbContext
         {
             entity.HasKey(e => e.Id);
             entity.Property(e => e.Name).IsRequired().HasMaxLength(100);
-            entity.Property(e => e.Description).HasMaxLength(500);
+            entity.Property(e => e.Description).HasMaxLength(1500);
             entity.Property(e => e.UnitNumber).IsRequired().HasMaxLength(20);
             entity.Property(e => e.ContactEmail).HasMaxLength(150);
             entity.Property(e => e.ContactPhone).HasMaxLength(50);

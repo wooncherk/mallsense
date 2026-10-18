@@ -93,8 +93,10 @@ public class NavigationGraphAdminService : INavigationGraphAdminService
             throw new ArgumentException("Upload a floor plan or describe what the AI should add.");
 
         var currentDraft = JsonSerializer.Serialize(new { nodes = request.CurrentNodes ?? [], edges = request.CurrentEdges ?? [] });
+        var isTargetedEdit = (request.Message ?? string.Empty).Contains("targeted map edit", StringComparison.OrdinalIgnoreCase);
         var tenantDirectory = JsonSerializer.Serialize((await _tenantRepository.GetAllAsync(cancellationToken))
             .Where(tenant => tenant.IsActive)
+            .Where(tenant => !isTargetedEdit || tenant.FloorNumber == request.FloorNumber)
             .OrderBy(tenant => tenant.FloorNumber)
             .ThenBy(tenant => tenant.UnitNumber)
             .Select(tenant => new
@@ -108,7 +110,7 @@ public class NavigationGraphAdminService : INavigationGraphAdminService
         var prompt = $$"""
             You are an indoor navigation graph assistant working with a human mall operator in multiple turns.
             Study floor plans, sketches, directory screenshots, photos, handwritten clues, or text descriptions conservatively.
-            Refine the current draft rather than starting over. Produce the best conservative proposal in one pass. Do not
+            Refine the supplied map context rather than starting over. Produce the best conservative proposal in one pass. Do not
             require conversational confirmation; record uncertainty in warnings and omit unsupported connections.
             Nodes may use any human label, but type must be one of Shop, Junction, Escalator, Lift, Entrance, Restroom, Surau, InformationCounter, Landmark.
             Coordinates are normalized 0-100. When a floor-plan image is present, derive every node position directly from
@@ -122,7 +124,9 @@ public class NavigationGraphAdminService : INavigationGraphAdminService
             nearby nodes slightly without changing their real ordering or corridor side. When one existing label combines
             distinct facilities (for example "Lift & Stairs"), split it into separate Lift and Stairs nodes only when the
             evidence shows distinct positions or distinct routes; otherwise preserve the combined location rather than guess.
-            Work on the complete multi-floor mall graph. Determine each location's floor from the evidence, existing graph,
+            For a targeted map edit, return only changed or added nodes and edges. Do not repeat unchanged context nodes, except
+            include both unchanged endpoint nodes when returning a changed connection so its references can be validated.
+            Use supplied stable node IDs as keys for existing locations. For a bulk request, work on the complete multi-floor mall graph. Determine each location's floor from the evidence, existing graph,
             and authoritative tenant directory; do not privilege or focus on any one floor. Every node must include its
             floor_number. Preserve every supported location already present in the current draft. Treat graph completeness
             as a required final check: every returned node must have at least one supported walkable edge, and all returned
@@ -135,10 +139,9 @@ public class NavigationGraphAdminService : INavigationGraphAdminService
             unit number matches, use that tenant's exact directory name as the node label. Do not invent a tenant or unit
             number, and record ambiguous or unreadable unit numbers in warnings. The application will automatically map
             exact tenant-name matches when the proposal is applied.
-            Before returning JSON, check the proposal yourself for missing nodes, dangling edge references, self-links,
-            duplicate links, isolated nodes, disconnected routing islands, and omitted existing locations. Put any issue you
-            cannot safely resolve in warnings and explain what evidence is missing. This check is repeated after apply, and
-            its findings may be supplied in a later turn for repair.
+            Before returning JSON, check for missing nodes, dangling edge references, self-links, and duplicate links.
+            For bulk requests also check isolated nodes, disconnected routing islands, and omitted existing locations.
+            Put any issue you cannot safely resolve in warnings. This check is repeated after apply.
             Latest operator message: {{request.Message ?? "No additional text clue."}}
             Conversation:
             {{conversation}}
@@ -147,8 +150,7 @@ public class NavigationGraphAdminService : INavigationGraphAdminService
             Authoritative active tenant directory for all floors (tenantId, name, floorNumber, unitNumber):
             {{tenantDirectory}}
             Return JSON with assistant_message, clarification_questions, nodes, edges, warnings, confidence_percentage.
-            The assistant_message must summarize the whole-mall proposal and the floors you selected; never frame the result
-            as an update to one active floor. Each node: key,floor_number,label,type,x,y,description,confidence. Node keys must be unique across the entire mall.
+            The assistant_message should briefly describe the proposed change. Each node: key,floor_number,label,type,x,y,description,confidence. Node keys must be unique.
             Each edge: from,to,distance_meters,accessible,bidirectional,direction_hint, where from and to reference node keys.
             """;
 
@@ -167,10 +169,10 @@ public class NavigationGraphAdminService : INavigationGraphAdminService
             json = await _geminiClient.GenerateJsonAsync($"{prompt}\nReconcile these evidence analyses into one draft:\n{evidenceText}", AiDraftSchema, cancellationToken: cancellationToken);
         }
 
-        return ParseAiDraft(json);
+        return ParseAiDraft(json, request);
     }
 
-    private static NavigationAiDraftDto ParseAiDraft(string json)
+    private static NavigationAiDraftDto ParseAiDraft(string json, NavigationAiDraftRequest request)
     {
         using var document = JsonDocument.Parse(json);
         var root = document.RootElement;
@@ -215,7 +217,65 @@ public class NavigationGraphAdminService : INavigationGraphAdminService
             ? $"I prepared a draft with {nodes.Count} locations and {edges.Count} walkable connections. Review it or tell me what to correct."
             : "I need a little more information before I can propose reliable navigation nodes.");
         if (questions.Count == 0 && nodes.Count == 0) questions.Add("Which entrances, destinations and corridor connections should be represented?");
-        return new NavigationAiDraftDto(assistant, questions, nodes, edges, warnings, (int)GetDouble(root, "confidence_percentage", 50));
+        var actions = BuildProposalActions(nodes, edges, request);
+        return new NavigationAiDraftDto(assistant, actions, questions, nodes, edges, warnings, (int)GetDouble(root, "confidence_percentage", 50));
+    }
+
+    private static IReadOnlyList<string> BuildProposalActions(
+        IReadOnlyList<NavigationAiDraftNodeDto> proposedNodes,
+        IReadOnlyList<NavigationAiDraftEdgeDto> proposedEdges,
+        NavigationAiDraftRequest request)
+    {
+        var currentNodes = request.CurrentNodes ?? [];
+        var labels = currentNodes.Concat(proposedNodes)
+            .GroupBy(node => node.Key, StringComparer.OrdinalIgnoreCase)
+            .ToDictionary(group => group.Key, group => group.Last().Label, StringComparer.OrdinalIgnoreCase);
+        var actions = new List<string>();
+        foreach (var node in proposedNodes)
+        {
+            var current = currentNodes.FirstOrDefault(candidate => candidate.Key.Equals(node.Key, StringComparison.OrdinalIgnoreCase)) ??
+                currentNodes.FirstOrDefault(candidate => candidate.FloorNumber == node.FloorNumber && candidate.Label.Equals(node.Label, StringComparison.OrdinalIgnoreCase));
+            if (current is null)
+            {
+                actions.Add($"Add {node.Type.ToLowerInvariant()}: {node.Label} on Level {node.FloorNumber}");
+                continue;
+            }
+            var changes = new List<string>();
+            if (!current.Label.Equals(node.Label, StringComparison.Ordinal)) changes.Add($"name → {node.Label}");
+            if (!current.Type.Equals(node.Type, StringComparison.OrdinalIgnoreCase)) changes.Add($"type → {node.Type}");
+            if (current.FloorNumber != node.FloorNumber) changes.Add($"level → {node.FloorNumber}");
+            if (Math.Abs(current.X - node.X) > 0.1 || Math.Abs(current.Y - node.Y) > 0.1) changes.Add($"position → ({node.X:0.#}, {node.Y:0.#})");
+            if (!string.Equals(current.Description, node.Description, StringComparison.Ordinal)) changes.Add("description");
+            if (changes.Count > 0) actions.Add($"Update {node.Label}: {string.Join(", ", changes)}");
+        }
+
+        foreach (var edge in proposedEdges)
+        {
+            var current = (request.CurrentEdges ?? []).FirstOrDefault(candidate =>
+                candidate.From.Equals(edge.From, StringComparison.OrdinalIgnoreCase) && candidate.To.Equals(edge.To, StringComparison.OrdinalIgnoreCase) ||
+                candidate.Bidirectional && candidate.From.Equals(edge.To, StringComparison.OrdinalIgnoreCase) && candidate.To.Equals(edge.From, StringComparison.OrdinalIgnoreCase));
+            var details = new List<string>();
+            if (current is null)
+            {
+                details.Add($"{edge.DistanceMeters:0.#} m");
+                details.Add(edge.Accessible ? "accessible" : "not wheelchair accessible");
+                details.Add(edge.Bidirectional ? "two-way" : "one-way");
+            }
+            else
+            {
+                if (Math.Abs(current.DistanceMeters - edge.DistanceMeters) > 0.01) details.Add($"distance {current.DistanceMeters:0.#} m → {edge.DistanceMeters:0.#} m");
+                if (current.Accessible != edge.Accessible) details.Add(edge.Accessible ? "mark accessible" : "mark not wheelchair accessible");
+                if (current.Bidirectional != edge.Bidirectional) details.Add(edge.Bidirectional ? "make two-way" : "make one-way");
+                if (!current.DirectionHint.Equals(edge.DirectionHint, StringComparison.OrdinalIgnoreCase)) details.Add($"direction {edge.DirectionHint}");
+                if (details.Count == 0) continue;
+            }
+
+            var action = current is null ? "Add connection" : "Update connection";
+            var from = labels.GetValueOrDefault(edge.From, edge.From);
+            var to = labels.GetValueOrDefault(edge.To, edge.To);
+            actions.Add($"{action}: {from} ↔ {to} ({string.Join("; ", details)})");
+        }
+        return actions;
     }
 
     private static bool TryGetProperty(JsonElement element, string name, out JsonElement value)

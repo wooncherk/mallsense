@@ -79,6 +79,7 @@ export interface RouteStepDto {
   floorChange: number;
   currentFloor: number;
   instruction: string;
+  visibleStoreName: string | null;
 }
 
 export interface RouteResponse {
@@ -308,6 +309,7 @@ export interface NavigationAiDraftNode { key: string; floorNumber: number; label
 export interface NavigationAiDraftEdge { from: string; to: string; distanceMeters: number; accessible: boolean; bidirectional: boolean; directionHint: string; }
 export interface NavigationAiDraft {
   assistantMessage: string;
+  actions: string[];
   clarificationQuestions: string[];
   nodes: NavigationAiDraftNode[];
   edges: NavigationAiDraftEdge[];
@@ -370,7 +372,21 @@ export interface StoreDto {
   storefrontImageUrl: string | null;
   isActive: boolean;
   navigationNodeId: string | null;
+  searchValidationRating?: number | null;
+  searchValidationSummary?: string | null;
+  searchValidationDescriptionHash?: string | null;
+  searchValidationAtUtc?: string | null;
+  searchValidationIsCurrent?: boolean;
 }
+
+export interface TenantSearchValidationResult {
+  rating: number;
+  summary: string;
+  validatedAtUtc: string;
+  descriptionHash: string;
+  questions: { question: string; tenantRank: number | null; isRelevant: boolean; assessment: string }[];
+}
+export interface TenantDescriptionEnrichmentResult { description: string; changes: string[]; }
 
 export type UserRole = 'Guest' | 'Shopper' | 'TenantStaff' | 'Admin';
 

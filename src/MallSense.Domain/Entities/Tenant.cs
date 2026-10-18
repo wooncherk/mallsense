@@ -20,6 +20,11 @@ public class Tenant : BaseEntity
     public string? StorefrontImageUrl { get; set; }
     public string Tags { get; set; } = string.Empty;
     public string PriceLevel { get; set; } = "mid"; // budget, mid, premium
+    public int? SearchValidationRating { get; set; }
+    public string? SearchValidationSummary { get; set; }
+    public string? SearchValidationDescriptionHash { get; set; }
+    public string? SearchValidationQuestionsJson { get; set; }
+    public DateTime? SearchValidationAtUtc { get; set; }
     public Guid? NavigationNodeId { get; set; }
     public bool IsActive { get; set; } = true;
 

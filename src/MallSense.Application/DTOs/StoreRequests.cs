@@ -7,7 +7,7 @@ public record CreateStoreRequest(
     [Required, StringLength(100, MinimumLength = 2)]
     string Name,
 
-    [StringLength(500)]
+    [StringLength(1500)]
     string? Description,
 
     [Required]
@@ -33,7 +33,7 @@ public record UpdateStoreRequest(
     [Required, StringLength(100, MinimumLength = 2)]
     string Name,
 
-    [StringLength(500)]
+    [StringLength(1500)]
     string? Description,
 
     [Required]

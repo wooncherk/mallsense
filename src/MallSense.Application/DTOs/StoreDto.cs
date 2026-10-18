@@ -18,7 +18,12 @@ public record TenantDto(
     bool IsActive,
     Guid? NavigationNodeId,
     DateTime CreatedAtUtc,
-    DateTime? UpdatedAtUtc
+    DateTime? UpdatedAtUtc,
+    int? SearchValidationRating = null,
+    string? SearchValidationSummary = null,
+    string? SearchValidationDescriptionHash = null,
+    DateTime? SearchValidationAtUtc = null,
+    bool SearchValidationIsCurrent = false
 )
 {
     public static TenantDto FromEntity(Tenant tenant) => new(
@@ -35,7 +40,12 @@ public record TenantDto(
         tenant.IsActive,
         tenant.NavigationNodeId,
         tenant.CreatedAtUtc,
-        tenant.UpdatedAtUtc
+        tenant.UpdatedAtUtc,
+        tenant.SearchValidationRating,
+        tenant.SearchValidationSummary,
+        tenant.SearchValidationDescriptionHash,
+        tenant.SearchValidationAtUtc,
+        tenant.SearchValidationDescriptionHash == TenantSearchValidationHash.Compute(tenant.Description)
     );
 }
 
@@ -54,7 +64,12 @@ public record StoreDto(
     bool IsActive,
     Guid? NavigationNodeId,
     DateTime CreatedAtUtc,
-    DateTime? UpdatedAtUtc
+    DateTime? UpdatedAtUtc,
+    int? SearchValidationRating = null,
+    string? SearchValidationSummary = null,
+    string? SearchValidationDescriptionHash = null,
+    DateTime? SearchValidationAtUtc = null,
+    bool SearchValidationIsCurrent = false
 )
 {
     public static StoreDto FromEntity(Tenant tenant) => new(
@@ -71,6 +86,11 @@ public record StoreDto(
         tenant.IsActive,
         tenant.NavigationNodeId,
         tenant.CreatedAtUtc,
-        tenant.UpdatedAtUtc
+        tenant.UpdatedAtUtc,
+        tenant.SearchValidationRating,
+        tenant.SearchValidationSummary,
+        tenant.SearchValidationDescriptionHash,
+        tenant.SearchValidationAtUtc,
+        tenant.SearchValidationDescriptionHash == TenantSearchValidationHash.Compute(tenant.Description)
     );
 }
