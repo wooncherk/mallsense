@@ -42,6 +42,10 @@ packages/
 *.nuget.props
 *.nuget.targets
 .dotnet/
+.local-dotnet/
+
+## Local demo image downloads
+/demo-assets/
 
 ## Local SQLite databases
 *.db-shm
