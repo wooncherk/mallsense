@@ -2,7 +2,6 @@ using Microsoft.Extensions.FileProviders;
 using MallSense.Application;
 using MallSense.Infrastructure;
 using MallSense.Infrastructure.Data;
-using MallSense.WebApi.Data;
 using MallSense.WebApi.Services;
 using Scalar.AspNetCore;
 
@@ -64,7 +63,9 @@ if (app.Environment.IsDevelopment())
 
 app.UseCors();
 
-if (!app.Environment.IsDevelopment())
+// Cloud Run terminates HTTPS before forwarding HTTP to the container.
+if (!app.Environment.IsDevelopment() &&
+    app.Configuration.GetValue("Hosting:HttpsRedirectionEnabled", true))
 {
     app.UseHttpsRedirection();
 }
