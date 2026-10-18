@@ -1,23 +1,21 @@
 using System.Globalization;
-using System.Reflection;
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using MallSense.Domain.Entities;
 using MallSense.Domain.Enums;
+using MallSense.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 
-namespace MallSense.Infrastructure.Data;
+namespace MallSense.WebApi.Data;
 
 /// <summary>
 /// Imports the captured Sunway Kluang Mall directory, deals and events into the
-/// relational model. The source JSON is embedded by MallSense.Infrastructure so
-/// seeding works from tests, local runs and published applications.
+/// relational model. The host supplies the source JSON as ordinary content files.
 /// </summary>
 public static class SunwayKluangMallDataSeeder
 {
-    private const string ResourcePrefix = "MallSense.Infrastructure.SeedData.SunwayKluangMall";
     private const string PromptVersion = "sunway-kluang-import-v1";
     private const string MallOperatorName = "Sunway Kluang Mall";
     private static readonly JsonSerializerOptions JsonOptions = new()
@@ -27,9 +25,9 @@ public static class SunwayKluangMallDataSeeder
 
     public static async Task SeedAsync(MallDbContext context)
     {
-        var stores = ReadResource<List<StoreRecord>>("stores.json");
-        var deals = ReadResource<List<DealRecord>>("deals.json");
-        var events = ReadResource<List<EventRecord>>("events.json");
+        var stores = ReadFile<List<StoreRecord>>("stores.json");
+        var deals = ReadFile<List<DealRecord>>("deals.json");
+        var events = ReadFile<List<EventRecord>>("events.json");
 
         var tenants = await context.Tenants.ToListAsync();
         var importedTenantProfiles = await context.KnowledgeSources
@@ -571,14 +569,12 @@ public static class SunwayKluangMallDataSeeder
         return $"{image.Meta.ThumbsUrl}w768{image.Meta.Extension}";
     }
 
-    private static T ReadResource<T>(string fileName)
+    private static T ReadFile<T>(string fileName)
     {
-        var assembly = typeof(SunwayKluangMallDataSeeder).Assembly;
-        var resourceName = $"{ResourcePrefix}.{fileName}";
-        using var stream = assembly.GetManifestResourceStream(resourceName)
-            ?? throw new InvalidOperationException($"Embedded seed resource '{resourceName}' was not found.");
+        var path = Path.Combine(AppContext.BaseDirectory, "SeedData", fileName);
+        using var stream = File.OpenRead(path);
         return JsonSerializer.Deserialize<T>(stream, JsonOptions)
-            ?? throw new InvalidOperationException($"Embedded seed resource '{resourceName}' was empty or invalid.");
+            ?? throw new InvalidOperationException($"Seed file '{path}' was empty or invalid.");
     }
 
     private static Guid StableGuid(string value)

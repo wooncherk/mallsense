@@ -2,6 +2,7 @@ using Microsoft.Extensions.FileProviders;
 using MallSense.Application;
 using MallSense.Infrastructure;
 using MallSense.Infrastructure.Data;
+using MallSense.WebApi.Data;
 using MallSense.WebApi.Services;
 using Scalar.AspNetCore;
 

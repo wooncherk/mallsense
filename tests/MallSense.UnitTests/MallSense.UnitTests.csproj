@@ -23,6 +23,7 @@
     <ProjectReference Include="..\..\src\MallSense.Domain\MallSense.Domain.csproj" />
     <ProjectReference Include="..\..\src\MallSense.Application\MallSense.Application.csproj" />
     <ProjectReference Include="..\..\src\MallSense.Infrastructure\MallSense.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\src\MallSense.WebApi\MallSense.WebApi.csproj" />
   </ItemGroup>
 
 </Project>

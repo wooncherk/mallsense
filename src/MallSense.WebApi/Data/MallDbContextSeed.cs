@@ -1,8 +1,9 @@
 using MallSense.Application.Services;
 using MallSense.Domain.Entities;
+using MallSense.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 
-namespace MallSense.Infrastructure.Data;
+namespace MallSense.WebApi.Data;
 
 public static class MallDbContextSeed
 {
